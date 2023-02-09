@@ -40,7 +40,7 @@ h6 {
 # Sections
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding: 50px 0;
   overflow: hidden;
 }
 
@@ -457,7 +457,7 @@ section {
   top: 0;
   width: 130%;
   height: 95%;
-  background:  url("../img/hero-bg.jpg") center top no-repeat;
+  background: url("../img/hero-bg.jpg") center top no-repeat;
   z-index: 0;
   border-radius: 0 0 50% 50%;
   transform: translateX(-50%) rotate(0deg);
@@ -687,18 +687,18 @@ section {
 
 .about .btn-read-more {
   line-height: 0;
-  padding: 15px 40px;
-  border-radius: 4px;
+  padding: 18px 36px;
+  border-radius: 26px;
   transition: 0.5s;
-  color: #fff;
-  background: #4154f1;
-  box-shadow: 0px 5px 25px rgba(65, 84, 241, 0.3);
+  color: #e41e5b;
+  background: #e6e6ff;
+  box-shadow: 0px 5px 25px rgb(65 84 241 / 30%);
 }
 
 .about .btn-read-more span {
   font-family: "Nunito", sans-serif;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 20px;
   letter-spacing: 1px;
 }
 
@@ -1062,54 +1062,56 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Pricing
+# products
 --------------------------------------------------------------*/
-.pricing .box {
-  padding: 40px 20px;
+.products .box {
+  padding: 35px 20px;
   background: #fff;
   text-align: center;
   box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
-  border-radius: 4px;
+  border-radius: 50px;
   position: relative;
   overflow: hidden;
   transition: 0.3s;
 }
 
-.pricing .box:hover {
+.products .box:hover {
   transform: scale(1.1);
   box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
 }
 
-.pricing h3 {
+.products h3 {
   font-weight: 700;
   font-size: 18px;
   margin-bottom: 15px;
 }
 
-.pricing .price {
+.products .price {
   font-size: 36px;
   color: #444444;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
 }
 
-.pricing .price sup {
+.products .price sup {
   font-size: 20px;
   top: -15px;
   left: -3px;
 }
 
-.pricing .price span {
+.products .price span {
   color: #bababa;
   font-size: 16px;
   font-weight: 300;
 }
 
-.pricing img {
+.products img {
   padding: 30px 40px;
+  max-height: 300px;
+  min-height: 300px;
 }
 
-.pricing ul {
+.products ul {
   padding: 0;
   list-style: none;
   color: #444444;
@@ -1119,35 +1121,35 @@ section {
   margin-bottom: 25px;
 }
 
-.pricing ul li {
+.products ul li {
   padding-bottom: 10px;
 }
 
-.pricing ul .na {
+.products ul .na {
   color: #ccc;
   text-decoration: line-through;
 }
 
-.pricing .btn-buy {
+.products .btn-buy {
   display: inline-block;
   padding: 8px 40px 10px 40px;
   border-radius: 50px;
-  color: #4154f1;
+  color: #e41e5b;
   transition: none;
   font-size: 16px;
   font-weight: 400;
   font-family: "Nunito", sans-serif;
   font-weight: 600;
   transition: 0.3s;
-  border: 1px solid #4154f1;
+  border: 1px solid #e41e5b;
 }
 
-.pricing .btn-buy:hover {
-  background: #4154f1;
+.products .btn-buy:hover {
+  background: #e41e5b;
   color: #fff;
 }
 
-.pricing .featured {
+.products .featured {
   width: 200px;
   position: absolute;
   top: 18px;
