@@ -12,6 +12,10 @@
             content: unset;
         }
 
+        #hero p {
+            width: 100% !important;
+        }
+
         .bg-about {
             background: url('assets/img/element-rana.png');
             background-position: right;
@@ -19,8 +23,10 @@
             background-repeat: no-repeat;
         }
 
-        .about .col-lg-12 {
-            padding: 0 80px;
+        @media (max-width: 1000px) {
+            .bg-about {
+                background-position: center !important;
+            }
         }
 
         .header {
@@ -33,6 +39,10 @@
             #hero .carousel-control-next {
                 width: 0%;
             }
+
+            .about .col-lg-12 {
+                padding: 0 80px;
+            }
         }
 
         #hero p {
@@ -43,41 +53,54 @@
             margin: 0 auto 0px auto;
             color: #fff;
         }
+
+
+
+        .brand {
+            position: relative;
+            left: 50%;
+            margin-left: -50px !important;
+            display: block;
+        }
     </style>
 @endsection
 @section('content')
     <!-- ======= Header ======= -->
     <header id="header" class="header fixed-top">
         <div class="container-fluid align-items-center justify-content-between">
-                <!-- Navbar-->
-                <nav class="navbar navbar-expand">
-                    <div class="container-fluid">
-                        <div class="navbar-collapse collapse" id="mynavbar">
-                            <div class="form-inline mx-auto">
-                                <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="#">
-                                    <img src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp" height="20"
-                                        alt="MDB Logo" loading="lazy" style="margin-top: 2px;" />
+            <!-- Navbar-->
+            <nav class="navbar navbar-expand">
+                <div class="container-fluid">
+                    <div class="navbar-collapse collapse" id="mynavbar">
+                        <div class="col-lg-3 text-start text-white">
+                            <span> <i class="bi bi-telephone-fill me-3"> </i> +(212)600000000</i> <span> <br>
+                            <span><i class="bi bi-envelope-fill me-3"> </i>ranaindustrie@gmail.com</i> </span>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-inline mx-auto" style="padding-right: 40px;">
+                                <a class="brand" href="#">
+                                    <img src="{{ asset('assets/img/logo-rana.png') }}" height="100" alt="Rana Logo"
+                                        loading="lazy" class="mt-4" />
                                 </a>
                             </div>
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <div class="btn-group">
-                                        <a class="btn nav-link dropdown-toggle" data-toggle="dropdown" href="#"
-                                            role="button" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fa fa-plus" aria-hidden="true"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right">
-                                            <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item"
-                                                href="#">Another action</a> <a class="dropdown-item"
-                                                href="#">Something else here</a>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
+                        </div>
+                        <div class="col-lg-3 text-end me-3">
+                            <!-- Facebook -->
+                            <button class="btn btn-primary icon" style="background-color: #3b5998;"
+                                href="https://www.facebook.com/CIMRetraite/" target="blank" role="button">
+                                <i class="bi bi-facebook"></i>
+                            </button>
+
+                            <!-- Instagram -->
+                            <button class="btn btn-primary icon" style="background-color: #ac2bac;"
+                                href="https://www.instagram.com/cimr_officiel" target="blank" role="button">
+                                <i class="bi bi-instagram"></i>
+                            </button>
                         </div>
                     </div>
-                </nav>
-                <!-- Navbar -->
+                </div>
+            </nav>
+            <!-- Navbar -->
             {{-- <!-- Navbar-->
             <nav class="navbar">
                 <div class="container-fluid justify-content-between">
@@ -189,21 +212,14 @@
             <div class="carousel-item active">
                 <div class="carousel-container">
                     <div class="row">
-                        <div class="col-lg-6 text-start">
-                            <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Moderna</span></h2>
-                            <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui
-                                aliquid.
-                                Sequi
-                                ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique
-                                ea
-                                voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi
-                                architecto.
-                            </p>
-                            <a href="" class="btn-get-started animate__animated animate__fadeInUp">voir plus</a>
+                        <div class="col-lg-6 text-start" style="margin-top: 100px;">
+                            <h2 class="animate__animated animate__fadeInDown">Nettoyant Sol</h2>
+                            <h3 class="animate__animated animate__fadeInUp text-white">Brillance & propreté</h3>
+                            <a href="" class="btn-get-started animate__animated animate__fadeInUp">Lire plus</a>
                         </div>
                         <div class="col-lg-6">
-                            <div class="img-cover" style='background-color:<?php printf("#%06X\n", mt_rand(0, 0x222222)); ?>'>
-                                <img src="assets/img/revues/arrabii-1-3.jpg" class="d-block m-auto w-100px"
+                            <div class="img-slide">
+                                <img src="{{ asset('assets/img/slide/product1.png') }}" class="d-block m-auto w-100px"
                                     alt="...">
                             </div>
                         </div>
