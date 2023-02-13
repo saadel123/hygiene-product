@@ -62,6 +62,47 @@
             margin-left: -50px !important;
             display: block;
         }
+
+        .text-slide {
+            margin: 200px 0px 0px 100px;
+        }
+
+        #mynavbar {
+            margin: -15px 30px;
+        }
+
+        .btn-comandez {
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-size: 26px;
+            letter-spacing: 1px;
+            display: inline-block;
+            padding: 17px 40px;
+            border-radius: 50px;
+            border: 3px solid #fff;
+            border-top: none;
+            transition: 0.5s;
+            line-height: 1;
+            -webkit-animation-delay: 0.8s;
+            animation-delay: 0.8s;
+            background: #a10cbd;
+            color: #fff;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        }
+
+        .icon-cmnd {
+            max-height: 30px;
+            margin-right: 20px;
+        }
+
+        .satisfaction {
+            height: 100%;
+            padding: 60px 45px;
+            transition: 0.3s;
+            background: #fff;
+            color: #000000;
+            border-radius: 30px;
+        }
     </style>
 @endsection
 @section('content')
@@ -74,7 +115,7 @@
                     <div class="navbar-collapse collapse" id="mynavbar">
                         <div class="col-lg-3 text-start text-white">
                             <span> <i class="bi bi-telephone-fill me-3"> </i> +(212)600000000</i> <span> <br>
-                            <span><i class="bi bi-envelope-fill me-3"> </i>ranaindustrie@gmail.com</i> </span>
+                                    <span><i class="bi bi-envelope-fill me-3"> </i>ranaindustrie@gmail.com</i> </span>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-inline mx-auto" style="padding-right: 40px;">
@@ -210,12 +251,14 @@
 
             <!-- Slide 1 -->
             <div class="carousel-item active">
-                <div class="carousel-container">
+                <div class="">
                     <div class="row">
-                        <div class="col-lg-6 text-start" style="margin-top: 100px;">
-                            <h2 class="animate__animated animate__fadeInDown">Nettoyant Sol</h2>
-                            <h3 class="animate__animated animate__fadeInUp text-white">Brillance & propreté</h3>
-                            <a href="" class="btn-get-started animate__animated animate__fadeInUp">Lire plus</a>
+                        <div class="col-lg-6 text-start">
+                            <div class="text-slide">
+                                <h2 class="animate__animated animate__fadeInDown">Nettoyant Sol</h2>
+                                <h3 class="animate__animated animate__fadeInUp text-white">Brillance & propreté</h3>
+                                <a href="" class="btn-get-started animate__animated animate__fadeInUp">Lire plus</a>
+                            </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="img-slide">
@@ -411,42 +454,16 @@
         <!-- ======= Values Section ======= -->
         <section id="values" class="values">
             <div class="container" data-aos="fade-up">
-                <header class="section-header">
-                    <h2>Our Values</h2>
-                    <p>Odit est perspiciatis laborum et dicta</p>
-                </header>
-
                 <div class="row">
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                        <div class="box">
-                            <img src="assets/img/values-1.png" class="img-fluid" alt="" />
-                            <h3>Ad cupiditate sed est odio</h3>
-                            <p>
-                                Eum ad dolor et. Autem aut fugiat debitis voluptatem
-                                consequuntur sit. Et veritatis id.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="400">
-                        <div class="box">
-                            <img src="assets/img/values-2.png" class="img-fluid" alt="" />
-                            <h3>Voluptatem voluptatum alias</h3>
-                            <p>
-                                Repudiandae amet nihil natus in distinctio suscipit id.
-                                Doloremque ducimus ea sit non.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="600">
-                        <div class="box">
-                            <img src="assets/img/values-3.png" class="img-fluid" alt="" />
-                            <h3>Fugit cupiditate alias nobis.</h3>
-                            <p>
-                                Quam rem vitae est autem molestias explicabo debitis sint.
-                                Vero aliquid quidem commodi.
-                            </p>
+                    <div class="col-lg-12 justify-content-center text-center">
+                        <div class="" data-aos="zoom-out" data-aos-delay="200">
+                            <div class="text-center text-lg-center">
+                                <a href="#"
+                                    class="btn-comandez d-inline-flex align-items-center justify-content-center align-self-center">
+                                    <img src="{{ asset('assets/img/commandez.png') }}" class="icon-cmnd" alt="">
+                                    <span>Comandez</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -454,141 +471,70 @@
         </section>
         <!-- End Values Section -->
 
-        <!-- ======= Counts Section ======= -->
-        <section id="counts" class="counts">
+        <!-- ======= Team Section ======= -->
+        <section id="features" class="features">
             <div class="container" data-aos="fade-up">
-                <div class="row gy-4">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="count-box">
-                            <i class="bi bi-emoji-smile"></i>
-                            <div>
-                                <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
-                                    class="purecounter"></span>
-                                <p>Happy Clients</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="row feture-tabs aos-init aos-animate" data-aos="fade-up">
+                    <div class="container">
+                        <div class="col-lg-10 col-11 mx-auto">
+                            <div class="row satisfaction">
+                                <header class="section-header">
+                                    <div class="logo d-flex align-items-center">
+                                        <img src="{{ asset('assets/img/elements/satisfaction-icon.png') }}" alt="">
+                                        <p>Satisfaction des clients</p>
+                                    </div>
+                                </header>
+                                <!-- Tab Content -->
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="tab1">
+                                        <p>
+                                            La satisfaction de nos clients constitue notre objectif premier ! <br>
+                                            Nous responsabilisons et formons nos collaborateurs à donner entière <br>
+                                            satisfaction à nos clients et à leur proposer des produits et services de
+                                            qualité. <br>
+                                            Nous sommes constamment à l’écoute des attentes de nos clients afin de répondre
+                                            conformément à leur demande. <br>
+                                        </p>
+                                        <h4>Nous nous engageons :</h4> <br>
+                                        <div class="d-flex align-items-center mb-2">
+                                            <i class="bi bi-check2"></i>
+                                            <h4>
+                                                Au respect des délais, des coûts et de la conformité de la demande.
+                                            </h4>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-2">
+                                            <i class="bi bi-check2"></i>
+                                            <h4>Au respect des délais, des coûts et de la conformité de la demande.</h4>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-2">
+                                            <i class="bi bi-check2"></i>
+                                            <h4>Au respect des délais, des coûts et de la conformité de la demande.</h4>
+                                        </div>
+                                    </div>
 
-                    <div class="col-lg-3 col-md-6">
-                        <div class="count-box">
-                            <i class="bi bi-journal-richtext" style="color: #ee6c20"></i>
-                            <div>
-                                <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1"
-                                    class="purecounter"></span>
-                                <p>Projects</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="count-box">
-                            <i class="bi bi-headset" style="color: #15be56"></i>
-                            <div>
-                                <span data-purecounter-start="0" data-purecounter-end="1463"
-                                    data-purecounter-duration="1" class="purecounter"></span>
-                                <p>Hours Of Support</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="count-box">
-                            <i class="bi bi-people" style="color: #bb0852"></i>
-                            <div>
-                                <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1"
-                                    class="purecounter"></span>
-                                <p>Hard Workers</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
         </section>
-        <!-- End Counts Section -->
+        <!-- End Team Section -->
+
+
+        <section class="section-satisfaction" style="background: red; padding: 200px;">
+
+        </section>
 
         <!-- ======= Features Section ======= -->
         <section id="features" class="features">
             <div class="container" data-aos="fade-up">
-                <header class="section-header">
-                    <h2>Features</h2>
-                    <p>Laboriosam et omnis fuga quis dolor direda fara</p>
-                </header>
-
-                <div class="row">
-                    <div class="col-lg-6">
-                        <img src="assets/img/features.png" class="img-fluid" alt="" />
-                    </div>
-
-                    <div class="col-lg-6 mt-5 mt-lg-0 d-flex">
-                        <div class="row align-self-center gy-4">
-                            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="200">
-                                <div class="feature-box d-flex align-items-center">
-                                    <i class="bi bi-check"></i>
-                                    <h3>Eos aspernatur rem</h3>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="300">
-                                <div class="feature-box d-flex align-items-center">
-                                    <i class="bi bi-check"></i>
-                                    <h3>Facilis neque ipsa</h3>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="400">
-                                <div class="feature-box d-flex align-items-center">
-                                    <i class="bi bi-check"></i>
-                                    <h3>Volup amet voluptas</h3>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="500">
-                                <div class="feature-box d-flex align-items-center">
-                                    <i class="bi bi-check"></i>
-                                    <h3>Rerum omnis sint</h3>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="600">
-                                <div class="feature-box d-flex align-items-center">
-                                    <i class="bi bi-check"></i>
-                                    <h3>Alias possimus</h3>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="700">
-                                <div class="feature-box d-flex align-items-center">
-                                    <i class="bi bi-check"></i>
-                                    <h3>Repellendus mollitia</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- / row -->
-
                 <!-- Feature Tabs -->
                 <div class="row feture-tabs" data-aos="fade-up">
-                    <div class="col-lg-6">
-                        <h3>
-                            Neque officiis dolore maiores et exercitationem quae est seda
-                            lidera pat claero
-                        </h3>
-
-                        <!-- Tabs -->
-                        <ul class="nav nav-pills mb-3">
-                            <li>
-                                <a class="nav-link active" data-bs-toggle="pill" href="#tab1">Saepe fuga</a>
-                            </li>
-                            <li>
-                                <a class="nav-link" data-bs-toggle="pill" href="#tab2">Voluptates</a>
-                            </li>
-                            <li>
-                                <a class="nav-link" data-bs-toggle="pill" href="#tab3">Corrupti</a>
-                            </li>
-                        </ul>
-                        <!-- End Tabs -->
-
+                    <div class="col-lg-12">
+                        <header class="section-header">
+                            <img src="" alt="">
+                            <h3>Satisfaction des clients</h3>
+                        </header>
                         <!-- Tab Content -->
                         <div class="tab-content">
                             <div class="tab-pane fade show active" id="tab1">
@@ -619,67 +565,7 @@
                                     tempora. Quia et perferendis.
                                 </p>
                             </div>
-                            <!-- End Tab 1 Content -->
 
-                            <div class="tab-pane fade show" id="tab2">
-                                <p>
-                                    Consequuntur inventore voluptates consequatur aut vel et.
-                                    Eos doloribus expedita. Sapiente atque consequatur minima
-                                    nihil quae aspernatur quo suscipit voluptatem.
-                                </p>
-                                <div class="d-flex align-items-center mb-2">
-                                    <i class="bi bi-check2"></i>
-                                    <h4>
-                                        Repudiandae rerum velit modi et officia quasi facilis
-                                    </h4>
-                                </div>
-                                <p>
-                                    Laborum omnis voluptates voluptas qui sit aliquam
-                                    blanditiis. Sapiente minima commodi dolorum non eveniet
-                                    magni quaerat nemo et.
-                                </p>
-                                <div class="d-flex align-items-center mb-2">
-                                    <i class="bi bi-check2"></i>
-                                    <h4>Incidunt non veritatis illum ea ut nisi</h4>
-                                </div>
-                                <p>
-                                    Non quod totam minus repellendus autem sint velit. Rerum
-                                    debitis facere soluta tenetur. Iure molestiae assumenda sunt
-                                    qui inventore eligendi voluptates nisi at. Dolorem quo
-                                    tempora. Quia et perferendis.
-                                </p>
-                            </div>
-                            <!-- End Tab 2 Content -->
-
-                            <div class="tab-pane fade show" id="tab3">
-                                <p>
-                                    Consequuntur inventore voluptates consequatur aut vel et.
-                                    Eos doloribus expedita. Sapiente atque consequatur minima
-                                    nihil quae aspernatur quo suscipit voluptatem.
-                                </p>
-                                <div class="d-flex align-items-center mb-2">
-                                    <i class="bi bi-check2"></i>
-                                    <h4>
-                                        Repudiandae rerum velit modi et officia quasi facilis
-                                    </h4>
-                                </div>
-                                <p>
-                                    Laborum omnis voluptates voluptas qui sit aliquam
-                                    blanditiis. Sapiente minima commodi dolorum non eveniet
-                                    magni quaerat nemo et.
-                                </p>
-                                <div class="d-flex align-items-center mb-2">
-                                    <i class="bi bi-check2"></i>
-                                    <h4>Incidunt non veritatis illum ea ut nisi</h4>
-                                </div>
-                                <p>
-                                    Non quod totam minus repellendus autem sint velit. Rerum
-                                    debitis facere soluta tenetur. Iure molestiae assumenda sunt
-                                    qui inventore eligendi voluptates nisi at. Dolorem quo
-                                    tempora. Quia et perferendis.
-                                </p>
-                            </div>
-                            <!-- End Tab 3 Content -->
                         </div>
                     </div>
 
@@ -774,6 +660,61 @@
         </section>
         <!-- End Features Section -->
 
+
+        <!-- ======= Counts Section ======= -->
+        <section id="counts" class="counts">
+            <div class="container" data-aos="fade-up">
+                <div class="row gy-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="count-box">
+                            <i class="bi bi-emoji-smile"></i>
+                            <div>
+                                <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
+                                    class="purecounter"></span>
+                                <p>Happy Clients</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="count-box">
+                            <i class="bi bi-journal-richtext" style="color: #ee6c20"></i>
+                            <div>
+                                <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1"
+                                    class="purecounter"></span>
+                                <p>Projects</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="count-box">
+                            <i class="bi bi-headset" style="color: #15be56"></i>
+                            <div>
+                                <span data-purecounter-start="0" data-purecounter-end="1463"
+                                    data-purecounter-duration="1" class="purecounter"></span>
+                                <p>Hours Of Support</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="count-box">
+                            <i class="bi bi-people" style="color: #bb0852"></i>
+                            <div>
+                                <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1"
+                                    class="purecounter"></span>
+                                <p>Hard Workers</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Counts Section -->
+
+
+
         <!-- ======= Services Section ======= -->
         <section id="services" class="services">
             <div class="container" data-aos="fade-up">
@@ -865,6 +806,7 @@
             </div>
         </section>
         <!-- End Services Section -->
+
 
 
 
@@ -1294,111 +1236,6 @@
             </div>
         </section>
         <!-- End Testimonials Section -->
-
-        <!-- ======= Team Section ======= -->
-        <section id="team" class="team">
-            <div class="container" data-aos="fade-up">
-                <header class="section-header">
-                    <h2>Team</h2>
-                    <p>Our hard working team</p>
-                </header>
-
-                <div class="row gy-4">
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                        <div class="member">
-                            <div class="member-img">
-                                <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="" />
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>Walter White</h4>
-                                <span>Chief Executive Officer</span>
-                                <p>
-                                    Velit aut quia fugit et et. Dolorum ea voluptate vel tempore
-                                    tenetur ipsa quae aut. Ipsum exercitationem iure minima enim
-                                    corporis et voluptate.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-                        <div class="member">
-                            <div class="member-img">
-                                <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="" />
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>Sarah Jhonson</h4>
-                                <span>Product Manager</span>
-                                <p>
-                                    Quo esse repellendus quia id. Est eum et accusantium
-                                    pariatur fugit nihil minima suscipit corporis. Voluptate sed
-                                    quas reiciendis animi neque sapiente.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-                        <div class="member">
-                            <div class="member-img">
-                                <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="" />
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>William Anderson</h4>
-                                <span>CTO</span>
-                                <p>
-                                    Vero omnis enim consequatur. Voluptas consectetur unde qui
-                                    molestiae deserunt. Voluptates enim aut architecto porro
-                                    aspernatur molestiae modi.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
-                        <div class="member">
-                            <div class="member-img">
-                                <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="" />
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>Amanda Jepson</h4>
-                                <span>Accountant</span>
-                                <p>
-                                    Rerum voluptate non adipisci animi distinctio et deserunt
-                                    amet voluptas. Quia aut aliquid doloremque ut possimus ipsum
-                                    officia.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End Team Section -->
 
         <!-- ======= Clients Section ======= -->
         <section id="clients" class="clients">
