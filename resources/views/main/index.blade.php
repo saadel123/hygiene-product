@@ -85,7 +85,7 @@
             line-height: 1;
             -webkit-animation-delay: 0.8s;
             animation-delay: 0.8s;
-            background: #a10cbd;
+            background: linear-gradient(0deg, rgba(127,5,148,1) 0%, rgba(165,13,194,1) 100%);
             color: #fff;
             box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
         }
@@ -138,15 +138,14 @@
                         </div>
                         <div class="col-lg-3 text-end me-3">
                             <!-- Facebook -->
-                            <button class="btn btn-primary icon" style="background-color: #3b5998;"
+                            <button class="btn btn-primary icon" style="background-color: #fff;border: unset;"
                                 href="https://www.facebook.com/CIMRetraite/" target="blank" role="button">
-                                <i class="bi bi-facebook"></i>
+                                <i class="bi bi-facebook" style="color:#3b5998"></i>
                             </button>
-
                             <!-- Instagram -->
-                            <button class="btn btn-primary icon" style="background-color: #ac2bac;"
+                            <button class="btn btn-primary icon" style="background-color: #fff;border: unset;"
                                 href="https://www.instagram.com/cimr_officiel" target="blank" role="button">
-                                <i class="bi bi-instagram"></i>
+                                <i class="bi bi-instagram" style="color:#ac2bac"></i>
                             </button>
                         </div>
                     </div>
@@ -302,7 +301,7 @@
                     <li><a class="nav-link scrollto" href="#about">Produits</a></li>
                     <li><a class="nav-link scrollto" href="#services">Nos atouts</a></li>
                     <li>
-                        <a class="nav-link scrollto" href="#portfolio">Distribution </a>
+                        <a class="nav-link scrollto" href="#portfolio">Distribution</a>
                     </li>
                     <li><a class="nav-link scrollto" href="#team">Blog</a></li>
                     {{-- <li class="dropdown">
@@ -516,11 +515,11 @@
                                         </div>
                                         <div class="d-flex align-items-center mb-2">
                                             <i class="bi bi-check2"></i>
-                                            <h4>Au respect des délais, des coûts et de la conformité de la demande.</h4>
+                                            <h4>À Adapter notre organisation en tenant compte des besoins de nos clients.</h4>
                                         </div>
                                         <div class="d-flex align-items-center mb-2">
                                             <i class="bi bi-check2"></i>
-                                            <h4>Au respect des délais, des coûts et de la conformité de la demande.</h4>
+                                            <h4>Faire évoluer nos prestations.</h4>
                                         </div>
                                     </div>
 

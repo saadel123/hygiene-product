@@ -17,6 +17,11 @@ Route::get('/', function () {
     return view('main.index');
 });
 
+Route::get('/qui-sommes-nous', function () {
+    return view('main.qui-sommes-nous');
+});
+
+
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
