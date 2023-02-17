@@ -912,12 +912,16 @@ section {
 # Services
 --------------------------------------------------------------*/
 .services .service-box {
-  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
+  box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
   height: 100%;
   padding: 60px 30px;
-  text-align: center;
+  text-align: left;
   transition: 0.3s;
-  border-radius: 5px;
+  border-radius: 80px;
+}
+.service .p{
+  color: #444444;
+    font-weight: 700;
 }
 
 .services .service-box .icon {
@@ -952,38 +956,38 @@ section {
 }
 
 .services .service-box.blue {
-  border-bottom: 3px solid #2db6fa;
+  border-bottom: 3px solid #114e95;
 }
 
 .services .service-box.blue .icon {
-  color: #2db6fa;
+  color: #114e95;
   background: #dbf3fe;
 }
 
 .services .service-box.blue .read-more {
-  color: #2db6fa;
+  color: #114e95;
 }
 
-.services .service-box.blue:hover {
-  background: #2db6fa;
-}
+/* .services .service-box.blue:hover {
+  background: #114e95;
+} */
 
 .services .service-box.orange {
-  border-bottom: 3px solid #f68c09;
+  border-bottom: 3px solid #fe7f00;
 }
 
 .services .service-box.orange .icon {
-  color: #f68c09;
+  color: #fe7f00;
   background: #fde3c4;
 }
 
 .services .service-box.orange .read-more {
-  color: #f68c09;
+  color: #fe7f00;
 }
 
-.services .service-box.orange:hover {
-  background: #f68c09;
-}
+/* .services .service-box.orange:hover {
+  background: #fe7f00;
+} */
 
 .services .service-box.green {
   border-bottom: 3px solid #08da4e;
@@ -998,9 +1002,9 @@ section {
   color: #08da4e;
 }
 
-.services .service-box.green:hover {
+/* .services .service-box.green:hover {
   background: #08da4e;
-}
+} */
 
 .services .service-box.red {
   border-bottom: 3px solid #e9222c;
@@ -1037,23 +1041,23 @@ section {
 }
 
 .services .service-box.pink {
-  border-bottom: 3px solid #f51f9c;
+  border-bottom: 3px solid #e41e5b;
 }
 
 .services .service-box.pink .icon {
-  color: #f51f9c;
+  color: #e41e5b;
   background: #feecf7;
 }
 
 .services .service-box.pink .read-more {
-  color: #f51f9c;
+  color: #e41e5b;
 }
 
-.services .service-box.pink:hover {
-  background: #f51f9c;
-}
+/* .services .service-box.pink:hover {
+  background: #e41e5b;
+} */
 
-.services .service-box:hover h3,
+/* .services .service-box:hover h3,
 .services .service-box:hover p,
 .services .service-box:hover .read-more {
   color: #fff;
@@ -1061,7 +1065,7 @@ section {
 
 .services .service-box:hover .icon {
   background: #fff;
-}
+} */
 
 /*--------------------------------------------------------------
 # products

@@ -85,7 +85,7 @@
             line-height: 1;
             -webkit-animation-delay: 0.8s;
             animation-delay: 0.8s;
-            background: linear-gradient(0deg, rgba(127,5,148,1) 0%, rgba(165,13,194,1) 100%);
+            background: linear-gradient(0deg, rgba(127, 5, 148, 1) 0%, rgba(165, 13, 194, 1) 100%);
             color: #fff;
             box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
         }
@@ -258,11 +258,10 @@
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex justify-cntent-center align-items-center">
         <div id="heroCarousel" class="container carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
-
             <!-- Slide 1 -->
             <div class="carousel-item active">
                 <div class="">
-                    <div class="row">
+                    <div class="row" data-aos="fade-up">
                         <div class="col-lg-6 text-start">
                             <div class="text-slide">
                                 <h2 class="animate__animated animate__fadeInDown">Nettoyant Sol</h2>
@@ -272,8 +271,27 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="img-slide">
-                                <img src="{{ asset('assets/img/slide/product1.png') }}" class="d-block m-auto w-100px"
-                                    alt="...">
+                                <img src="{{ asset('assets/img/slide/product1.png') }}"
+                                    class="d-block m-auto w-100px animate__animated animate__fadeInRight" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="">
+                    <div class="row" data-aos="fade-up">
+                        <div class="col-lg-6 text-start">
+                            <div class="text-slide">
+                                <h2 class="animate__animated animate__fadeInDown">Nettoyant Sol</h2>
+                                <h3 class="animate__animated animate__fadeInUp text-white">Brillance & propreté</h3>
+                                <a href="" class="btn-get-started animate__animated animate__fadeInUp">Lire plus</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="img-slide">
+                                <img src="{{ asset('assets/img/slide/product7.png') }}"
+                                    class="d-block m-auto w-100px animate__animated animate__fadeInRight" alt="...">
                             </div>
                         </div>
                     </div>
@@ -297,7 +315,7 @@
             <nav id="navbar" class="navbar">
                 <ul>
                     {{-- <li><a class="nav-link scrollto active" href="#hero">Home</a></li> --}}
-                    <li><a class="nav-link scrollto" href="#about">Qui sommes-nous</a></li>
+                    <li><a class="nav-link scrollto" href="{{ url('/qui-sommes-nous') }}">Qui sommes-nous</a></li>
                     <li><a class="nav-link scrollto" href="#about">Produits</a></li>
                     <li><a class="nav-link scrollto" href="#services">Nos atouts</a></li>
                     <li>
@@ -336,7 +354,7 @@
     </div>
 
     <!-- End navbar -->
-    <main id="main">
+    <main id="main" class="bg-home">
         <!-- ======= About Section ======= -->
         <section id="about" class="about">
             <div class="container" data-aos="fade-up">
@@ -515,14 +533,14 @@
                                         </div>
                                         <div class="d-flex align-items-center mb-2">
                                             <i class="bi bi-check2"></i>
-                                            <h4>À Adapter notre organisation en tenant compte des besoins de nos clients.</h4>
+                                            <h4>À Adapter notre organisation en tenant compte des besoins de nos clients.
+                                            </h4>
                                         </div>
                                         <div class="d-flex align-items-center mb-2">
                                             <i class="bi bi-check2"></i>
                                             <h4>Faire évoluer nos prestations.</h4>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
@@ -534,7 +552,6 @@
 
             </section>
 
-
-
-
-        @endsection
+        </div>
+    </main>
+@endsection

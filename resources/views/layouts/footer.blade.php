@@ -25,7 +25,7 @@
                      <h4>Les pages</h4>
                      <ul>
                          <li>
-                             <i class="bi bi-chevron-right"></i> <a href="#">Qui sommes-nous</a>
+                             <i class="bi bi-chevron-right"></i> <a href="{{ url('/qui-soummes-nous') }}">Qui sommes-nous</a>
                          </li>
                          <li>
                              <i class="bi bi-chevron-right"></i> <a href="#">Produits</a>
