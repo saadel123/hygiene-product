@@ -18,8 +18,8 @@
         }
 
         /*--------------------------------------------------------------
-                                            # qui-sommes-nous
-                                            --------------------------------------------------------------*/
+                                                                                                                                                                # qui-sommes-nous
+                                                                                                                                                                --------------------------------------------------------------*/
         .qui-sommes-nous .content {
             padding: 40px;
         }
@@ -76,6 +76,74 @@
 
         .services .service-box.blue span {
             color: #114e95;
+        }
+
+        .shape-integrite {
+            position: relative;
+            overflow: hidden;
+            padding: 80px;
+        }
+
+        .shape-integrite:after {
+            content: '';
+            position: absolute;
+            width: 370px;
+            height: 100%;
+            background: #fbbc19;
+            top: 0;
+            right: 0;
+            z-index: -1;
+            /* change value as required */
+            left: -20%;
+        }
+
+        .shape-pro {
+            position: relative;
+            overflow: hidden;
+            padding: 80px;
+        }
+
+        .shape-pro:after {
+            content: '';
+            position: absolute;
+            width: 304px;
+            height: 65%;
+            background: #fbbc19;
+            bottom: 45px;
+            right: 0;
+            z-index: -1;
+        }
+
+        h3 {
+            margin: 0px 0 10px 0px;
+            font-size: 34px;
+            line-height: 42px;
+            font-weight: 700;
+            color: #305095;
+        }
+
+
+
+
+        @media (min-width: 1199px) {
+            .img-confiance {
+                max-height: 660px !important;
+                margin-left: 120px;
+                object-fit: cover !important;
+                object-position: center center !important;
+            }
+
+            .text-confiance {
+                padding: 24px 28px;
+                text-align: start;
+                position: relative;
+                width: 43%;
+                background: #fff;
+                bottom: 300px;
+                z-index: 1;
+                float: right;
+            }
+
         }
     </style>
 @endsection
@@ -266,11 +334,70 @@
             <div class="container" data-aos="fade-up">
                 <div class="row">
                     <div class="col-lg-6">
-                        <h1>Tets</h1>
+                        <div class="col-md-12 aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+                            <h3>Intégrité</h3>
+                            <p>
+                                Nous essayons toujours de faire ce qui est juste.
+                                Nous sommes honnêtes et francs les uns avec les autres.
+                                Nous respectons nos valeurs dans chaque action et décision que nous prenons.
+                                Nous partons toujours des données et nous faisons preuve d’honnêteté intellectuelle dans la
+                                défense des propositions, y compris la reconnaissance des risques.
+                            </p>
+                        </div>
+                        <div class="col-md-12">
+                            <img src="{{ asset('assets/img/about/integrite1.jpg') }}" class="img-fluid" alt=""
+                                style="float: right;
+                            max-height: 270px;
+                            margin-top: 80px;">
+                        </div>
                     </div>
                     <div class="col-lg-6">
-                        <h1>Tets</h1>
-
+                        <div class="shape-integrite">
+                            <img src="{{ asset('assets/img/about/integrite2.jpg') }}" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                    <div class="row aos-init aos-animate pt-5" data-aos="fade-up">
+                        <div class="col-lg-6">
+                            <div class="shape-pro">
+                                <img src="{{ asset('assets/img/about/professionnalisme1.jpg') }}" class="img-fluid"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="col-md-12 aos-init aos-animate" data-aos="fade-up" data-aos-delay="300"
+                                style="margin-top: 9rem">
+                                <h3>Professionnalisme</h3>
+                                <p>
+                                    Nous exerçons nos métiers avec l'ambition de progresser et d'accroître durablement nos
+                                    compétences. Ceci implique un effort de formation permanent et une recherche de progrès
+                                    constants en qualifications, certifications et démarche qualité.
+                                </p>
+                            </div>
+                            <div class="col-md-12">
+                                <img src="{{ asset('assets/img/about/professionnalisme2.jpg') }}"
+                                    style="max-height: 190px;" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row aos-init aos-animate pt-5" data-aos="fade-up">
+                        <div class="col-xl-12 col-md-12 d-flex aos-init aos-animate" data-aos="zoom-in"
+                            data-aos-delay="200">
+                            <div class="team-member">
+                                <div class="member-img">
+                                    <img src="{{ asset('assets/img/about/confiance.jpg') }}" class="img-confiance"
+                                        alt="">
+                                </div>
+                                <div class="text-confiance">
+                                    <h3>Confiance</h3>
+                                    <p>
+                                        Nous développons avec nos clients des relations basées sur la confiance. Confiance
+                                        dans notre capacité à tenir nos engagements. La gestion rigoureuse et la stabilité
+                                        de notre entreprise familiale sont des gages qui nous permettent de construire avec
+                                        nos clients une relation basée sur la durée.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

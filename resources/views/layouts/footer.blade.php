@@ -4,7 +4,7 @@
          <div class="container">
              <div class="row gy-4">
                  <div class="col-lg-3 col-md-12 footer-info d-flex justify-content-center align-self-center">
-                     <a href="index.html" class="logo">
+                     <a href="/" class="logo">
                          <img src="{{ asset('assets/img/logo-footer.png') }}" alt="" />
                          {{-- <span>FlexStart</span> --}}
                      </a>

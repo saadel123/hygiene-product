@@ -309,7 +309,7 @@
     <!-- ======= navbar ======= -->
     <div class="pb-4">
         <div class="container-fluid container-xl d-flex align-items-center justify-content-center">
-            <a href="index.html" class="logo d-flex align-items-center">
+            <a href="/" class="logo d-flex align-items-center">
                 <img src="assets/img/icone-accueil.png" alt="" />
             </a>
             <nav id="navbar" class="navbar">
