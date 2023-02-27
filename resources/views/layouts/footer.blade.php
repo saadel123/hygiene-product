@@ -25,7 +25,7 @@
                      <h4>Les pages</h4>
                      <ul>
                          <li>
-                             <i class="bi bi-chevron-right"></i> <a href="{{ url('/qui-soummes-nous') }}">Qui sommes-nous</a>
+                             <i class="bi bi-chevron-right"></i> <a href="{{ url('/qui-sommes-nous') }}">Qui sommes-nous</a>
                          </li>
                          <li>
                              <i class="bi bi-chevron-right"></i> <a href="#">Produits</a>
@@ -43,7 +43,7 @@
                          </li>
                          <li>
                              <i class="bi bi-chevron-right"></i>
-                             <a href="#">Contactez-nous</a>
+                             <a href="{{url('/contactez-nous')}}">Contactez-nous</a>
                          </li>
                      </ul>
                  </div>
@@ -59,7 +59,7 @@
                  </div>
 
                  <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-                     <h4>Contact Us</h4>
+                     <h4>Map</h4>
                      <div>
                          <iframe
                              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.276279283151!2d-7.649082884484539!3d33.57217525032214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d322193f9f61%3A0x7ea999c2e7a9240!2sDirect%20Invest!5e0!3m2!1sen!2sma!4v1676473490487!5m2!1sen!2sma"

@@ -4,6 +4,10 @@
 
 @section('stylesheet')
     <style>
+        .header {
+            position: absolute !important;
+        }
+
         #main {
             background: #e6e6ff;
         }
@@ -17,7 +21,7 @@
         }
 
         .bg-about {
-            background: url('assets/img/element-rana.png');
+            background: url('assets/img/elements/element-rana.png');
             background-position: right;
             min-height: 366px;
             background-repeat: no-repeat;
@@ -130,7 +134,7 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="form-inline mx-auto" style="padding-right: 40px;">
-                                <a class="brand" href="#">
+                                <a class="brand" href="/">
                                     <img src="{{ asset('assets/img/logo-rana.png') }}" height="100" alt="Rana Logo"
                                         loading="lazy" class="mt-4" />
                                 </a>
@@ -266,7 +270,7 @@
                             <div class="text-slide">
                                 <h2 class="animate__animated animate__fadeInDown">Nettoyant Sol</h2>
                                 <h3 class="animate__animated animate__fadeInUp text-white">Brillance & propreté</h3>
-                                <a href="" class="btn-get-started animate__animated animate__fadeInUp">Lire plus</a>
+                                <a href="{{ url('/details-produit') }}" class="btn-get-started animate__animated animate__fadeInUp">Lire plus</a>
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -285,7 +289,7 @@
                             <div class="text-slide">
                                 <h2 class="animate__animated animate__fadeInDown">Nettoyant Sol</h2>
                                 <h3 class="animate__animated animate__fadeInUp text-white">Brillance & propreté</h3>
-                                <a href="" class="btn-get-started animate__animated animate__fadeInUp">Lire plus</a>
+                                <a href="{{ url('/details-produit') }}" class="btn-get-started animate__animated animate__fadeInUp">Lire plus</a>
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -384,7 +388,7 @@
                                     <div class="" data-aos="zoom-out" data-aos-delay="200">
                                         {{-- <img src="assets/img/about.jpg" class="img-fluid" alt="" /> --}}
                                         <div class="text-center text-lg-center" style="margin-top: 155px;">
-                                            <a href="#"
+                                            <a href="{{ url('/qui-sommes-nous') }}"
                                                 class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
                                                 <span>Lire plus</span>
                                                 <i class="bi bi-arrow-right"></i>
@@ -403,7 +407,7 @@
             </div>
         </section>
         <!-- End About Section -->
-        <!-- ======= Pricing Section ======= -->
+        <!-- ======= Products Section ======= -->
         <section id="pricing" class="products">
             <div class="container" data-aos="fade-up">
                 <header class="section-header">
@@ -416,7 +420,7 @@
                         <div class="box">
                             <img src="{{ asset('assets/img/products/7.png') }}" class="img-fluid" alt="" />
                             <h3>Netoyant Sol</h3>
-                            <a href="#" class="btn-buy">Voir plus</a>
+                            <a href="{{ url('/details-produit') }}" class="btn-buy">Voir plus</a>
                         </div>
                     </div>
 
@@ -424,7 +428,7 @@
                         <div class="box">
                             <img src="{{ asset('assets/img/products/26.png') }}" class="img-fluid" alt="" />
                             <h3>Netoyant Sol</h3>
-                            <a href="#" class="btn-buy">Voir plus</a>
+                            <a href="{{ url('/details-produit') }}" class="btn-buy">Voir plus</a>
                         </div>
                     </div>
 
@@ -432,7 +436,7 @@
                         <div class="box">
                             <img src="{{ asset('assets/img/products/2.png') }}" class="img-fluid" alt="" />
                             <h3>Netoyant Sol</h3>
-                            <a href="#" class="btn-buy">Voir plus</a>
+                            <a href="{{ url('/details-produit') }}" class="btn-buy">Voir plus</a>
                         </div>
                     </div>
 
@@ -440,7 +444,7 @@
                         <div class="box">
                             <img src="{{ asset('assets/img/products/6.png') }}" class="img-fluid" alt="" />
                             <h3>Netoyant Sol</h3>
-                            <a href="#" class="btn-buy">Voir plus</a>
+                            <a href="{{ url('/details-produit') }}" class="btn-buy">Voir plus</a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
@@ -448,7 +452,7 @@
                             {{-- <div class="price"><sup>$</sup>0<span> / mo</span></div> --}}
                             <img src="{{ asset('assets/img/products/12.png') }}" class="img-fluid" alt="" />
                             <h3>Netoyant Sol</h3>
-                            <a href="#" class="btn-buy">Voir plus</a>
+                            <a href="{{ url('/details-produit') }}" class="btn-buy">Voir plus</a>
                         </div>
                     </div>
 
@@ -456,7 +460,7 @@
                         <div class="box">
                             <img src="{{ asset('assets/img/products/35.png') }}" class="img-fluid" alt="" />
                             <h3>Netoyant Sol</h3>
-                            <a href="#" class="btn-buy">Voir plus</a>
+                            <a href="{{ url('/details-produit') }}" class="btn-buy">Voir plus</a>
                         </div>
                     </div>
 
@@ -464,7 +468,7 @@
                         <div class="box">
                             <img src="{{ asset('assets/img/products/25.png') }}" class="img-fluid" alt="" />
                             <h3>Netoyant Sol</h3>
-                            <a href="#" class="btn-buy">Voir plus</a>
+                            <a href="{{ url('/details-produit') }}" class="btn-buy">Voir plus</a>
                         </div>
                     </div>
 
@@ -472,13 +476,13 @@
                         <div class="box">
                             <img src="{{ asset('assets/img/products/16.png') }}" class="img-fluid" alt="" />
                             <h3>Netoyant Sol</h3>
-                            <a href="#" class="btn-buy">Voir plus</a>
+                            <a href="{{ url('/details-produit') }}" class="btn-buy">Voir plus</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- End Pricing Section -->
+        <!-- End Products Section -->
         <!-- ======= Values Section ======= -->
         <section id="values" class="values">
             <div class="container" data-aos="fade-up">

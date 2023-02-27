@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +22,16 @@ Route::get('/qui-sommes-nous', function () {
     return view('main.qui-sommes-nous');
 });
 
+
+Route::get('/details-produit', function () {
+    return view('main.details-produit');
+});
+
+Route::get('/contactez-nous', function () {
+    return view('main.contact');
+});
+
+Route::resource('contact', ContactController::class);
 
 
 Route::group(['prefix' => 'admin'], function () {

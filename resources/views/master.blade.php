@@ -53,13 +53,11 @@
 </head>
 
 <body>
-    {{-- @if (request()->is('login'))
-        @yield('content')
-    @else
-        @include('site.layouts.header') --}}
+    @if (!request()->is('/'))
+        @include('layouts.header')
+    @endif
 
     @yield('content')
-
     @include('layouts.footer')
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>

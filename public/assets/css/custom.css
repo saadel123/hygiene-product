@@ -23,8 +23,18 @@
             }
         }
 
+
         .header {
-            position: absolute !important;
+            position: unset !important;
+            margin-top: -1px !important;
+            padding: 20px 0;
+        }
+
+        .header-top {
+            background: white url('../img/header-img.jpg') no-repeat right top;
+            background-size: cover;
+            padding: 10px 0 90px 0;
+
         }
 
         @media (min-width: 1024px) {
