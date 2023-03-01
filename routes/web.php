@@ -27,6 +27,10 @@ Route::get('/details-produit', function () {
     return view('main.details-produit');
 });
 
+Route::get('/qualite', function () {
+    return view('main.qualite');
+});
+
 Route::get('/contactez-nous', function () {
     return view('main.contact');
 });
