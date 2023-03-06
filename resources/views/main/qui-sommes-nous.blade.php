@@ -4,11 +4,9 @@
 @section('description', 'TEST')
 @section('stylesheet')
     <style>
-
-
         /*--------------------------------------------------------------
-                                                                                                                                                                    # qui-sommes-nous
-                                                                                                                                                                    --------------------------------------------------------------*/
+                                                                                                                                                                                                # qui-sommes-nous
+                                                                                                                                                                                                --------------------------------------------------------------*/
         .qui-sommes-nous .content {
             padding: 40px;
         }
@@ -143,8 +141,7 @@
         <section class="qui-sommes-nous">
             <div class="container" data-aos="fade-up">
                 <div class="row gx-0">
-                    <div class="col-lg-12 d-flex flex-column justify-content-center" data-aos="fade-up"
-                        data-aos-delay="200">
+                    <div class="col-lg-12 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
                         <div class="content">
                             <div class="row">
                                 <div class="col-lg-8">
@@ -152,23 +149,13 @@
                                         Qui sommes-nous
                                     </h2>
                                     <p>
-                                        Quisquam vel ut sint cum eos hic dolores aperiam. Sed deserunt
-                                        et. Inventore et et dolor consequatur itaque ut voluptate sed
-                                        et. Magnam nam ipsum tenetur suscipit voluptatum nam et est
-                                        corrupti. <br>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, nisi adipisci!
-                                        Debitis nulla eaque quod maiores ut veritatis dicta doloremque quos culpa eum
-                                        cumque, repudiandae in, voluptas accusamus minima temporibus?<br>
-                                        Quisquam vel ut sint cum eos hic dolores aperiam. Sed deserunt
-                                        et. Inventore et et dolor consequatur itaque ut voluptate sed
-                                        et. Magnam nam ipsum tenetur suscipit voluptatum nam et est
-                                        corrupti. <br>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, nisi adipisci!
-                                        Debitis nulla eaque quod maiores ut veritatis dicta doloremque quos culpa eum
-                                        cumque, repudiandae in, voluptas accusamus minima temporibus?<br>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, rem. Nemo
-                                        tenetur ipsum officiis obcaecati, qui explicabo voluptatem doloremque, aspernatur
-                                        nihil veniam ad quo omnis sapiente a. Sequi, dolore laborum....
+                                        Rana Industrie est une entreprise marocaine spécialisée dans les produits de grande
+                                        consommation. <br>
+                                        Rana Industrie opère dans les secteurs de l’hygiène : la formulation, la conception,
+                                        la production et la commercialisation des produits d’hygiène domestique. <br>
+                                        Rana Industrie dispose d’une unité de production à Casablanca et distribue ses
+                                        produits sur l’ensemble du territoire national et à l’export.
+
                                     </p>
                                 </div>
                                 <div class="col-lg-4 bg-about">
@@ -197,8 +184,8 @@
                                 <span>Notre mission</span>
                             </div>
                             <p>
-                                Ut autem aut autem non a. Sint sint sit facilis nam iusto
-                                sint. Libero corrupti neque eum hic non ut nesciunt dolorem.
+                                Nous mettons en commun nos énergies pour fournir à nos clients des produits et services de
+                                qualité et de valeur supérieure insufflant de l’aisance dans leur vie de tous les jours.
                             </p>
                         </div>
                     </div>
@@ -210,8 +197,8 @@
                                 <span>Notre vision</span>
                             </div>
                             <p>
-                                Ut excepturi voluptatem nisi sed. Quidem fuga consequatur.
-                                Minus ea aut. Vel qui id voluptas adipisci eos earum corrupti.
+                                Notre entreprise vise à contribuer au développement économique du pays et à renforcer la
+                                position de l’industrie marocaine sur le marché national et international.
                             </p>
                         </div>
                     </div>
@@ -223,9 +210,8 @@
                                 <span>Nos valeur</span>
                             </div>
                             <p>
-                                Provident nihil minus qui consequatur non omnis maiores. Eos
-                                accusantium minus dolores iure perferendis tempore et
-                                consequatur.
+                                Nos valeurs reflètent les comportements qui donnent le ton de nos interactions entre
+                                collaborateurs, avec nos clients et avec nos partenaires.
                             </p>
                         </div>
                     </div>
@@ -241,11 +227,8 @@
                         <div class="col-md-12 aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
                             <h3>Intégrité</h3>
                             <p>
-                                Nous essayons toujours de faire ce qui est juste.
-                                Nous sommes honnêtes et francs les uns avec les autres.
-                                Nous respectons nos valeurs dans chaque action et décision que nous prenons.
-                                Nous partons toujours des données et nous faisons preuve d’honnêteté intellectuelle dans la
-                                défense des propositions, y compris la reconnaissance des risques.
+                                Nos valeurs reflètent les comportements qui donnent le ton de nos interactions entre
+                                collaborateurs, avec nos clients et avec nos partenaires.
                             </p>
                         </div>
                         <div class="col-md-12">
@@ -273,13 +256,13 @@
                                 <h3>Professionnalisme</h3>
                                 <p>
                                     Nous exerçons nos métiers avec l'ambition de progresser et d'accroître durablement nos
-                                    compétences. Ceci implique un effort de formation permanent et une recherche de progrès
-                                    constants en qualifications, certifications et démarche qualité.
+                                    compétences. Ceci implique un effort de formation permanent et une recherche constante
+                                    de progrès en qualifications, certifications et démarche qualité.
                                 </p>
                             </div>
                             <div class="col-md-12">
-                                <img src="{{ asset('assets/img/about/professionnalisme2.jpg') }}"
-                                    style="max-height: 190px;" class="img-fluid" alt="">
+                                <img src="{{ asset('assets/img/about/professionnalisme2.jpg') }}" style="max-height: 190px;"
+                                    class="img-fluid" alt="">
                             </div>
                         </div>
                     </div>
@@ -294,10 +277,10 @@
                                 <div class="text-confiance">
                                     <h3>Confiance</h3>
                                     <p>
-                                        Nous développons avec nos clients des relations basées sur la confiance. Confiance
-                                        dans notre capacité à tenir nos engagements. La gestion rigoureuse et la stabilité
-                                        de notre entreprise familiale sont des gages qui nous permettent de construire avec
-                                        nos clients une relation basée sur la durée.
+                                        Nous établissons des relations de confiance avec nos clients en démontrant notre
+                                        capacité à respecter nos engagements. Grâce à notre gestion rigoureuse et à la
+                                        stabilité de notre entreprise, nous sommes en mesure de bâtir des relations durables
+                                        avec nos clients, fondées sur la confiance.
                                     </p>
                                 </div>
                             </div>

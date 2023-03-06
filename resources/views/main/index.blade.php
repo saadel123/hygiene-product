@@ -270,7 +270,8 @@
                             <div class="text-slide">
                                 <h2 class="animate__animated animate__fadeInDown">Nettoyant Sol</h2>
                                 <h3 class="animate__animated animate__fadeInUp text-white">Brillance & propreté</h3>
-                                <a href="{{ url('/details-produit') }}" class="btn-get-started animate__animated animate__fadeInUp">Lire plus</a>
+                                <a href="{{ url('/details-produit') }}"
+                                    class="btn-get-started animate__animated animate__fadeInUp">Lire plus</a>
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -289,7 +290,8 @@
                             <div class="text-slide">
                                 <h2 class="animate__animated animate__fadeInDown">Nettoyant Sol</h2>
                                 <h3 class="animate__animated animate__fadeInUp text-white">Brillance & propreté</h3>
-                                <a href="{{ url('/details-produit') }}" class="btn-get-started animate__animated animate__fadeInUp">Lire plus</a>
+                                <a href="{{ url('/details-produit') }}"
+                                    class="btn-get-started animate__animated animate__fadeInUp">Lire plus</a>
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -371,17 +373,13 @@
                                     <h2>
                                         Qui sommes-nous
                                     </h2>
-                                    <p>
-                                        Quisquam vel ut sint cum eos hic dolores aperiam. Sed deserunt
-                                        et. Inventore et et dolor consequatur itaque ut voluptate sed
-                                        et. Magnam nam ipsum tenetur suscipit voluptatum nam et est
-                                        corrupti. <br>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, nisi adipisci!
-                                        Debitis nulla eaque quod maiores ut veritatis dicta doloremque quos culpa eum
-                                        cumque, repudiandae in, voluptas accusamus minima temporibus?<br>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, rem. Nemo
-                                        tenetur ipsum officiis obcaecati, qui explicabo voluptatem doloremque, aspernatur
-                                        nihil veniam ad quo omnis sapiente a. Sequi, dolore laborum....
+                                    <p style="max-width: 629px">
+                                        Rana Industrie est une entreprise marocaine spécialisée dans les produits de grande
+                                        consommation. <br><br>
+                                        Rana Industrie opère dans les secteurs de l’hygiène : la formulation, la conception,
+                                        la production et la commercialisation des produits d’hygiène domestique. <br><br>
+                                        Rana Industrie dispose d’une unité de production à Casablanca et distribue ses
+                                        produits sur l’ensemble du territoire national et à l’export.
                                     </p>
                                 </div>
                                 <div class="col-lg-4 bg-about">
@@ -522,11 +520,12 @@
                                     <div class="tab-pane fade show active" id="tab1">
                                         <p>
                                             La satisfaction de nos clients constitue notre objectif premier ! <br>
-                                            Nous responsabilisons et formons nos collaborateurs à donner entière <br>
+                                            Nous responsabilisons et formons nos collaborateurs à donner une entière
                                             satisfaction à nos clients et à leur proposer des produits et services de
                                             qualité. <br>
-                                            Nous sommes constamment à l’écoute des attentes de nos clients afin de répondre
-                                            conformément à leur demande. <br>
+                                            Nous responsabilisons et formons nos collaborateurs à donner une entière
+                                            satisfaction à nos clients et à leur proposer des produits et services de
+                                            qualité. <br>
                                         </p>
                                         <h4>Nous nous engageons :</h4> <br>
                                         <div class="d-flex align-items-center mb-2">
@@ -537,12 +536,12 @@
                                         </div>
                                         <div class="d-flex align-items-center mb-2">
                                             <i class="bi bi-check2"></i>
-                                            <h4>À Adapter notre organisation en tenant compte des besoins de nos clients.
+                                            <h4>Au respect des délais, des coûts et de la conformité de la demande.
                                             </h4>
                                         </div>
                                         <div class="d-flex align-items-center mb-2">
                                             <i class="bi bi-check2"></i>
-                                            <h4>Faire évoluer nos prestations.</h4>
+                                            <h4>À faire évoluer nos prestations.</h4>
                                         </div>
                                     </div>
                                 </div>

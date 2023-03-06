@@ -93,12 +93,10 @@
                     <div class="col-md-10">
                         <h1>Qualité</h1>
                         <p>
-                            Nous veillons à mener différents tests et études afin de vous garantir une qualité de produits
-                            et de services irréprochables. <br> <br>
-                            Tous les produits que nous fabriquons répondent aux normes de qualité et de sécurité et à toutes
-                            les réglementations en vigueur. <br> <br>
-                            Tous les produits fabriqués au sein de nos usines sont certifiés conformes à la norme marocaine
-                            IMANOR.
+                            Nous veillons à mener les différents tests et études afin de vous garantir une qualité de
+                            produits et de services irréprochables. <br> <br>
+                            Tous les produits fabriqués au sein de nos usines répondent aux normes de qualité et de sécurité
+                            internationales.
                         </p>
                     </div>
                 </div>
@@ -118,15 +116,14 @@
                             <h3>Satisfaction des clients</h3>
                             <p>
                                 La satisfaction de nos clients constitue notre objectif premier ! <br> <br>
-                                Nous responsabilisons et formons nos collaborateurs à donner entière satisfaction à nos
+                                Nous responsabilisons et formons nos collaborateurs à donner une entière satisfaction à nos
                                 clients et à leur proposer des produits et services de qualité. <br> <br>
-                                Nous sommes constamment à l’écoute des attentes de nos clients afin de répondre conformément
-                                à leur demande. <br> <br>
+                                Nous sommes constamment à l’écoute des attentes de nos clients afin de répondre au mieux à
+                                leurs besoins. <br> <br>
                                 Nous nous engageons : <br> <br>
                                 Au respect des délais, des coûts et de la conformité de la demande. <br> <br>
-                                À Adapter notre organisation en tenant compte des besoins de nos clients. <br> <br>
-                                Faire évoluer nos prestations.
-
+                                À adapter notre organisation en tenant compte des besoins de nos clients. <br> <br>
+                                À faire évoluer nos prestations.
                             </p>
                         </div>
                     </div>

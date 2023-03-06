@@ -18,6 +18,11 @@ Route::get('/', function () {
     return view('main.index');
 });
 
+Route::get('/produits', function () {
+    return view('products.produits');
+});
+
+
 Route::get('/qui-sommes-nous', function () {
     return view('main.qui-sommes-nous');
 });
