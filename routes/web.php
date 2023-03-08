@@ -32,8 +32,8 @@ Route::get('/details-produit', function () {
     return view('main.details-produit');
 });
 
-Route::get('/qualite', function () {
-    return view('main.qualite');
+Route::get('/nos_atouts', function () {
+    return view('main.nos-atouts');
 });
 
 Route::get('/contactez-nous', function () {

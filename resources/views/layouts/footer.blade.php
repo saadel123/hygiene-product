@@ -28,10 +28,10 @@
                              <i class="bi bi-chevron-right"></i> <a href="{{ url('/qui-sommes-nous') }}">Qui sommes-nous</a>
                          </li>
                          <li>
-                             <i class="bi bi-chevron-right"></i> <a href="#">Produits</a>
+                             <i class="bi bi-chevron-right"></i> <a href="{{ url('/produits') }}">Produits</a>
                          </li>
                          <li>
-                             <i class="bi bi-chevron-right"></i> <a href="#">Nos atouts</a>
+                             <i class="bi bi-chevron-right"></i> <a href="{{ url('/nos_atouts') }}">Nos atouts</a>
                          </li>
                          <li>
                              <i class="bi bi-chevron-right"></i>

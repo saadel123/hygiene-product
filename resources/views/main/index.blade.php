@@ -68,7 +68,7 @@
         }
 
         .text-slide {
-            margin: 200px 0px 0px 100px;
+            margin: 135px 0px 0px 100px;
         }
 
         #mynavbar {
@@ -322,8 +322,8 @@
                 <ul>
                     {{-- <li><a class="nav-link scrollto active" href="#hero">Home</a></li> --}}
                     <li><a class="nav-link scrollto" href="{{ url('/qui-sommes-nous') }}">Qui sommes-nous</a></li>
-                    <li><a class="nav-link scrollto" href="#about">Produits</a></li>
-                    <li><a class="nav-link scrollto" href="#services">Nos atouts</a></li>
+                    <li><a class="nav-link scrollto" href="{{ url('/produits') }}">Produits</a></li>
+                    <li><a class="nav-link scrollto" href="{{ url('/nos_atouts') }}">Nos atouts</a></li>
                     <li>
                         <a class="nav-link scrollto" href="#portfolio">Distribution</a>
                     </li>

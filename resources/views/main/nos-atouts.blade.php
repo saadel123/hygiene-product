@@ -57,31 +57,58 @@
             font-size: 19px;
         }
 
-        .environnement .bg-environnement {
-            padding: 35px 0px 20px 65px;
-            border-radius: 60px 0px 60px 0px;
-            margin-left: 100px;
-            margin-right: -35px;
-            background: #07b228;
+        /* .environnement .bg-environnement {
+                                padding: 35px 0px 20px 65px;
+                                border-radius: 60px 0px 60px 0px;
+                                margin-left: 100px;
+                                margin-right: -35px;
+                                background: #07b228;
+                            }
+
+                            @media (max-width: 1000px) {
+                                .environnement p {
+                                    max-width: 555px !important;
+                                }
+                            }
+
+                            .environnement p {
+                                margin: 15px 0 30px 0;
+                                line-height: 26px;
+                                max-width: 637px;
+                                font-size: 21px;
+                                color: #000;
+                            }
+
+                            .environnement h3 {
+                                color: white;
+                                font-weight: 600;
+                            } */
+        .disponibilite .content {
+            background-color: #305095;
+            padding: 50px;
         }
 
-        @media (max-width: 1000px) {
-            .environnement p {
-                max-width: 555px !important;
+        .disponibilite h3 {
+            margin: 0px 0 21px 0px;
+            font-size: 34px;
+            line-height: 42px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .disponibilite p {
+            font-size: 20px;
+            color: #fff;
+        }
+
+        .disponibilite img {
+            max-width: 300px
+        }
+
+        @media (min-width: 1024px) {
+            .disponibilite .col-lg-12 {
+                padding: 0 50px;
             }
-        }
-
-        .environnement p {
-            margin: 15px 0 30px 0;
-            line-height: 26px;
-            max-width: 637px;
-            font-size: 21px;
-            color: #000;
-        }
-
-        .environnement h3 {
-            color: white;
-            font-weight: 600;
         }
     </style>
 @endsection
@@ -130,7 +157,35 @@
                 </div>
             </div>
         </section>
-        <section class="environnement">
+        <section class="disponibilite">
+            <div class="container" data-aos="fade-up">
+                <div class="col-lg-12 d-flex flex-column" data-aos="fade-up" data-aos-delay="200">
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-lg-9">
+                                <h3>
+                                    Disponibilité & réactivité
+                                </h3>
+                                <p>
+                                    Nous sommes à l’écoute de nos clients, tous les jours de la semaine de 09 à 17
+                                    heures. <br> <br>
+                                    Nous entretenons des relations de proximité avec tous les intervenants au niveau de
+                                    notre chaine de distribution : distributeurs, grossistes, détaillants. <br> <br>
+                                    Nous sommes attentifs au retour et aux commentaires des consommateurs par rapport à
+                                    nos produits. <br> <br>
+                                    N’hésitez pas à nous contacter.
+                                </p>
+                            </div>
+                            <div class="col-lg-3">
+                                <img src="{{ asset('assets/img/satisfaction/disponibilite.png') }}" class=""
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {{-- <section class="environnement">
             <div class="container" data-aos="fade-up">
                 <div class="row">
                     <div class="col-lg-9 mt-5" style="margin-right: -130px;">
@@ -154,6 +209,6 @@
                 </div>
             </div>
             </div>
-        </section>
+        </section> --}}
     </main>
 @endsection
