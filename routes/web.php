@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,9 +20,10 @@ Route::get('/', function () {
     return view('main.index');
 });
 
-Route::get('/produits', function () {
-    return view('products.produits');
-});
+Route::resource('categories', CategoryController::class);
+Route::resource('produits', ProductController::class);
+Route::get('/produits/{category}/{slug}', [ProductController::class, 'showProduct']);
+
 
 
 Route::get('/qui-sommes-nous', function () {
@@ -28,9 +31,9 @@ Route::get('/qui-sommes-nous', function () {
 });
 
 
-Route::get('/details-produit', function () {
-    return view('main.details-produit');
-});
+// Route::get('/details-produit', function () {
+//     return view('main.details-produit');
+// });
 
 Route::get('/nos_atouts', function () {
     return view('main.nos-atouts');

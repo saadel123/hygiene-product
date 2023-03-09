@@ -8,6 +8,4 @@
 
 @section('content')
     @include('products.categories-list')
-    @include('products.produits-list')
-
 @endsection
