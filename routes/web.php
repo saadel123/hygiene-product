@@ -21,6 +21,10 @@ Route::get('/', function () {
     return view('main.index');
 });
 
+Route::get('/blog', function () {
+    return view('blog.blogs');
+});
+
 Route::resource('categories', CategoryController::class);
 Route::resource('produits', ProductController::class);
 Route::get('/produits/{category}/{slug}', [ProductController::class, 'showProduct']);

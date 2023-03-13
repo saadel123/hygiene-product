@@ -8,6 +8,24 @@
             color: red;
             margin-left: 15px;
         }
+
+        .bg-distribution {
+            background: rgb(3, 157, 217);
+            background: radial-gradient(circle, rgba(3, 157, 217, 1) 0%, rgba(12, 81, 156, 1) 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-control {
+            border: 1px solid #a29191 !important;
+        }
+
+        .distribution .php-email-form {
+            background: unset !important;
+            /* padding: 30px;
+                height: 100%; */
+        }
     </style>
 @endsection
 @section('content')
@@ -30,18 +48,14 @@
             </div>
         </section>
         <!-- ======= Contact Section ======= -->
-        <section id="contact" class="contact">
-            <div class="container" data-aos="fade-up">
+        <section id="contact" class="contact distribution">
+            <div class="" data-aos="fade-up">
                 <div class="row gy-4">
-                    <div class="col-lg-6">
-                        <div class="row gy-4">
-                            <div class="col-md-6">
-                                <img src="{{ asset('assets/img/distribustion/distribustion-products.jpg') }}" class=""
-                                    style="max-height: 700px;" alt="distribution">
-                            </div>
-                        </div>
+                    <div class="col-lg-5 bg-distribution">
+                        <img src="{{ asset('assets/img/distribustion/distribustion-products.png') }}" class=""
+                            style="max-height: 700px;" alt="distribution">
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-5">
                         <form action="{{ route('contact.store') }}" method="post" class="php-email-form">
                             @include('partials.messages-alert')
                             @csrf
@@ -80,6 +94,8 @@
                                 </div>
                             </div>
                         </form>
+                    </div>
+                    <div class="col-lg-2">
                     </div>
                 </div>
             </div>
