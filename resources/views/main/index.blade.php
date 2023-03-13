@@ -325,7 +325,7 @@
                     <li><a class="nav-link scrollto" href="{{ url('/produits') }}">Produits</a></li>
                     <li><a class="nav-link scrollto" href="{{ url('/nos_atouts') }}">Nos atouts</a></li>
                     <li>
-                        <a class="nav-link scrollto" href="#portfolio">Distribution</a>
+                        <a class="nav-link scrollto" href="{{ url('/distribution') }}">Distribution</a>
                     </li>
                     <li><a class="nav-link scrollto" href="#team">Blog</a></li>
                     {{-- <li class="dropdown">
@@ -348,7 +348,7 @@
                         <li><a href="#">Drop Down 4</a></li>
                     </ul>
                 </li> --}}
-                    <li><a class="nav-link scrollto" href="#contact">Contactez-nous</a></li>
+                    <li><a class="nav-link scrollto" href="{{ url('/contactez-nous') }}">Contactez-nous</a></li>
                     {{-- <li>
                     <a class="getstarted scrollto" href="#about">Get Started</a>
                 </li> --}}

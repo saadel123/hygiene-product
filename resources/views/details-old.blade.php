@@ -131,42 +131,5 @@
             </div> <!-- row.// -->
         </div> <!-- container .// -->
     </section>
-    <section id="pricing" class="products">
-        <div class="container" data-aos="fade-up">
-            <div class="row gy-4" data-aos="fade-left">
-                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="box">
-                        <img src="{{ asset('assets/img/products/7.png') }}" class="img-fluid" alt="" />
-                        <h3>Netoyant Sol</h3>
-                        <a href="#" class="btn-buy">Voir plus</a>
-                    </div>
-                </div>
 
-                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="box">
-                        <img src="{{ asset('assets/img/products/26.png') }}" class="img-fluid" alt="" />
-                        <h3>Netoyant Sol</h3>
-                        <a href="#" class="btn-buy">Voir plus</a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="box">
-                        <img src="{{ asset('assets/img/products/2.png') }}" class="img-fluid" alt="" />
-                        <h3>Netoyant Sol</h3>
-                        <a href="#" class="btn-buy">Voir plus</a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="box">
-                        <img src="{{ asset('assets/img/products/6.png') }}" class="img-fluid" alt="" />
-                        <h3>Netoyant Sol</h3>
-                        <a href="#" class="btn-buy">Voir plus</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Products Section -->
 @endsection

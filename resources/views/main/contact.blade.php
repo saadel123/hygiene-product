@@ -4,10 +4,7 @@
 @section('description', 'TEST')
 @section('stylesheet')
     <style>
-        .contact span {
-            color: red;
-            margin-left: 15px;
-        }
+
     </style>
 @endsection
 @section('content')
@@ -18,7 +15,6 @@
                 <header class="section-header">
                     <h1>Contactez-nous</h1>
                 </header>
-
                 <div class="row gy-4">
                     {{-- <div class="col-lg-6">
                         <div class="row gy-4">
@@ -54,65 +50,19 @@
                     </div> --}}
                     <div class="col-lg-12">
                         <form action="{{ route('contact.store') }}" method="post" class="php-email-form">
-                            @include('layouts.messages-alert')
+                            @include('partials.messages-alert')
                             @csrf
                             <div class="row gy-4">
-                                <div class="col-md-6">
-                                    <input type="text" name="nom"
-                                        class="form-control {{ $errors->has('nom') ? 'is-invalid' : '' }}"
-                                        value="{{ old('nom') }}" placeholder="Nom*" required />
-                                    @error('nom')
-                                        <span>{{ $message }}</span>
-                                    @enderror
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="text" name="prenom"
-                                        class="form-control {{ $errors->has('prenom') ? 'is-invalid' : '' }}"
-                                        value="{{ old('prenom') }}" placeholder="Prénom*" required />
-                                    @error('prenom')
-                                        <span>{{ $message }}</span>
-                                    @enderror
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="number"
-                                        class="form-control {{ $errors->has('tele') ? 'is-invalid' : '' }}" name="tele"
-                                        value="{{ old('tele') }}" placeholder="Tél*" required />
-                                    @error('tele')
-                                        <span>{{ $message }}</span>
-                                    @enderror
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="email"
-                                        class="form-control {{ $errors->has('email') ? 'is-invalid' : '' }}" name="email"
-                                        value="{{ old('email') }}" placeholder="Email*" required />
-                                    @error('email')
-                                        <span>{{ $message }}</span>
-                                    @enderror
-                                </div>
+                                @include('partials.contact-form')
                                 <div class="col-md-12">
-                                    <input type="text"
-                                        class="form-control {{ $errors->has('adresse') ? 'is-invalid' : '' }}"
-                                        name="adresse" value="{{ old('adresse') }}" placeholder="Adresse" required />
-                                    @error('adresse')
-                                        <span>{{ $message }}</span>
-                                    @enderror
-                                </div>
-
-                                <div class="col-md-12">
-                                    <textarea class="form-control {{ $errors->has('message') ? 'is-invalid' : '' }}" name="message" rows="6"
-                                        placeholder="Message" required> {{ old('message') }}</textarea>
+                                    <label for="message" class="form-label">Message*</label>
+                                    <textarea class="form-control {{ $errors->has('message') ? 'is-invalid' : '' }}" name="message" id="message"
+                                        rows="6" required> {{ old('message') }}</textarea>
                                     @error('message')
                                         <span>{{ $message }}</span>
                                     @enderror
                                 </div>
-
                                 <div class="col-md-12 text-center">
-                                    {{-- <div class="loading">Loading</div>
-                                    <div class="error-message"></div>
-                                    <div class="sent-message">
-                                        Your message has been sent. Thank you!
-                                    </div> --}}
-
                                     <button type="submit">Send Message</button>
                                 </div>
                             </div>

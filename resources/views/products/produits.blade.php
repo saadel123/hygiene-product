@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
-    @include('products.categories-list')
-    @include('products.produits-list')
+    @include('partials.categories-list')
+    @include('partials.produits-list')
 
 @endsection

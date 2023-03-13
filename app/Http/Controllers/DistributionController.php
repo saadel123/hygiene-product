@@ -2,11 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
-use App\Product;
 use Illuminate\Http\Request;
 
-class ProductController extends Controller
+class DistributionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +13,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        // $categories = Category::latest()->paginate(6);
-        $categories = Category::all();
-        return view('products.categories')->with('categories', $categories);
+        //
+        return view('main.distribution');
     }
 
     /**
@@ -47,30 +44,9 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($slug)
+    public function show($id)
     {
-        // $category = Category::latest()
-        //     ->whereSlug($slug)
-        //     ->with('products')
-        //     ->get();
-        $category = Category::whereSlug($slug)->with('products')->firstOrFail();
-
-        return view('products.produits', ['category' => $category, 'categories' => Category::all()]);
-    }
-
-    public function showProduct($category = null, $slug = null)
-    {
-        $product = Product::whereSlug($slug)
-            ->firstOrFail();
-        // $relatedProducts = Product::latest()
-        //     ->whereCategoryId($product->category_id)
-        //     ->get();
-        $relatedProducts = $product->category->products()->where('id', '!=', $product->id)->get();
-
-        return view(
-            'products.details-produit',
-            ['product' => $product, 'categories' => Category::all(), 'relatedProducts' => $relatedProducts, 'name_cat' => $category]
-        );
+        //
     }
 
     /**

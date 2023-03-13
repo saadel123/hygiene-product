@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\DistributionController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
@@ -29,6 +30,8 @@ Route::get('/produits/{category}/{slug}', [ProductController::class, 'showProduc
 Route::get('/qui-sommes-nous', function () {
     return view('main.qui-sommes-nous');
 });
+Route::get('/distribution', [DistributionController::class, 'index']);
+
 
 
 // Route::get('/details-produit', function () {

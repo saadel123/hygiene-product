@@ -50,7 +50,7 @@
 @endsection
 
 @section('content')
-    @include('products.categories-list')
+    @include('partials.categories-list')
     <!-- ======= Products Section ======= -->
     <section class="padding-y bg-white product-detail">
         <div class="container" data-aos="fade-up">
@@ -107,7 +107,7 @@
                 @php
                     $i = 200;
                 @endphp
-                @foreach ($list_produits as $product)
+                @foreach ($relatedProducts as $product)
                     <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="{{ $i }}">
                         <div class="box">
                             <img src="{{ Voyager::image($product->image) }}" class="img-fluid"

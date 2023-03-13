@@ -1,3 +1,12 @@
+.contact span {
+    color: red;
+    margin-left: 15px;
+}
+
+.contact label {
+    margin-left: 14px;
+}
+
 .category .category-btn {
     padding: 8px;
     text-align: center;

@@ -35,7 +35,7 @@
                          </li>
                          <li>
                              <i class="bi bi-chevron-right"></i>
-                             <a href="#">Distribution</a>
+                             <a href="{{ url('/distribution') }}">Distribution</a>
                          </li>
                          <li>
                              <i class="bi bi-chevron-right"></i>
