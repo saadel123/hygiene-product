@@ -42,7 +42,7 @@
     @yield('stylesheet')
 </head>
 
-<body>
+<body class="{{ session()->get('locale') == 'ar' ? 'rtl' : '' }}">
     @if (!request()->is('/'))
         @include('layouts.header')
     @endif
@@ -66,6 +66,14 @@
     {{-- <script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script> --}}
     <!-- Template Main JS File -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
+    {{-- <script src="{{ asset('assets/js/familytree.js') }}"></script> --}}
+    <script type="text/javascript">
+        var url = "{{ route('changeLang') }}";
+
+        $(".changeLang").change(function() {
+            window.location.href = url + "?lang=" + $(this).val();
+        });
+    </script>
 
     @yield('javascripts')
 

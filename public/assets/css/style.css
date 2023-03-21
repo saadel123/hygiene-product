@@ -1878,7 +1878,7 @@ section {
   font-size: 28px;
   font-weight: bold;
   padding: 0;
-  margin: 0 0 20px 0;
+  margin: 25px 0 20px 0;
 }
 
 .blog .entry .entry-title a {
@@ -1914,7 +1914,7 @@ section {
   line-height: 0;
 }
 
-.blog .entry .entry-meta a {
+.blog .entry .entry-meta time {
   color: #777777;
   font-size: 14px;
   display: inline-block;
@@ -2181,7 +2181,7 @@ section {
 }
 
 .blog .blog-pagination {
-  color: #024ed5;
+  /* color: #024ed5; */
 }
 
 .blog .blog-pagination ul {
@@ -2197,7 +2197,7 @@ section {
 }
 
 .blog .blog-pagination li a {
-  color: #305095;
+  /* color: #305095; */
   padding: 7px 16px;
   display: flex;
   align-items: center;
@@ -2206,13 +2206,15 @@ section {
 
 .blog .blog-pagination li.active,
 .blog .blog-pagination li:hover {
-  background: #305095;
+  /* background: #305095; */
 }
 
 .blog .blog-pagination li.active a,
 .blog .blog-pagination li:hover a {
-  color: #fff;
+  /* color: #fff; */
 }
+
+
 
 .blog .sidebar {
   padding: 30px;

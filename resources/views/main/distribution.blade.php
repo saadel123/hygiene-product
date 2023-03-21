@@ -24,7 +24,7 @@
         .distribution .php-email-form {
             background: unset !important;
             /* padding: 30px;
-                height: 100%; */
+                    height: 100%; */
         }
     </style>
 @endsection
@@ -60,6 +60,7 @@
                             @include('partials.messages-alert')
                             @csrf
                             <div class="row gy-4">
+                                <li></li>
                                 @include('partials.contact-form')
                                 <div class="col-md-12">
                                     <label for="ville" class="form-label">Ville*</label>
@@ -79,6 +80,9 @@
                                         <option value="1">One</option>
                                         <option value="2">Two</option>
                                         <option value="3">Three</option>
+                                        <option value="4">Four</option>
+                                        <option value="5">Hello Which kind of post you want</option>
+                                        Thanks mate will do the same for the flyer
                                     </select>
                                 </div>
                                 <div class="col-md-12">

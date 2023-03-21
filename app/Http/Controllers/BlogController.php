@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
-use App\Product;
 use Illuminate\Http\Request;
+use TCG\Voyager\Models\Post;
 
-class ProductController extends Controller
+class BlogController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +14,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $categories = Category::all();
-        return view('products.categories')->with('categories', $categories);
+        //
+        $blogs = Post::latest()->paginate(3);
+        return view('blog.blogs')->with('blogs', $blogs);
     }
 
     /**
@@ -48,22 +48,13 @@ class ProductController extends Controller
      */
     public function show($slug)
     {
+        $blog = Post::whereSlug($slug)->firstOrFail();
+        $relatedBlogs = Post::where('id', '!=', $blog->id)
+            ->latest()
+            ->take(6)
+            ->get(['image', 'title','slug', 'created_at']);
 
-        $category = Category::whereSlug($slug)->with('products')->firstOrFail();
-
-        return view('products.produits', ['category' => $category, 'categories' => Category::all()]);
-    }
-
-    public function showProduct($category = null, $slug = null)
-    {
-        $product = Product::whereSlug($slug)
-            ->firstOrFail();
-        $relatedProducts = $product->category->products()->where('id', '!=', $product->id)->get();
-
-        return view(
-            'products.details-produit',
-            ['product' => $product, 'categories' => Category::all(), 'relatedProducts' => $relatedProducts, 'name_cat' => $category]
-        );
+        return view('blog.details-blog', compact('blog', 'relatedBlogs'));
     }
 
     /**

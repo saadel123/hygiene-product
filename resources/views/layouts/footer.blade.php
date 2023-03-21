@@ -31,7 +31,7 @@
                              <i class="bi bi-chevron-right"></i> <a href="{{ url('/produits') }}">Produits</a>
                          </li>
                          <li>
-                             <i class="bi bi-chevron-right"></i> <a href="{{ url('/nos_atouts') }}">Nos atouts</a>
+                             <i class="bi bi-chevron-right"></i> <a href="{{ url('/nos-atouts') }}">Nos atouts</a>
                          </li>
                          <li>
                              <i class="bi bi-chevron-right"></i>
@@ -39,7 +39,7 @@
                          </li>
                          <li>
                              <i class="bi bi-chevron-right"></i>
-                             <a href="#">Blog</a>
+                             <a href="{{ route('blogs.index') }}">Blog</a>
                          </li>
                          <li>
                              <i class="bi bi-chevron-right"></i>

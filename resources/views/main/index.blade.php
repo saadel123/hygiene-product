@@ -303,6 +303,7 @@
                     </div>
                 </div>
             </div>
+
             <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
             </a>
@@ -316,18 +317,18 @@
     <div class="pb-4">
         <div class="container-fluid container-xl d-flex align-items-center justify-content-center">
             <a href="/" class="logo d-flex align-items-center">
-                <img src="assets/img/icone-accueil.png" alt="" />
+                <img src="{{ asset('assets/img/icone-accueil.png') }}" alt="" />
             </a>
             <nav id="navbar" class="navbar">
                 <ul>
                     {{-- <li><a class="nav-link scrollto active" href="#hero">Home</a></li> --}}
                     <li><a class="nav-link scrollto" href="{{ url('/qui-sommes-nous') }}">Qui sommes-nous</a></li>
                     <li><a class="nav-link scrollto" href="{{ url('/produits') }}">Produits</a></li>
-                    <li><a class="nav-link scrollto" href="{{ url('/nos_atouts') }}">Nos atouts</a></li>
+                    <li><a class="nav-link scrollto" href="{{ url('/nos-atouts') }}">Nos atouts</a></li>
                     <li>
                         <a class="nav-link scrollto" href="{{ url('/distribution') }}">Distribution</a>
                     </li>
-                    <li><a class="nav-link scrollto" href="#team">Blog</a></li>
+                    <li><a class="nav-link scrollto" href="{{ route('blogs.index') }}">Blog</a></li>
                     {{-- <li class="dropdown">
                     <a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
@@ -408,75 +409,25 @@
         <!-- ======= Products Section ======= -->
         <section id="pricing" class="products">
             <div class="container" data-aos="fade-up">
-                <header class="section-header">
-                    {{-- <h2>Nos Produits</h2> --}}
-                    <p>Nos Produits</p>
-                </header>
-
                 <div class="row gy-4" data-aos="fade-left">
-                    <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="box">
-                            <img src="{{ asset('assets/img/products/7.png') }}" class="img-fluid" alt="" />
-                            <h3>Netoyant Sol</h3>
-                            <a href="{{ url('/details-produit') }}" class="btn-buy">Voir plus</a>
+                    @php
+                        $delay = 200;
+                    @endphp
+                    @foreach ($products as $product)
+                        <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="{{ $delay }}">
+                            <div class="box">
+                                <img src="{{ Voyager::image($product->image) }}" class="img-fluid"
+                                    alt="{{ $product->title }}" />
+                                <h3>{{ $product->title }}</h3>
+                                <a href="{{ url('produits/' . $product->category->slug . '/' . $product->slug) }}"
+                                    class="btn-buy">Voir
+                                    plus</a>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="box">
-                            <img src="{{ asset('assets/img/products/26.png') }}" class="img-fluid" alt="" />
-                            <h3>Netoyant Sol</h3>
-                            <a href="{{ url('/details-produit') }}" class="btn-buy">Voir plus</a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="box">
-                            <img src="{{ asset('assets/img/products/2.png') }}" class="img-fluid" alt="" />
-                            <h3>Netoyant Sol</h3>
-                            <a href="{{ url('/details-produit') }}" class="btn-buy">Voir plus</a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
-                        <div class="box">
-                            <img src="{{ asset('assets/img/products/6.png') }}" class="img-fluid" alt="" />
-                            <h3>Netoyant Sol</h3>
-                            <a href="{{ url('/details-produit') }}" class="btn-buy">Voir plus</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="box">
-                            {{-- <div class="price"><sup>$</sup>0<span> / mo</span></div> --}}
-                            <img src="{{ asset('assets/img/products/12.png') }}" class="img-fluid" alt="" />
-                            <h3>Netoyant Sol</h3>
-                            <a href="{{ url('/details-produit') }}" class="btn-buy">Voir plus</a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="box">
-                            <img src="{{ asset('assets/img/products/35.png') }}" class="img-fluid" alt="" />
-                            <h3>Netoyant Sol</h3>
-                            <a href="{{ url('/details-produit') }}" class="btn-buy">Voir plus</a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="box">
-                            <img src="{{ asset('assets/img/products/25.png') }}" class="img-fluid" alt="" />
-                            <h3>Netoyant Sol</h3>
-                            <a href="{{ url('/details-produit') }}" class="btn-buy">Voir plus</a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
-                        <div class="box">
-                            <img src="{{ asset('assets/img/products/16.png') }}" class="img-fluid" alt="" />
-                            <h3>Netoyant Sol</h3>
-                            <a href="{{ url('/details-produit') }}" class="btn-buy">Voir plus</a>
-                        </div>
-                    </div>
+                        @php
+                            $delay += 100;
+                        @endphp
+                    @endforeach
                 </div>
             </div>
         </section>

@@ -38,18 +38,18 @@
 <div class="pb-4">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-center">
         <a href="/" class="logo d-flex align-items-center">
-            <img src="assets/img/icone-accueil.png" alt="" />
+            <img src="{{ asset('assets/img/icone-accueil.png') }}" alt="" />
         </a>
         <nav id="navbar" class="navbar">
             <ul>
                 {{-- <li><a class="nav-link scrollto active" href="#hero">Home</a></li> --}}
-                <li><a class="nav-link scrollto" href="{{ url('/qui-sommes-nous') }}">Qui sommes-nous</a></li>
-                <li><a class="nav-link scrollto" href="{{ url('/produits') }}">Produits</a></li>
-                <li><a class="nav-link scrollto" href="{{ url('/nos_atouts') }}">Nos atouts</a></li>
+                <li><a class="nav-link scrollto" href="{{ url('/qui-sommes-nous') }}">{{ __('messages.navbar.qui-sommes-nous') }}</a></li>
+                <li><a class="nav-link scrollto" href="{{ url('/produits') }}">{{ __('messages.navbar.produits') }}</a></li>
+                <li><a class="nav-link scrollto" href="{{ url('/nos-atouts') }}">{{ __('messages.navbar.nos_atouts') }}</a></li>
                 <li>
-                    <a class="nav-link scrollto" href="{{ url('/distribution') }}">Distribution</a>
+                    <a class="nav-link scrollto" href="{{ url('/distribution') }}">{{ __('messages.navbar.distribution') }}</a>
                 </li>
-                <li><a class="nav-link scrollto" href="#team">Blog</a></li>
+                <li><a class="nav-link scrollto" href="{{ route('blogs.index') }}">{{ __('messages.navbar.blog') }}</a></li>
                 {{-- <li class="dropdown">
         <a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
         <ul>
@@ -70,7 +70,14 @@
             <li><a href="#">Drop Down 4</a></li>
         </ul>
     </li> --}}
-                <li><a class="nav-link scrollto" href="{{url('/contactez-nous')}}">Contactez-nous</a></li>
+                <li><a class="nav-link scrollto" href="{{ url('/contactez-nous') }}">{{ __('messages.navbar.contact') }}</a></li>
+                <li>
+                    <select class="form-control changeLang ">
+                        <option value="fr" {{ session()->get('locale') == 'fr' ? 'selected' : '' }}>Fr</option>
+                        <option value="ar" {{ session()->get('locale') == 'ar' ? 'selected' : '' }}>Ar</option>
+                    </select>
+                </li>
+
                 {{-- <li>
         <a class="getstarted scrollto" href="#qui-sommes-nous">Get Started</a>
     </li> --}}
