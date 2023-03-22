@@ -43,44 +43,21 @@
         <nav id="navbar" class="navbar">
             <ul>
                 {{-- <li><a class="nav-link scrollto active" href="#hero">Home</a></li> --}}
-                <li><a class="nav-link scrollto" href="{{ url('/qui-sommes-nous') }}">{{ __('messages.navbar.qui-sommes-nous') }}</a></li>
-                <li><a class="nav-link scrollto" href="{{ url('/produits') }}">{{ __('messages.navbar.produits') }}</a></li>
-                <li><a class="nav-link scrollto" href="{{ url('/nos-atouts') }}">{{ __('messages.navbar.nos_atouts') }}</a></li>
+                <li><a class="nav-link scrollto" href="{{ url('/qui-sommes-nous') }}">{{ __('partials.navbar.qui-sommes-nous') }}</a></li>
+                <li><a class="nav-link scrollto" href="{{ url('/produits') }}">{{ __('partials.navbar.produits') }}</a></li>
+                <li><a class="nav-link scrollto" href="{{ url('/nos-atouts') }}">{{ __('partials.navbar.nos_atouts') }}</a></li>
                 <li>
-                    <a class="nav-link scrollto" href="{{ url('/distribution') }}">{{ __('messages.navbar.distribution') }}</a>
+                    <a class="nav-link scrollto" href="{{ url('/distribution') }}">{{ __('partials.navbar.distribution') }}</a>
                 </li>
-                <li><a class="nav-link scrollto" href="{{ route('blogs.index') }}">{{ __('messages.navbar.blog') }}</a></li>
-                {{-- <li class="dropdown">
-        <a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-        <ul>
-            <li><a href="#">Drop Down 1</a></li>
-            <li class="dropdown">
-                <a href="#"><span>Deep Drop Down</span>
-                    <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                    <li><a href="#">Deep Drop Down 1</a></li>
-                    <li><a href="#">Deep Drop Down 2</a></li>
-                    <li><a href="#">Deep Drop Down 3</a></li>
-                    <li><a href="#">Deep Drop Down 4</a></li>
-                    <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Drop Down 2</a></li>
-            <li><a href="#">Drop Down 3</a></li>
-            <li><a href="#">Drop Down 4</a></li>
-        </ul>
-    </li> --}}
-                <li><a class="nav-link scrollto" href="{{ url('/contactez-nous') }}">{{ __('messages.navbar.contact') }}</a></li>
-                <li>
+                <li><a class="nav-link scrollto" href="{{ route('blogs.index') }}">{{ __('partials.navbar.blog') }}</a></li>
+                <li><a class="nav-link scrollto" href="{{ url('/contactez-nous') }}">{{ __('partials.navbar.contact') }}</a></li>
+                <li class="ms-4 me-4">
                     <select class="form-control changeLang ">
-                        <option value="fr" {{ session()->get('locale') == 'fr' ? 'selected' : '' }}>Fr</option>
-                        <option value="ar" {{ session()->get('locale') == 'ar' ? 'selected' : '' }}>Ar</option>
+                            <option value="fr" {{ session()->get('locale') == 'fr' ? 'selected' : '' }}>{{ __('partials.languages.fr') }}</option>
+                            <option value="en" {{ session()->get('locale') == 'en' ? 'selected' : '' }}>{{ __('partials.languages.en') }}</option>
+                            <option value="ar" {{ session()->get('locale') == 'ar' ? 'selected' : '' }}>{{ __('partials.languages.ar') }}</option>
                     </select>
                 </li>
-
-                {{-- <li>
-        <a class="getstarted scrollto" href="#qui-sommes-nous">Get Started</a>
-    </li> --}}
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>

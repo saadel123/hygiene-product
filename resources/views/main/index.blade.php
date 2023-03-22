@@ -156,104 +156,6 @@
                 </div>
             </nav>
             <!-- Navbar -->
-            {{-- <!-- Navbar-->
-            <nav class="navbar">
-                <div class="container-fluid justify-content-between">
-                    <!-- Left elements -->
-                    <div class="d-flex">
-                        <!-- Brand -->
-                        <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="#">
-                            <img src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp" height="20"
-                                alt="MDB Logo" loading="lazy" style="margin-top: 2px;" />
-                        </a>
-
-                    </div>
-                    <!-- Left elements -->
-
-                    <!-- Center elements -->
-                    <ul class="navbar-nav flex-row d-none d-md-flex">
-                        <li class="nav-item me-3 me-lg-1 active">
-                            <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="#">
-                                <img src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp" height="20"
-                                    alt="MDB Logo" loading="lazy" style="margin-top: 2px;" />
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- Center elements -->
-
-                    <!-- Right elements -->
-                    <ul class="navbar-nav flex-row">
-                        <li class="nav-item me-3 me-lg-1">
-                            <a class="nav-link d-sm-flex align-items-sm-center" href="#">
-                                <img src="https://mdbcdn.b-cdn.net/img/new/avatars/1.webp" class="rounded-circle"
-                                    height="22" alt="Black and White Portrait of a Man" loading="lazy" />
-                                <strong class="d-none d-sm-block ms-1">John</strong>
-                            </a>
-                        </li>
-                        <li class="nav-item me-3 me-lg-1">
-                            <a class="nav-link" href="#">
-                                <span><i class="fas fa-plus-circle fa-lg"></i></span>
-                            </a>
-                        </li>
-                        <li class="nav-item dropdown me-3 me-lg-1">
-                            <a class="nav-link dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink"
-                                role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-                                <i class="fas fa-comments fa-lg"></i>
-
-                                <span class="badge rounded-pill badge-notification bg-danger">6</span>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
-                                <li>
-                                    <a class="dropdown-item" href="#">Some news</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">Another news</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown me-3 me-lg-1">
-                            <a class="nav-link dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink"
-                                role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-                                <i class="fas fa-bell fa-lg"></i>
-                                <span class="badge rounded-pill badge-notification bg-danger">12</span>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
-                                <li>
-                                    <a class="dropdown-item" href="#">Some news</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">Another news</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown me-3 me-lg-1">
-                            <a class="nav-link dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink"
-                                role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-                                <i class="fas fa-chevron-circle-down fa-lg"></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
-                                <li>
-                                    <a class="dropdown-item" href="#">Some news</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">Another news</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <!-- Right elements -->
-                </div>
-            </nav>
-            <!-- Navbar --> --}}
         </div>
     </header>
     <!-- End Header -->
@@ -271,7 +173,7 @@
                                 <h2 class="animate__animated animate__fadeInDown">Nettoyant Sol</h2>
                                 <h3 class="animate__animated animate__fadeInUp text-white">Brillance & propreté</h3>
                                 <a href="{{ url('/details-produit') }}"
-                                    class="btn-get-started animate__animated animate__fadeInUp">Lire plus</a>
+                                    class="btn-get-started animate__animated animate__fadeInUp">{{ __('partials.buttons.read_more') }}</a>
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -288,10 +190,10 @@
                     <div class="row" data-aos="fade-up">
                         <div class="col-lg-6 text-start">
                             <div class="text-slide">
-                                <h2 class="animate__animated animate__fadeInDown">Nettoyant Sol</h2>
+                                <h2 class="animate__animated animate__fadeInDown">Liquide Vaisselle</h2>
                                 <h3 class="animate__animated animate__fadeInUp text-white">Brillance & propreté</h3>
                                 <a href="{{ url('/details-produit') }}"
-                                    class="btn-get-started animate__animated animate__fadeInUp">Lire plus</a>
+                                    class="btn-get-started animate__animated animate__fadeInUp">{{ __('partials.buttons.read_more') }}</a>
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -303,11 +205,9 @@
                     </div>
                 </div>
             </div>
-
             <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
             </a>
-
             <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
                 <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
             </a>
@@ -322,44 +222,36 @@
             <nav id="navbar" class="navbar">
                 <ul>
                     {{-- <li><a class="nav-link scrollto active" href="#hero">Home</a></li> --}}
-                    <li><a class="nav-link scrollto" href="{{ url('/qui-sommes-nous') }}">Qui sommes-nous</a></li>
-                    <li><a class="nav-link scrollto" href="{{ url('/produits') }}">Produits</a></li>
-                    <li><a class="nav-link scrollto" href="{{ url('/nos-atouts') }}">Nos atouts</a></li>
-                    <li>
-                        <a class="nav-link scrollto" href="{{ url('/distribution') }}">Distribution</a>
+                    <li><a class="nav-link scrollto"
+                            href="{{ url('/qui-sommes-nous') }}">{{ __('partials.navbar.qui-sommes-nous') }}</a></li>
+                    <li><a class="nav-link scrollto" href="{{ url('/produits') }}">{{ __('partials.navbar.produits') }}</a>
                     </li>
-                    <li><a class="nav-link scrollto" href="{{ route('blogs.index') }}">Blog</a></li>
-                    {{-- <li class="dropdown">
-                    <a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-                    <ul>
-                        <li><a href="#">Drop Down 1</a></li>
-                        <li class="dropdown">
-                            <a href="#"><span>Deep Drop Down</span>
-                                <i class="bi bi-chevron-right"></i></a>
-                            <ul>
-                                <li><a href="#">Deep Drop Down 1</a></li>
-                                <li><a href="#">Deep Drop Down 2</a></li>
-                                <li><a href="#">Deep Drop Down 3</a></li>
-                                <li><a href="#">Deep Drop Down 4</a></li>
-                                <li><a href="#">Deep Drop Down 5</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Drop Down 2</a></li>
-                        <li><a href="#">Drop Down 3</a></li>
-                        <li><a href="#">Drop Down 4</a></li>
-                    </ul>
-                </li> --}}
-                    <li><a class="nav-link scrollto" href="{{ url('/contactez-nous') }}">Contactez-nous</a></li>
-                    {{-- <li>
-                    <a class="getstarted scrollto" href="#about">Get Started</a>
-                </li> --}}
+                    <li><a class="nav-link scrollto"
+                            href="{{ url('/nos-atouts') }}">{{ __('partials.navbar.nos_atouts') }}</a></li>
+                    <li>
+                        <a class="nav-link scrollto"
+                            href="{{ url('/distribution') }}">{{ __('partials.navbar.distribution') }}</a>
+                    </li>
+                    <li><a class="nav-link scrollto"
+                            href="{{ route('blogs.index') }}">{{ __('partials.navbar.blog') }}</a></li>
+                    <li><a class="nav-link scrollto"
+                            href="{{ url('/contactez-nous') }}">{{ __('partials.navbar.contact') }}</a></li>
+                    <li class="ms-4 me-4">
+                        <select class="form-control changeLang ">
+                            <option value="fr" {{ session()->get('locale') == 'fr' ? 'selected' : '' }}>
+                                {{ __('partials.languages.fr') }}</option>
+                            <option value="en" {{ session()->get('locale') == 'en' ? 'selected' : '' }}>
+                                {{ __('partials.languages.en') }}</option>
+                            <option value="ar" {{ session()->get('locale') == 'ar' ? 'selected' : '' }}>
+                                {{ __('partials.languages.ar') }}</option>
+                        </select>
+                    </li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav>
             <!-- .navbar -->
         </div>
     </div>
-
     <!-- End navbar -->
     <main id="main" class="bg-home">
         <!-- ======= About Section ======= -->
@@ -372,15 +264,10 @@
                             <div class="row">
                                 <div class="col-lg-8">
                                     <h2>
-                                        Qui sommes-nous
+                                        {{ __('about.qui-sommes-nous') }}
                                     </h2>
-                                    <p style="max-width: 629px">
-                                        Rana Industrie est une entreprise marocaine spécialisée dans les produits de grande
-                                        consommation. <br><br>
-                                        Rana Industrie opère dans les secteurs de l’hygiène : la formulation, la conception,
-                                        la production et la commercialisation des produits d’hygiène domestique. <br><br>
-                                        Rana Industrie dispose d’une unité de production à Casablanca et distribue ses
-                                        produits sur l’ensemble du territoire national et à l’export.
+                                    <p>
+                                        {!! __('about.description') !!}
                                     </p>
                                 </div>
                                 <div class="col-lg-4 bg-about">
@@ -389,7 +276,7 @@
                                         <div class="text-center text-lg-center" style="margin-top: 155px;">
                                             <a href="{{ url('/qui-sommes-nous') }}"
                                                 class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
-                                                <span>Lire plus</span>
+                                                <span>{{ __('partials.buttons.read_more') }}</span>
                                                 <i class="bi bi-arrow-right"></i>
                                             </a>
                                         </div>
@@ -398,7 +285,6 @@
                             </div>
                         </div>
                     </div>
-
                     {{-- <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
                         <img src="assets/img/about.jpg" class="img-fluid" alt="" />
                     </div> --}}
@@ -442,7 +328,7 @@
                                 <a href="#"
                                     class="btn-comandez d-inline-flex align-items-center justify-content-center align-self-center">
                                     <img src="{{ asset('assets/img/commandez.png') }}" class="icon-cmnd" alt="">
-                                    <span>Comandez</span>
+                                    <span>{{ __('partials.buttons.order') }}</span>
                                 </a>
                             </div>
                         </div>
@@ -451,7 +337,6 @@
             </div>
         </section>
         <!-- End Values Section -->
-
         <!-- ======= Team Section ======= -->
         <div id="features" class="features" style="margin-top: -80px;">
             <div class="container" data-aos="fade-up">
@@ -463,37 +348,13 @@
                                     <div class="logo d-flex align-items-center">
                                         <img src="{{ asset('assets/img/elements/satisfaction-icon.png') }}"
                                             class="satisfaction-icon" alt="satisfaction icon">
-                                        <p>Satisfaction des clients</p>
+                                        <p>{{ __('partials.satisfaction-clients.title') }}</p>
                                     </div>
                                 </header>
                                 <!-- Tab Content -->
                                 <div class="tab-content">
                                     <div class="tab-pane fade show active" id="tab1">
-                                        <p>
-                                            La satisfaction de nos clients constitue notre objectif premier ! <br>
-                                            Nous responsabilisons et formons nos collaborateurs à donner une entière
-                                            satisfaction à nos clients et à leur proposer des produits et services de
-                                            qualité. <br>
-                                            Nous responsabilisons et formons nos collaborateurs à donner une entière
-                                            satisfaction à nos clients et à leur proposer des produits et services de
-                                            qualité. <br>
-                                        </p>
-                                        <h4>Nous nous engageons :</h4> <br>
-                                        <div class="d-flex align-items-center mb-2">
-                                            <i class="bi bi-check2"></i>
-                                            <h4>
-                                                Au respect des délais, des coûts et de la conformité de la demande.
-                                            </h4>
-                                        </div>
-                                        <div class="d-flex align-items-center mb-2">
-                                            <i class="bi bi-check2"></i>
-                                            <h4>Au respect des délais, des coûts et de la conformité de la demande.
-                                            </h4>
-                                        </div>
-                                        <div class="d-flex align-items-center mb-2">
-                                            <i class="bi bi-check2"></i>
-                                            <h4>À faire évoluer nos prestations.</h4>
-                                        </div>
+                                        {!! __('partials.satisfaction-clients.description') !!}
                                     </div>
                                 </div>
                             </div>
@@ -503,9 +364,7 @@
             </div>
             <!-- End Team Section -->
             <section class="bg-pink">
-
             </section>
-
         </div>
     </main>
 @endsection

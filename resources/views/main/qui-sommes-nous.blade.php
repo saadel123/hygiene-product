@@ -5,8 +5,8 @@
 @section('stylesheet')
     <style>
         /*--------------------------------------------------------------
-                                                                                                                                                                                                # qui-sommes-nous
-                                                                                                                                                                                                --------------------------------------------------------------*/
+                                                                                                                                                                                                                # qui-sommes-nous
+                                                                                                                                                                                                                --------------------------------------------------------------*/
         .qui-sommes-nous .content {
             padding: 40px;
         }
@@ -146,16 +146,10 @@
                             <div class="row">
                                 <div class="col-lg-8">
                                     <h2>
-                                        Qui sommes-nous
+                                        {{ __('about.qui-sommes-nous') }}
                                     </h2>
                                     <p>
-                                        Rana Industrie est une entreprise marocaine spécialisée dans les produits de grande
-                                        consommation. <br>
-                                        Rana Industrie opère dans les secteurs de l’hygiène : la formulation, la conception,
-                                        la production et la commercialisation des produits d’hygiène domestique. <br>
-                                        Rana Industrie dispose d’une unité de production à Casablanca et distribue ses
-                                        produits sur l’ensemble du territoire national et à l’export.
-
+                                        {!! __('about.description') !!}
                                     </p>
                                 </div>
                                 <div class="col-lg-4 bg-about">
@@ -181,11 +175,12 @@
                             <div class="logo d-flex align-items-center mb-3">
                                 <img src="{{ asset('assets/img/elements/notre-mission.png') }}" class="icons-qsn"
                                     alt="">
-                                <span>Notre mission</span>
+                                <span>
+                                    {{ __('about.mission.title') }}
+                                </span>
                             </div>
                             <p>
-                                Nous mettons en commun nos énergies pour fournir à nos clients des produits et services de
-                                qualité et de valeur supérieure insufflant de l’aisance dans leur vie de tous les jours.
+                                {{ __('about.mission.description') }}
                             </p>
                         </div>
                     </div>
@@ -194,11 +189,12 @@
                             <div class="logo d-flex align-items-center mb-3">
                                 <img src="{{ asset('assets/img/elements/notre-vision.png') }}" class="icons-qsn"
                                     alt="">
-                                <span>Notre vision</span>
+                                <span>
+                                    {{ __('about.vision.title') }}
+                                </span>
                             </div>
                             <p>
-                                Notre entreprise vise à contribuer au développement économique du pays et à renforcer la
-                                position de l’industrie marocaine sur le marché national et international.
+                                {{ __('about.vision.description') }}
                             </p>
                         </div>
                     </div>
@@ -207,11 +203,12 @@
                             <div class="logo d-flex align-items-center mb-3">
                                 <img src="{{ asset('assets/img/elements/nos-valeur.png') }}" class="icons-qsn"
                                     alt="">
-                                <span>Nos valeur</span>
+                                <span>
+                                    {{ __('about.valeur.title') }}
+                                </span>
                             </div>
                             <p>
-                                Nos valeurs reflètent les comportements qui donnent le ton de nos interactions entre
-                                collaborateurs, avec nos clients et avec nos partenaires.
+                                {{ __('about.valeur.description') }}
                             </p>
                         </div>
                     </div>
@@ -225,10 +222,9 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="col-md-12 aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
-                            <h3>Intégrité</h3>
+                            <h3>{{ __('about.integrite.title') }}</h3>
                             <p>
-                                Nos valeurs reflètent les comportements qui donnent le ton de nos interactions entre
-                                collaborateurs, avec nos clients et avec nos partenaires.
+                                {{ __('about.integrite.description') }}
                             </p>
                         </div>
                         <div class="col-md-12">
@@ -253,16 +249,14 @@
                         <div class="col-lg-6">
                             <div class="col-md-12 aos-init aos-animate" data-aos="fade-up" data-aos-delay="300"
                                 style="margin-top: 9rem">
-                                <h3>Professionnalisme</h3>
+                                <h3> {{ __('about.professionnalisme.title') }}</h3>
                                 <p>
-                                    Nous exerçons nos métiers avec l'ambition de progresser et d'accroître durablement nos
-                                    compétences. Ceci implique un effort de formation permanent et une recherche constante
-                                    de progrès en qualifications, certifications et démarche qualité.
+                                    {{ __('about.professionnalisme.description') }}
                                 </p>
                             </div>
                             <div class="col-md-12">
-                                <img src="{{ asset('assets/img/about/professionnalisme2.jpg') }}" style="max-height: 190px;"
-                                    class="img-fluid" alt="">
+                                <img src="{{ asset('assets/img/about/professionnalisme2.jpg') }}"
+                                    style="max-height: 190px;" class="img-fluid" alt="">
                             </div>
                         </div>
                     </div>
@@ -275,12 +269,9 @@
                                         alt="">
                                 </div>
                                 <div class="text-confiance">
-                                    <h3>Confiance</h3>
+                                    <h3>{{ __('about.confiance.title') }}</h3>
                                     <p>
-                                        Nous établissons des relations de confiance avec nos clients en démontrant notre
-                                        capacité à respecter nos engagements. Grâce à notre gestion rigoureuse et à la
-                                        stabilité de notre entreprise, nous sommes en mesure de bâtir des relations durables
-                                        avec nos clients, fondées sur la confiance.
+                                        {{ __('about.confiance.description') }}
                                     </p>
                                 </div>
                             </div>
