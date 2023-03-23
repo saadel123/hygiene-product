@@ -13,7 +13,7 @@
         <section id="contact" class="contact">
             <div class="container" data-aos="fade-up">
                 <header class="section-header">
-                    <h1>Contactez-nous</h1>
+                    <h1>{{ __('partials.navbar.contact') }}</h1>
                 </header>
                 <div class="row gy-4">
                     {{-- <div class="col-lg-6">
@@ -55,7 +55,7 @@
                             <div class="row gy-4">
                                 @include('partials.contact-form')
                                 <div class="col-md-12">
-                                    <label for="message" class="form-label">Message*</label>
+                                    <label for="message" class="form-label">{{ __('partials.forms.contact.message') }}*</label>
                                     <textarea class="form-control {{ $errors->has('message') ? 'is-invalid' : '' }}" name="message" id="message"
                                         rows="6" required> {{ old('message') }}</textarea>
                                     @error('message')
@@ -63,7 +63,7 @@
                                     @enderror
                                 </div>
                                 <div class="col-md-12 text-center">
-                                    <button type="submit">Send Message</button>
+                                    <button type="submit">{{ __('partials.buttons.send') }}</button>
                                 </div>
                             </div>
                         </form>

@@ -1,15 +1,13 @@
 <?php
 
 return [
-    // "about" => [
-    "qui-sommes-nous" => "About us",
-    "description" => "Rana Industrie is a Moroccan company specialized in consumer products. <br><br> Rana Industrie operates in the fields of hygiene: formulation, design, production and selling domestic hygiene products. <br><br>
-                          Rana Industrie has a production unit in Casablanca and distributes its products throughout the country and abroad.",
-    "mission" => ["title" => "Our mission", "description" => "We pool our energies to provide our customers with high-quality and high-value products and services that bring comfort to their everyday lives."],
-    "vision" => ["title" => "Our vision", "description" => "Our company aims to contribute to the economic development of the country and to strengthen the position of the Moroccan industry in the national and international market."],
-    "valeur" => ["title" => "Our Values", "description" => "Our values reflect the behaviours we adopt when interacting with employees, customers and partners."],
-    "integrite" => ["title" => "Integrity", "description" =>"We constantly strive to do what is moral and fair, being transparent and sincere to each other. We attach great importance to our values and respect them in all our actions and decisions."],
-    "professionnalisme" => ["title" => "Professionalism","description" => "We practice our businesses with the ambition to grow and sustainably increase our skills. This implies a continuous training effort and a constant search for progress in qualifications, certifications and quality approach."],
-    "confiance" => ["title" => "Trust", "description" => "Thanks to our rigorous management and the stability of our company, we are able to build lasting relationships with our customers, based on trust."],
-    // ],
+    "qui-sommes-nous" => "من نحن",
+    "description" => "Rana Industrie  هي شركة مغربية متخصصة في المنتجات الاستهلاكية. <br><br> تعمل Rana Industrie  في قطاع النظافة: صياغة وتصميم وإنتاج وتسويق منتجات النظافة المنزلية. <br><br>
+    تمتلك Rana Industrie  وحدة إنتاج في الدار البيضاء وتسوق منتجاتها في جميع أنحاء التراب الوطني وكذلك من خلال التصدير.",
+    "mission" => ["title" => "مهمتنا", "description" => "نوظف طاقاتنا لتزويد زبنائنا بمنتجات وخدمات ذات جودة وقيمة عالية تجلب الراحة لحياتهم اليومية"],
+    "vision" => ["title" => "رؤيتنا", "description" => "تهدف شركتنا إلى المساهمة في التنمية الاقتصادية للبلاد وتعزيز مكانة الصناعة المغربية في السوق الوطنية والدولية."],
+    "valeur" => ["title" => "قيمنا", "description" => "تعكس قيمنا السلوكيات التي نعتمدها عند التعامل مع الموظفين والزبناء والشركاء."],
+    "integrite" => ["title" => "Intégrité", "description" => "Nos valeurs reflètent les comportements qui donnent le ton de nos interactions entre collaborateurs, avec nos clients et avec nos partenaires."],
+    "professionnalisme" => ["title" => "Professionnalisme", "description" => "Nos valeurs reflètent les comportements qui donnent le ton de nos interactions entre collaborateurs, avec nos clients et avec nos partenaires."],
+    "confiance" => ["title" => "Confiance", "description" => "Nous établissons des relations de confiance avec nos clients en démontrant notre capacité à respecter nos engagements. Grâce à notre gestion rigoureuse et à la stabilité de notre entreprise, nous sommes en mesure de bâtir des relations durables avec nos clients, fondées sur la confiance."],
 ];

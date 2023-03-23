@@ -16,9 +16,21 @@ return [
         "read_more" => "Lire plus",
         "see_more" => "Voir plus",
         "order" => "Comandez",
-        "Send" => "Envoyer",
+        "send" => "Envoyer",
     ],
     "languages" => ["fr" => "Français", "en" => "Anglais", "ar" => "Arabe"],
+    "forms" => [
+        "contact" => [
+            "f_name" => "Nom",
+            "l_name" => "Prénom",
+            "phone" => "Tél",
+            "email" => "Email",
+            "address" => "Adresse",
+            "message" => "Message",
+            "ville" => "Ville",
+            "requested_products" => "Produit demandé",
+        ]
+    ],
     "satisfaction-clients" => [
         "title" => "Satisfaction des clients",
         "description" => "

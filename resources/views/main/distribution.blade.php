@@ -53,17 +53,16 @@
                 <div class="row gy-4">
                     <div class="col-lg-5 bg-distribution">
                         <img src="{{ asset('assets/img/distribustion/distribustion-products.png') }}" class=""
-                            style="max-height: 700px;" alt="distribution">
+                            style="max-height: 450px;" alt="distribution">
                     </div>
                     <div class="col-lg-5">
                         <form action="{{ route('contact.store') }}" method="post" class="php-email-form">
                             @include('partials.messages-alert')
                             @csrf
                             <div class="row gy-4">
-                                <li></li>
                                 @include('partials.contact-form')
                                 <div class="col-md-12">
-                                    <label for="ville" class="form-label">Ville*</label>
+                                    <label for="ville" class="form-label">{{ __('partials.forms.contact.ville') }}*</label>
                                     <select class="form-select" name="ville" id=""
                                         aria-label="Default select example">
                                         <option selected>Open this select menu</option>
@@ -73,7 +72,7 @@
                                     </select>
                                 </div>
                                 <div class="col-md-12">
-                                    <label for="ville" class="form-label">Produit demandé*</label>
+                                    <label for="ville" class="form-label">{{ __('partials.forms.contact.requested_products') }}*</label>
                                     <select class="form-select" name="ville" id=""
                                         aria-label="Default select example">
                                         <option selected>Open this select menu</option>
@@ -86,7 +85,7 @@
                                     </select>
                                 </div>
                                 <div class="col-md-12">
-                                    <label for="adresse" class="form-label">Message*</label>
+                                    <label for="adresse" class="form-label">{{ __('partials.forms.contact.message') }}*</label>
                                     <textarea class="form-control {{ $errors->has('message') ? 'is-invalid' : '' }}" name="message" rows="6"
                                         placeholder="Message" required> {{ old('message') }}</textarea>
                                     @error('message')
@@ -94,7 +93,7 @@
                                     @enderror
                                 </div>
                                 <div class="col-md-12">
-                                    <button type="submit">Envoyer</button>
+                                    <button type="submit">{{ __('partials.buttons.send') }}</button>
                                 </div>
                             </div>
                         </form>

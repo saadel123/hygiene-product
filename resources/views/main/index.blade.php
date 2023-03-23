@@ -118,6 +118,10 @@
             padding: 250px;
             margin-top: -400px;
         }
+
+        #header {
+            direction: ltr !important;
+        }
     </style>
 @endsection
 @section('content')
@@ -215,7 +219,10 @@
     </section><!-- End Hero -->
     <!-- ======= navbar ======= -->
     <div class="pb-4">
-        <div class="container-fluid container-xl d-flex align-items-center justify-content-center">
+        {{-- Use this style to add z-index to this menu
+        z-index: 11;
+        position: relative; --}}
+        <div class="container-fluid container-xl d-flex align-items-md-center justify-content-md-center">
             <a href="/" class="logo d-flex align-items-center">
                 <img src="{{ asset('assets/img/icone-accueil.png') }}" alt="" />
             </a>
@@ -224,7 +231,8 @@
                     {{-- <li><a class="nav-link scrollto active" href="#hero">Home</a></li> --}}
                     <li><a class="nav-link scrollto"
                             href="{{ url('/qui-sommes-nous') }}">{{ __('partials.navbar.qui-sommes-nous') }}</a></li>
-                    <li><a class="nav-link scrollto" href="{{ url('/produits') }}">{{ __('partials.navbar.produits') }}</a>
+                    <li><a class="nav-link scrollto"
+                            href="{{ url('/produits') }}">{{ __('partials.navbar.produits') }}</a>
                     </li>
                     <li><a class="nav-link scrollto"
                             href="{{ url('/nos-atouts') }}">{{ __('partials.navbar.nos_atouts') }}</a></li>

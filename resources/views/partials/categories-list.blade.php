@@ -1,7 +1,7 @@
 <section id="category" class="category">
     <div class="container" data-aos="fade-up">
         <div class="col-lg-12 d-flex flex-column">
-            <div class="row gy-4 align-items-center justify-content-center">
+            <div class="row gy-4 text-center align-items-center justify-content-center">
                 @php
                     $i = 200;
                 @endphp

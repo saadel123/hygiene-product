@@ -58,31 +58,31 @@
         }
 
         /* .environnement .bg-environnement {
-                                padding: 35px 0px 20px 65px;
-                                border-radius: 60px 0px 60px 0px;
-                                margin-left: 100px;
-                                margin-right: -35px;
-                                background: #07b228;
-                            }
+                                        padding: 35px 0px 20px 65px;
+                                        border-radius: 60px 0px 60px 0px;
+                                        margin-left: 100px;
+                                        margin-right: -35px;
+                                        background: #07b228;
+                                    }
 
-                            @media (max-width: 1000px) {
-                                .environnement p {
-                                    max-width: 555px !important;
-                                }
-                            }
+                                    @media (max-width: 1000px) {
+                                        .environnement p {
+                                            max-width: 555px !important;
+                                        }
+                                    }
 
-                            .environnement p {
-                                margin: 15px 0 30px 0;
-                                line-height: 26px;
-                                max-width: 637px;
-                                font-size: 21px;
-                                color: #000;
-                            }
+                                    .environnement p {
+                                        margin: 15px 0 30px 0;
+                                        line-height: 26px;
+                                        max-width: 637px;
+                                        font-size: 21px;
+                                        color: #000;
+                                    }
 
-                            .environnement h3 {
-                                color: white;
-                                font-weight: 600;
-                            } */
+                                    .environnement h3 {
+                                        color: white;
+                                        font-weight: 600;
+                                    } */
         .disponibilite .content {
             background-color: #305095;
             padding: 50px;
@@ -118,12 +118,9 @@
             <div class="container" data-aos="fade-up">
                 <div class="row">
                     <div class="col-md-10">
-                        <h1>Qualité</h1>
+                        <h1> {{ __('advantages.qualite.title') }} </h1>
                         <p>
-                            Nous veillons à mener les différents tests et études afin de vous garantir une qualité de
-                            produits et de services irréprochables. <br> <br>
-                            Tous les produits fabriqués au sein de nos usines répondent aux normes de qualité et de sécurité
-                            internationales.
+                            {!! __('advantages.qualite.description') !!}
                         </p>
                     </div>
                 </div>
@@ -135,22 +132,14 @@
                     <div class="col-lg-6">
                         <div class="text-center">
                             <img src="{{ asset('assets/img/satisfaction/babble.jpg') }}" style="max-height: 500px;"
-                                class="img-fluid" alt="">
+                                class="img-fluid" alt="{{ __('advantages.satisfaction.title') }}">
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="col-md-12 aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
-                            <h3>Satisfaction des clients</h3>
+                            <h3>{{ __('advantages.satisfaction.title') }}</h3>
                             <p>
-                                La satisfaction de nos clients constitue notre objectif premier ! <br> <br>
-                                Nous responsabilisons et formons nos collaborateurs à donner une entière satisfaction à nos
-                                clients et à leur proposer des produits et services de qualité. <br> <br>
-                                Nous sommes constamment à l’écoute des attentes de nos clients afin de répondre au mieux à
-                                leurs besoins. <br> <br>
-                                Nous nous engageons : <br> <br>
-                                Au respect des délais, des coûts et de la conformité de la demande. <br> <br>
-                                À adapter notre organisation en tenant compte des besoins de nos clients. <br> <br>
-                                À faire évoluer nos prestations.
+                                {!! __('advantages.satisfaction.description') !!}
                             </p>
                         </div>
                     </div>
@@ -164,21 +153,15 @@
                         <div class="row">
                             <div class="col-lg-9">
                                 <h3>
-                                    Disponibilité & réactivité
+                                    {{ __('advantages.disponibilite.title') }}
                                 </h3>
                                 <p>
-                                    Nous sommes à l’écoute de nos clients, tous les jours de la semaine de 09 à 17
-                                    heures. <br> <br>
-                                    Nous entretenons des relations de proximité avec tous les intervenants au niveau de
-                                    notre chaine de distribution : distributeurs, grossistes, détaillants. <br> <br>
-                                    Nous sommes attentifs au retour et aux commentaires des consommateurs par rapport à
-                                    nos produits. <br> <br>
-                                    N’hésitez pas à nous contacter.
+                                    {!! __('advantages.disponibilite.description') !!}
                                 </p>
                             </div>
                             <div class="col-lg-3">
                                 <img src="{{ asset('assets/img/satisfaction/disponibilite.png') }}" class=""
-                                    alt="">
+                                    alt="{{ __('advantages.satisfaction.title') }}">
                             </div>
                         </div>
                     </div>

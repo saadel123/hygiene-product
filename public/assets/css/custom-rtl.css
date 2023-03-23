@@ -1,0 +1,15 @@
+.rtl * {
+    direction: rtl;
+}
+
+.rtl #header * {
+    direction: ltr !important;
+}
+
+.rtl p {
+    text-align: right;
+}
+
+.rtl .services .service-box span, .rtl .section-header p {
+    margin-right: 29px;
+}
