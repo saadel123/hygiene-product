@@ -77,12 +77,21 @@
                             </div>
                             {{-- <h5 class="review-count">12 Reviews</h5> --}}
                         </div>
-                        <div class="mb-3"> <span class="price h5">{{ $product->title }} MAD</span> <span
+                        <div class="mb-3"> <span class="price h5">{{ $product->prix }} MAD</span> <span
                                 class="text-muted">/{{ $product->size }}</span>
                         </div>
                         <p>{!! $product->description !!}</p>
+                        <p>
+                            <strong>Mode d’emploi :</strong>
+                            {{ $product->mode_emploi }}
+                        </p>
+                        <p>
+                            <strong>Précaution d’emploi :</strong>
+                            {{ $product->precaution_emploi }}
+                        </p>
+
                         {{-- <dl class="row">
-                            <dt class="col-3">Model#</dt>
+                            <dt class="col-2">Model#</dt>
                             <dd class="col-9">Hugo Boss</dd>
                             <dt class="col-3">Color</dt>
                             <dd class="col-9">Brown</dd>

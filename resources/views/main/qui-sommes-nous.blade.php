@@ -261,7 +261,7 @@
                         </div>
                     </div>
                     <div class="row aos-init aos-animate pt-5" data-aos="fade-up">
-                        <div class="col-xl-12 col-md-12 d-flex aos-init aos-animate" data-aos="zoom-in"
+                        <div class="col-xl-12 col-md-12 d-flex aos-init aos-animate align-items-center justify-content-center confiance-qsn" data-aos="zoom-in"
                             data-aos-delay="200">
                             <div class="team-member">
                                 <div class="member-img">

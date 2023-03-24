@@ -7,7 +7,7 @@ return [
     "mission" => ["title" => "مهمتنا", "description" => "نوظف طاقاتنا لتزويد زبنائنا بمنتجات وخدمات ذات جودة وقيمة عالية تجلب الراحة لحياتهم اليومية"],
     "vision" => ["title" => "رؤيتنا", "description" => "تهدف شركتنا إلى المساهمة في التنمية الاقتصادية للبلاد وتعزيز مكانة الصناعة المغربية في السوق الوطنية والدولية."],
     "valeur" => ["title" => "قيمنا", "description" => "تعكس قيمنا السلوكيات التي نعتمدها عند التعامل مع الموظفين والزبناء والشركاء."],
-    "integrite" => ["title" => "Intégrité", "description" => "Nos valeurs reflètent les comportements qui donnent le ton de nos interactions entre collaborateurs, avec nos clients et avec nos partenaires."],
-    "professionnalisme" => ["title" => "Professionnalisme", "description" => "Nos valeurs reflètent les comportements qui donnent le ton de nos interactions entre collaborateurs, avec nos clients et avec nos partenaires."],
-    "confiance" => ["title" => "Confiance", "description" => "Nous établissons des relations de confiance avec nos clients en démontrant notre capacité à respecter nos engagements. Grâce à notre gestion rigoureuse et à la stabilité de notre entreprise, nous sommes en mesure de bâtir des relations durables avec nos clients, fondées sur la confiance."],
+    "integrite" => ["title" => "النزاهة", "description" => "نسعى باستمرار للقيام بما هو أخلاقي وأن نكون شفافين ومخلصين لبعضنا البعض. كما نعلق أهمية كبيرة على قيمنا ونحترمها في جميع أعمالنا وقراراتنا."],
+    "professionnalisme" => ["title" => "الاحتراف", "description" => "ننفذ أعمالنا بطموح للتقدم وزيادة مهاراتنا بشكل مستدام. وهذا يعني بذل الجهد الدائم والبحث المستمر عن التقدم في المؤهلات والشهادات ونهج الجودة."],
+    "confiance" => ["title" => "الثقة", "description" => "بفضل إدارتنا الصارمة واستقرار شركتنا، نحن قادرون على بناء علاقات دائمة مبنية على الثقة مع زبنائنا"],
 ];

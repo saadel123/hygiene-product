@@ -1,9 +1,26 @@
 .rtl * {
     direction: rtl;
+    font-family: Andalus !important;
+    src: url('../fonts/andlso.ttf') !important;
+
+}
+
+@font-face {
+    font-family: Andalus !important;
+    src: url('../fonts/andlso.ttf') !important;
 }
 
 .rtl #header * {
     direction: ltr !important;
+}
+
+.rtl .navbar a, .navbar a:focus {
+    font-size: 22px;
+    font-weight: 100;
+}
+
+.rtl .logo-nav{
+    margin-left: 30px;
 }
 
 .rtl p {
@@ -13,3 +30,27 @@
 .rtl .services .service-box span, .rtl .section-header p {
     margin-right: 29px;
 }
+
+.rtl .confiance-qsn {
+    direction: ltr !important;
+
+}
+
+@media (min-width: 1199px) {
+    .rtl .text-confiance {
+        float: left;
+    }
+}
+
+.rtl .footer .footer-top h4 {
+    font-size: 22px;
+    font-weight: 100;
+}
+
+.rtl .footer .footer-top .footer-links ul li {
+    font-size: 18px;
+}
+
+/* {
+    margin-right: 10px;
+} */

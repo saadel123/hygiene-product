@@ -223,7 +223,7 @@
         z-index: 11;
         position: relative; --}}
         <div class="container-fluid container-xl d-flex align-items-md-center justify-content-md-center">
-            <a href="/" class="logo d-flex align-items-center">
+            <a href="/" class="logo-nav d-flex align-items-center">
                 <img src="{{ asset('assets/img/icone-accueil.png') }}" alt="" />
             </a>
             <nav id="navbar" class="navbar">
