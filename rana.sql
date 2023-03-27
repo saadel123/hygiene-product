@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Mar 24, 2023 at 03:16 PM
+-- Generation Time: Mar 27, 2023 at 05:53 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.6
 
@@ -31,27 +31,29 @@ CREATE TABLE `categories` (
   `id` int(10) UNSIGNED NOT NULL,
   `parent_id` int(10) UNSIGNED DEFAULT NULL,
   `order` int(11) NOT NULL DEFAULT 1,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name_fr` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `name_ar` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `name_en` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `categories`
 --
 
-INSERT INTO `categories` (`id`, `parent_id`, `order`, `name`, `slug`, `created_at`, `updated_at`) VALUES
-(1, NULL, 1, 'Détergent liquide', 'detergent-liquide', '2023-02-01 08:11:23', '2023-03-03 10:24:37'),
-(2, NULL, 1, 'Adoucissant', 'adoucissant', '2023-02-01 08:11:23', '2023-03-03 10:25:15'),
-(3, NULL, 1, 'Nettoyant Sol', 'nettoyant-sol', '2023-03-03 10:25:28', '2023-03-03 10:25:28'),
-(4, NULL, 1, 'Eau de Javel', 'eau-de-javel', '2023-03-03 10:25:49', '2023-03-03 10:25:49'),
-(5, NULL, 1, 'Liquide Vaisselle', 'liquide-vaisselle', '2023-03-03 10:26:04', '2023-03-03 10:26:04'),
-(6, NULL, 1, 'Dégraissant', 'degraissant', '2023-03-03 10:26:18', '2023-03-03 10:26:18'),
-(7, NULL, 1, 'Lave Vitres', 'lave-vitres', '2023-03-03 10:26:29', '2023-03-03 10:26:29'),
-(8, NULL, 1, 'Nettoyant WC', 'nettoyant-wc', '2023-03-03 10:26:40', '2023-03-03 10:26:40'),
-(9, NULL, 1, 'Savon Liquide', 'savon-liquide', '2023-03-03 10:26:55', '2023-03-03 10:26:55'),
-(10, NULL, 1, 'Parfum d\'Ambiance', 'parfum-d-ambiance', '2023-03-03 10:27:21', '2023-03-03 10:27:21');
+INSERT INTO `categories` (`id`, `parent_id`, `order`, `name_fr`, `slug`, `created_at`, `updated_at`, `name_ar`, `name_en`) VALUES
+(1, NULL, 1, 'Détergent liquide', 'detergent-liquide', '2023-02-01 08:11:23', '2023-03-03 10:24:37', 'منظف سائل', 'Liquid Laundry Detergent '),
+(2, NULL, 1, 'Adoucissant', 'adoucissant', '2023-02-01 08:11:23', '2023-03-03 10:25:15', 'منعم الملابس', 'Fabric softener'),
+(3, NULL, 1, 'Nettoyant Sol', 'nettoyant-sol', '2023-03-03 10:25:28', '2023-03-03 10:25:28', 'منظف الأرضيات', 'Floor Cleaner '),
+(4, NULL, 1, 'Eau de Javel', 'eau-de-javel', '2023-03-03 10:25:49', '2023-03-03 10:25:49', 'ماء جافيل', 'Bleach'),
+(5, NULL, 1, 'Liquide Vaisselle', 'liquide-vaisselle', '2023-03-03 10:26:04', '2023-03-03 10:26:04', 'سائل غسل الاواني', 'Dishwashing Liquid'),
+(6, NULL, 1, 'Dégraissant', 'degraissant', '2023-03-03 10:26:18', '2023-03-03 10:26:18', 'مزيل الدهون', 'Kitchen Degreaser'),
+(7, NULL, 1, 'Lave Vitres', 'lave-vitres', '2023-03-03 10:26:29', '2023-03-03 10:26:29', 'منظف الزجاج', 'Glass cleaner'),
+(8, NULL, 1, 'Nettoyant WC', 'nettoyant-wc', '2023-03-03 10:26:40', '2023-03-03 10:26:40', 'منظف المرحاض', 'WC Cleaner Gel'),
+(9, NULL, 1, 'Savon Liquide', 'savon-liquide', '2023-03-03 10:26:55', '2023-03-03 10:26:55', 'الصابون السائل', 'Liquid Soap'),
+(10, NULL, 1, 'Parfum d\'Ambiance', 'parfum-d-ambiance', '2023-03-03 10:27:21', '2023-03-03 10:27:21', 'معطر الجو', 'Air freshener');
 
 -- --------------------------------------------------------
 
@@ -127,13 +129,12 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (19, 3, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, NULL, 4),
 (20, 3, 'display_name', 'text', 'Display Name', 1, 1, 1, 1, 1, 1, NULL, 5),
 (21, 1, 'role_id', 'text', 'Role', 1, 1, 1, 1, 1, 1, NULL, 9),
-(22, 4, 'id', 'number', 'ID', 1, 0, 0, 0, 0, 0, NULL, 1),
-(23, 4, 'parent_id', 'select_dropdown', 'Parent', 0, 0, 1, 1, 1, 1, '{\"default\":\"\",\"null\":\"\",\"options\":{\"\":\"-- None --\"},\"relationship\":{\"key\":\"id\",\"label\":\"name\"}}', 2),
+(22, 4, 'id', 'number', 'ID', 1, 0, 0, 0, 0, 0, '{}', 1),
+(23, 4, 'parent_id', 'select_dropdown', 'Parent', 0, 0, 1, 1, 1, 1, '{\"default\":\"\",\"null\":\"\",\"options\":{\"\":\"-- None --\"},\"relationship\":{\"key\":\"id\",\"label\":\"name_fr\"}}', 2),
 (24, 4, 'order', 'text', 'Order', 1, 1, 1, 1, 1, 1, '{\"default\":1}', 3),
-(25, 4, 'name', 'text', 'Name', 1, 1, 1, 1, 1, 1, NULL, 4),
-(26, 4, 'slug', 'text', 'Slug', 1, 1, 1, 1, 1, 1, '{\"slugify\":{\"origin\":\"name\"}}', 5),
-(27, 4, 'created_at', 'timestamp', 'Created At', 0, 0, 1, 0, 0, 0, NULL, 6),
-(28, 4, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, NULL, 7),
+(26, 4, 'slug', 'text', 'Slug', 1, 1, 1, 1, 1, 1, '{\"slugify\":{\"origin\":\"name_fr\"}}', 7),
+(27, 4, 'created_at', 'timestamp', 'Created At', 0, 0, 1, 0, 0, 0, '{}', 8),
+(28, 4, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 9),
 (29, 5, 'id', 'number', 'ID', 1, 0, 0, 0, 0, 0, '{}', 1),
 (30, 5, 'author_id', 'text', 'Author', 1, 0, 1, 1, 0, 1, '{}', 2),
 (31, 5, 'category_id', 'text', 'Category', 0, 0, 1, 1, 1, 0, '{}', 3),
@@ -171,23 +172,40 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (63, 9, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
 (64, 9, 'category_id', 'text', 'Catégorie', 0, 0, 0, 1, 1, 1, '{}', 2),
 (65, 9, 'user_id', 'text', 'Utilisateur', 0, 0, 0, 0, 0, 0, '{}', 4),
-(66, 9, 'title', 'text', 'Titre', 0, 1, 1, 1, 1, 1, '{\"validation\":{\"rule\":\"required\"}}', 5),
-(67, 9, 'description', 'text_area', 'Description', 0, 0, 1, 1, 1, 1, '{\"validation\":{\"rule\":\"required\"}}', 6),
-(68, 9, 'size', 'text', 'Size', 0, 0, 1, 1, 1, 1, '{}', 9),
-(69, 9, 'price', 'number', 'Prix', 0, 1, 1, 1, 1, 1, '{}', 10),
-(70, 9, 'uses', 'text', 'Les usages', 0, 1, 1, 1, 1, 1, '{}', 11),
-(71, 9, 'stars', 'select_dropdown', 'Numbre d\'Étoile', 0, 0, 1, 1, 1, 1, '{\"default\":\"5\",\"options\":{\"1\":\"1\",\"2\":\"2\",\"3\":\"3\",\"4\":\"4\",\"5\":\"5\"}}', 12),
-(72, 9, 'image', 'image', 'Image', 0, 1, 1, 1, 1, 1, '{\"validation\":{\"rule\":\"required_if:id,null\",\"messages\":{\"required\":\"The Image field is required.\"}}}', 14),
-(73, 9, 'slug', 'text', 'Slug', 0, 0, 1, 1, 1, 1, '{\"slugify\":{\"origin\":\"title\",\"forceUpdate\":true},\"validation\":{\"rule\":\"unique:posts,slug\"}}', 15),
-(74, 9, 'meta_description', 'text_area', 'Meta Description', 0, 0, 0, 0, 0, 1, '{}', 16),
-(75, 9, 'meta_keywords', 'text', 'Meta Keywords', 0, 0, 0, 0, 0, 1, '{}', 17),
-(76, 9, 'status', 'select_dropdown', 'Status', 0, 0, 0, 0, 0, 1, '{}', 18),
-(77, 9, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 19),
-(78, 9, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 20),
-(80, 9, 'product_belongsto_category_relationship', 'relationship', 'categories', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Models\\\\Category\",\"table\":\"categories\",\"type\":\"belongsTo\",\"column\":\"category_id\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"categories\",\"pivot\":\"0\",\"taggable\":\"0\"}', 3),
-(81, 9, 'parfums', 'text', 'Parfums', 0, 1, 1, 1, 1, 1, '{}', 13),
-(82, 9, 'mode_emploi', 'text', 'Mode d’emploi', 0, 0, 1, 1, 1, 1, '{}', 7),
-(83, 9, 'precaution_emploi', 'text', 'Précaution d’emploi', 0, 0, 1, 1, 1, 1, '{}', 8);
+(69, 9, 'price', 'number', 'Prix', 0, 1, 1, 1, 1, 1, '{}', 26),
+(71, 9, 'stars', 'select_dropdown', 'Numbre d\'Étoile', 0, 0, 1, 1, 1, 1, '{\"default\":\"5\",\"options\":{\"1\":\"1\",\"2\":\"2\",\"3\":\"3\",\"4\":\"4\",\"5\":\"5\"}}', 27),
+(72, 9, 'image', 'image', 'Image', 0, 1, 1, 1, 1, 1, '{\"validation\":{\"rule\":\"required_if:id,null\",\"messages\":{\"required\":\"The Image field is required.\"}}}', 28),
+(73, 9, 'slug', 'text', 'Slug', 0, 0, 1, 1, 1, 1, '{\"slugify\":{\"origin\":\"title\",\"forceUpdate\":true},\"validation\":{\"rule\":\"unique:posts,slug\"}}', 29),
+(74, 9, 'meta_description', 'text_area', 'Meta Description', 0, 0, 0, 0, 0, 1, '{}', 30),
+(75, 9, 'meta_keywords', 'text', 'Meta Keywords', 0, 0, 0, 0, 0, 1, '{}', 31),
+(76, 9, 'status', 'select_dropdown', 'Status', 0, 0, 0, 0, 0, 1, '{}', 32),
+(77, 9, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 33),
+(78, 9, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 34),
+(80, 9, 'product_belongsto_category_relationship', 'relationship', 'categories', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Models\\\\Category\",\"table\":\"categories\",\"type\":\"belongsTo\",\"column\":\"category_id\",\"key\":\"id\",\"label\":\"name_fr\",\"pivot_table\":\"categories\",\"pivot\":\"0\",\"taggable\":\"0\"}', 3),
+(84, 4, 'name_fr', 'text', 'Name Fr', 1, 1, 1, 1, 1, 1, '{}', 4),
+(85, 4, 'name_ar', 'text', 'Name Ar', 0, 1, 1, 1, 1, 1, '{}', 5),
+(86, 4, 'name_en', 'text', 'Name En', 0, 1, 1, 1, 1, 1, '{}', 6),
+(87, 9, 'title_en', 'text', 'Title En', 0, 0, 1, 1, 1, 1, '{}', 6),
+(88, 9, 'title_ar', 'text', 'Title Ar', 0, 0, 1, 1, 1, 1, '{}', 7),
+(89, 9, 'description_en', 'text_area', 'Description En', 0, 0, 1, 1, 1, 1, '{}', 9),
+(90, 9, 'description_ar', 'text_area', 'Description Ar', 0, 0, 1, 1, 1, 1, '{}', 10),
+(91, 9, 'size_en', 'text', 'Size En', 0, 0, 1, 1, 1, 1, '{}', 12),
+(92, 9, 'size_ar', 'text', 'Size Ar', 0, 0, 1, 1, 1, 1, '{}', 13),
+(93, 9, 'parfums_en', 'text', 'Parfums En', 0, 0, 1, 1, 1, 1, '{}', 24),
+(94, 9, 'parfums_ar', 'text', 'Parfums Ar', 0, 0, 1, 1, 1, 1, '{}', 25),
+(95, 9, 'mode_emploi_en', 'text', 'Mode Emploi En', 0, 0, 1, 1, 1, 1, '{}', 18),
+(96, 9, 'mode_emploi_ar', 'text', 'Mode Emploi Ar', 0, 0, 1, 1, 1, 1, '{}', 19),
+(97, 9, 'precaution_emploi_en', 'text', 'Precaution Emploi En', 0, 0, 1, 1, 1, 1, '{}', 21),
+(98, 9, 'precaution_emploi_ar', 'text', 'Precaution Emploi Ar', 0, 0, 1, 1, 1, 1, '{}', 22),
+(99, 9, 'title_fr', 'text', 'Title Fr', 0, 0, 1, 1, 1, 1, '{}', 5),
+(100, 9, 'description_fr', 'text_area', 'Description Fr', 0, 0, 1, 1, 1, 1, '{}', 8),
+(101, 9, 'size_fr', 'text', 'Size Fr', 0, 0, 1, 1, 1, 1, '{}', 11),
+(102, 9, 'uses_fr', 'text', 'Uses Fr', 0, 0, 1, 1, 1, 1, '{}', 14),
+(103, 9, 'parfums_fr', 'text', 'Parfums Fr', 0, 1, 1, 1, 1, 1, '{}', 23),
+(104, 9, 'mode_emploi_fr', 'text', 'Mode Emploi Fr', 0, 1, 1, 1, 1, 1, '{}', 17),
+(105, 9, 'precaution_emploi_fr', 'text', 'Precaution Emploi Fr', 0, 1, 1, 1, 1, 1, '{}', 20),
+(106, 9, 'uses_en', 'text', 'Uses En', 0, 0, 1, 1, 1, 1, '{}', 15),
+(107, 9, 'uses_ar', 'text', 'Uses Ar', 0, 1, 1, 1, 1, 1, '{}', 16);
 
 -- --------------------------------------------------------
 
@@ -221,11 +239,11 @@ INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `displa
 (1, 'users', 'users', 'User', 'Users', 'voyager-person', 'TCG\\Voyager\\Models\\User', 'TCG\\Voyager\\Policies\\UserPolicy', 'TCG\\Voyager\\Http\\Controllers\\VoyagerUserController', '', 1, 0, NULL, '2023-02-01 08:11:22', '2023-02-01 08:11:22'),
 (2, 'menus', 'menus', 'Menu', 'Menus', 'voyager-list', 'TCG\\Voyager\\Models\\Menu', NULL, '', '', 1, 0, NULL, '2023-02-01 08:11:22', '2023-02-01 08:11:22'),
 (3, 'roles', 'roles', 'Role', 'Roles', 'voyager-lock', 'TCG\\Voyager\\Models\\Role', NULL, 'TCG\\Voyager\\Http\\Controllers\\VoyagerRoleController', '', 1, 0, NULL, '2023-02-01 08:11:22', '2023-02-01 08:11:22'),
-(4, 'categories', 'categories', 'Category', 'Categories', 'voyager-categories', 'TCG\\Voyager\\Models\\Category', NULL, '', '', 1, 0, NULL, '2023-02-01 08:11:23', '2023-02-01 08:11:23'),
+(4, 'categories', 'categories', 'Category', 'Categories', 'voyager-categories', 'TCG\\Voyager\\Models\\Category', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"desc\",\"default_search_key\":null,\"scope\":null}', '2023-02-01 08:11:23', '2023-03-27 13:33:18'),
 (5, 'posts', 'posts', 'Post', 'Posts', 'voyager-news', 'TCG\\Voyager\\Models\\Post', 'TCG\\Voyager\\Policies\\PostPolicy', NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"desc\",\"default_search_key\":null,\"scope\":null}', '2023-02-01 08:11:23', '2023-03-21 14:35:42'),
 (6, 'pages', 'pages', 'Page', 'Pages', 'voyager-file-text', 'TCG\\Voyager\\Models\\Page', NULL, '', '', 1, 0, NULL, '2023-02-01 08:11:24', '2023-02-01 08:11:24'),
 (7, 'contacts', 'contacts', 'Contact', 'Contacts', 'voyager-chat', 'App\\Models\\Contact', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2023-02-27 10:25:44', '2023-02-27 10:26:53'),
-(9, 'products', 'products', 'Product', 'Products', NULL, 'App\\Product', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2023-03-03 09:58:40', '2023-03-24 13:34:02');
+(9, 'products', 'products', 'Product', 'Products', NULL, 'App\\Product', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2023-03-03 09:58:40', '2023-03-27 14:22:58');
 
 -- --------------------------------------------------------
 
@@ -592,11 +610,11 @@ CREATE TABLE `products` (
   `id` int(10) UNSIGNED NOT NULL,
   `category_id` int(11) DEFAULT NULL,
   `user_id` int(11) DEFAULT NULL,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `description` varchar(1000) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `size` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `title_fr` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description_fr` varchar(1000) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `size_fr` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `price` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `uses` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `uses_fr` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `stars` int(11) DEFAULT NULL,
   `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `slug` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -605,24 +623,38 @@ CREATE TABLE `products` (
   `status` int(11) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  `parfums` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `mode_emploi` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `precaution_emploi` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `parfums_fr` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `mode_emploi_fr` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `precaution_emploi_fr` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `title_en` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `title_ar` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description_en` varchar(1000) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description_ar` varchar(1000) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `size_en` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `size_ar` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `parfums_en` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `parfums_ar` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `mode_emploi_en` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `mode_emploi_ar` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `precaution_emploi_en` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `precaution_emploi_ar` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `uses_en` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `uses_ar` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `category_id`, `user_id`, `title`, `description`, `size`, `price`, `uses`, `stars`, `image`, `slug`, `meta_description`, `meta_keywords`, `status`, `created_at`, `updated_at`, `parfums`, `mode_emploi`, `precaution_emploi`) VALUES
-(1, 3, NULL, 'Netoyant Sol Jaune', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quae amet impedit rerum voluptatum, corporis sed porro fuga quaerat est ab tempora, odio laudantium neque earum! Doloribus tempore dolorum voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur aspernatur voluptatem quaerat consectetur rem accusantium assumenda sequi itaque, vitae ipsa incidunt architecto! Aspernatur, voluptatum itaque dolorum voluptatem. Lorem ipsum dolo magnam recusandae suscipit nemo ipsa?', '1L', '20', 'Cleans,disinfects,perfumes', 5, 'products\\March2023\\qHIGecJMkj8t7avl66QG.png', 'netoyant-sol-jaune', NULL, NULL, NULL, '2023-03-03 13:27:00', '2023-03-06 13:14:43', NULL, NULL, NULL),
-(2, 3, NULL, 'Netoyant Sol Violet', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quae amet impedit rerum voluptatum, corporis sed porro fuga quaerat est ab tempora, odio laudantium neque earum! Doloribus tempore dolorum voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur aspernatur voluptatem quaerat consectetur rem accusantium assumenda sequi itaque, vitae ipsa incidunt architecto! Aspernatur, voluptatum itaque magnam recusandae suscipit nemo ipsa?', '1L', '20', 'Cleans,disinfects,perfumes', 5, 'products\\March2023\\X9hpPscN0xoY5UyRvJ6H.png', 'netoyant-sol-violet', NULL, NULL, NULL, '2023-03-03 13:56:54', '2023-03-03 13:56:54', NULL, NULL, NULL),
-(3, 3, NULL, 'Netoyant Sol Rose', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quae amet impedit rerum voluptatum, corporis sed porro fuga quaerat est ab tempora, odio laudantium neque earum! Doloribus tempore dolorum voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur aspernatur voluptatem quaerat consectetur rem accusantium assumenda sequi itaque, vitae ipsa incidunt architecto! Aspernatur, voluptatum itaque dolorum voluptatem. Lorem ipsum dolo magnam recusandae suscipit nemo ipsa?', '1L', NULL, '20', 5, 'products\\March2023\\b5nUkQV4cnOzcBCfu79l.png', 'netoyant-sol-rose', NULL, NULL, NULL, '2023-03-06 13:14:00', '2023-03-06 13:15:11', NULL, NULL, NULL),
-(4, 1, NULL, 'Détergent liquide rose', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quae amet impedit rerum voluptatum, corporis sed porro fuga quaerat est ab tempora, odio laudantium neque earum! Doloribus tempore dolorum voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur aspernatur voluptatem quaerat consectetur rem accusantium assumenda sequi itaque, vitae ipsa incidunt architecto! Aspernatur, voluptatum itaque magnam recusandae suscipit nemo ipsa?', '3L', '50', 'Cleans,disinfects,perfumes', 4, 'products\\March2023\\PgKKABpXErfpRi8pw8yL.png', 'detergent-liquide-rose', NULL, NULL, NULL, '2023-03-06 13:24:00', '2023-03-09 14:19:00', NULL, NULL, NULL),
-(5, 1, NULL, 'Détergent liquide bleu', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quae amet impedit rerum voluptatum, corporis sed porro fuga quaerat est ab tempora, odio laudantium neque earum! Doloribus tempore dolorum voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur aspernatur voluptatem quaerat consectetur rem accusantium assumenda sequi itaque, vitae ipsa incidunt architecto! Aspernatur, voluptatum itaque magnam recusandae suscipit nemo ipsa?', '3L', '50', 'Cleans,disinfects,perfumes', 5, 'products\\March2023\\bFmhIMBuuPtIjkbd97Tk.png', 'detergent-liquide-bleu', NULL, NULL, NULL, '2023-03-06 13:26:12', '2023-03-06 13:26:12', NULL, NULL, NULL),
-(6, 1, NULL, 'Détergent Liquide Jaim Matic', 'Le Détergent Liquide Jaim Matic contient une formule efficace pour nettoyer en profondeur et éliminer les tâches difficiles.\r\nLe Détergent Liquide Jaim Matic est spécialement développé pour préserver l’élasticité et la forme de vos vêtements.', '3L', '50', 'Nettoie, Protège et Détache', 5, 'products\\March2023\\JXUyOm2igyNZvDh6IZAi.png', 'detergent-liquide-jaim-matic-violet', NULL, NULL, NULL, '2023-03-06 13:28:00', '2023-03-24 14:00:25', NULL, 'Triez le linge selon le textile et la couleur. Versez l’équivalent du dosage mentionné dans le bac doseur de la lessive liquide de votre machine à laver ou versez le contenu dans un bac à lessive en cas de nettoyage à la main.', 'Tenir hors portée des enfants. Éviter le contact avec les yeux. En cas de contact avec les yeux, laver immédiatement avec de l’eau.'),
-(7, 1, NULL, 'Détergent Liquide Jaim Matic blanc', 'Le Détergent Liquide Jaim Matic contient une formule efficace pour nettoyer en profondeur et éliminer les tâches difficiles.\r\nLe Détergent Liquide Jaim Matic est spécialement développé pour préserver l’élasticité et la forme de vos vêtements.', '3L', '50', 'Cleans,disinfects,perfumes', 5, 'products\\March2023\\tmIbRkTWLoZ5HZyP3e5j.png', 'detergent-liquide-jaim-matic-blanc', NULL, NULL, NULL, '2023-03-06 13:30:00', '2023-03-24 13:39:23', NULL, 'Triez le linge selon le textile et la couleur. Versez l’équivalent du dosage mentionné dans le bac doseur de la lessive liquide de votre machine à laver ou versez le contenu dans un bac à lessive en cas de nettoyage à la main.', 'Tenir hors portée des enfants. Éviter le contact avec les yeux. En cas de contact avec les yeux, laver immédiatement avec de l’eau.'),
-(8, 1, NULL, 'Détergent Liquide Jaim Matic', 'Le Détergent Liquide Jaim Matic contient une formule efficace pour nettoyer en profondeur et éliminer les tâches difficiles.\r\nLe Détergent Liquide Jaim Matic est spécialement développé pour préserver l’élasticité et la forme de vos vêtements.', '3L', '50', 'Nettoie, Protège et Détache', 5, 'products\\March2023\\3snXSodqlciGQSLbFJSs.png', 'detergent-liquide-jaim-matic', NULL, NULL, NULL, '2023-03-06 13:34:00', '2023-03-24 13:37:46', NULL, 'Triez le linge selon le textile et la couleur. Versez l’équivalent du dosage mentionné dans le bac doseur de la lessive liquide de votre machine à laver ou versez le contenu dans un bac à lessive en cas de nettoyage à la main.', 'Tenir hors portée des enfants. Éviter le contact avec les yeux. En cas de contact avec les yeux, laver immédiatement avec de l’eau.');
+INSERT INTO `products` (`id`, `category_id`, `user_id`, `title_fr`, `description_fr`, `size_fr`, `price`, `uses_fr`, `stars`, `image`, `slug`, `meta_description`, `meta_keywords`, `status`, `created_at`, `updated_at`, `parfums_fr`, `mode_emploi_fr`, `precaution_emploi_fr`, `title_en`, `title_ar`, `description_en`, `description_ar`, `size_en`, `size_ar`, `parfums_en`, `parfums_ar`, `mode_emploi_en`, `mode_emploi_ar`, `precaution_emploi_en`, `precaution_emploi_ar`, `uses_en`, `uses_ar`) VALUES
+(1, 3, NULL, 'Nettoyant Sol Jaim', 'Le Nettoyant de Sol Jaim est un produit d\'entretien liquide parfait pour le nettoyage régulier des surfaces de sol. Non seulement il désinfecte et nettoie efficacement, mais laisse votre sol brillant en un seul passage. Ce produit est doté d\'un parfum agréable qui procure une sensation de fraîcheur durable.', '1L', '20', 'Brillance & propreté', 5, 'products\\March2023\\qHIGecJMkj8t7avl66QG.png', 'netoyant-sol-jaim-jaune', NULL, NULL, NULL, '2023-03-03 13:27:00', '2023-03-24 14:25:59', 'Roses de M’Gouna – Lavande – Aoud – Citron', 'Versez 2 bouchons dans 5 litres d’eau. Nettoyer le sol avec un balai éponge ou serpillère. Laissez sécher sans rincer.', 'Tenir hors portée des enfants, Éviter le contact avec les yeux, en cas de contact avec les yeux, laver immédiatement avec de l’eau. À conserver à l’abri du soleil et de la chaleur.', 'Jaim Floor Cleaner', 'منظف الأرضيات Jaim ', 'Jaim Floor Cleaner is a perfect maintenance product for regular cleaning of floor surfaces. It not only disinfects and cleans effectively, but leaves your floor shiny in just one pass. This product has a pleasant fragrance that provides a long-lasting feeling of freshness.', 'منظف الأرضيات Jaim السائل مثالي للعناية بأسطح الأرضيات. فهو لا يقوم فقط بالتطهير والتنظيف بشكل فعال ، ولكنه يترك أرضيتك لامعة بلمسة واحدة. كما يحتوي على رائحة لطيفة توفر شعورا دائما بالانتعاش.', '1L', '1 لتر', 'Roses of M\'Gouna - Lavender– Oud – Lemon', 'ورد مڭجونا ، خزامى، عود، حامض.', 'Pour 2 capfuls into 5 liters of water. Clean the floor with a mop. Let dry without rinsing.', 'منظف الأرضيات Jaim السائل مثالي للعناية بأسطح الأرضيات. فهو لا يقوم فقط بالتطهير والتنظيف بشكل فعال ، ولكنه يترك أرضيتك لامعة بلمسة واحدة. كما يحتوي على رائحة لطيفة توفر شعورا دائما بالانتعاش.', 'Keep out of reach of children, Avoid contact with eyes, in case of contact with eyes, wash immediately with water. Store away from direct sunlight and heat.', 'يحفظ بعيدا عن متناول الأطفال. تجنب ملامسة العينين ، في حالة ملامسة العينين ، اغسلها بالماء على الفور. يخزن بعيدا عن الشمس والحرارة.', 'Shine & Cleanliness', 'لمعان ونظافة'),
+(2, 3, NULL, 'Nettoyant Sol Jaim', 'Le Nettoyant de Sol Jaim est un produit d\'entretien liquide parfait pour le nettoyage régulier des surfaces de sol. Non seulement il désinfecte et nettoie efficacement, mais laisse votre sol brillant en un seul passage. Ce produit est doté d\'un parfum agréable qui procure une sensation de fraîcheur durable.', '1L', '20', 'Brillance & propreté', 5, 'products\\March2023\\X9hpPscN0xoY5UyRvJ6H.png', 'nettoyant-sol-jaim-violet', NULL, NULL, NULL, '2023-03-03 13:56:00', '2023-03-24 14:26:02', 'Roses de M’Gouna – Lavande – Aoud – Citron', 'Versez 2 bouchons dans 5 litres d’eau. Nettoyer le sol avec un balai éponge ou serpillère. Laissez sécher sans rincer.', 'Tenir hors portée des enfants, Éviter le contact avec les yeux, en cas de contact avec les yeux, laver immédiatement avec de l’eau. À conserver à l’abri du soleil et de la chaleur.', 'Jaim Floor Cleaner', 'منظف الأرضيات Jaim ', 'Jaim Floor Cleaner is a perfect maintenance product for regular cleaning of floor surfaces. It not only disinfects and cleans effectively, but leaves your floor shiny in just one pass. This product has a pleasant fragrance that provides a long-lasting feeling of freshness.', 'منظف الأرضيات Jaim السائل مثالي للعناية بأسطح الأرضيات. فهو لا يقوم فقط بالتطهير والتنظيف بشكل فعال ، ولكنه يترك أرضيتك لامعة بلمسة واحدة. كما يحتوي على رائحة لطيفة توفر شعورا دائما بالانتعاش.', '1L', '1 لتر', 'Roses of M\'Gouna - Lavender– Oud – Lemon', 'ورد مڭجونا ، خزامى، عود، حامض.', 'Pour 2 capfuls into 5 liters of water. Clean the floor with a mop. Let dry without rinsing.', 'منظف الأرضيات Jaim السائل مثالي للعناية بأسطح الأرضيات. فهو لا يقوم فقط بالتطهير والتنظيف بشكل فعال ، ولكنه يترك أرضيتك لامعة بلمسة واحدة. كما يحتوي على رائحة لطيفة توفر شعورا دائما بالانتعاش.', 'Keep out of reach of children, Avoid contact with eyes, in case of contact with eyes, wash immediately with water. Store away from direct sunlight and heat.', 'يحفظ بعيدا عن متناول الأطفال. تجنب ملامسة العينين ، في حالة ملامسة العينين ، اغسلها بالماء على الفور. يخزن بعيدا عن الشمس والحرارة.', 'Shine & Cleanliness', 'لمعان ونظافة'),
+(3, 3, NULL, 'Nettoyant Sol Jaim', 'Le Nettoyant de Sol Jaim est un produit d\'entretien liquide parfait pour le nettoyage régulier des surfaces de sol. Non seulement il désinfecte et nettoie efficacement, mais laisse votre sol brillant en un seul passage. Ce produit est doté d\'un parfum agréable qui procure une sensation de fraîcheur durable.', '1L', '20', 'Brillance & propreté', 5, 'products\\March2023\\b5nUkQV4cnOzcBCfu79l.png', 'nettoyant-sol-jaim-rose', NULL, NULL, NULL, '2023-03-06 13:14:00', '2023-03-27 13:34:45', 'Roses de M’Gouna – Lavande – Aoud – Citron', 'Versez 2 bouchons dans 5 litres d’eau. Nettoyer le sol avec un balai éponge ou serpillère. Laissez sécher sans rincer.', 'Tenir hors portée des enfants, Éviter le contact avec les yeux, en cas de contact avec les yeux, laver immédiatement avec de l’eau. À conserver à l’abri du soleil et de la chaleur.', 'Jaim Floor Cleaner', 'منظف الأرضيات Jaim ', 'Jaim Floor Cleaner is a perfect maintenance product for regular cleaning of floor surfaces. It not only disinfects and cleans effectively, but leaves your floor shiny in just one pass. This product has a pleasant fragrance that provides a long-lasting feeling of freshness.', 'منظف الأرضيات Jaim السائل مثالي للعناية بأسطح الأرضيات. فهو لا يقوم فقط بالتطهير والتنظيف بشكل فعال ، ولكنه يترك أرضيتك لامعة بلمسة واحدة. كما يحتوي على رائحة لطيفة توفر شعورا دائما بالانتعاش.', '1L', '1 لتر', 'Roses of M\'Gouna - Lavender– Oud – Lemon', 'ورد مڭجونا ، خزامى، عود، حامض.', 'Pour 2 capfuls into 5 liters of water. Clean the floor with a mop. Let dry without rinsing.', 'منظف الأرضيات Jaim السائل مثالي للعناية بأسطح الأرضيات. فهو لا يقوم فقط بالتطهير والتنظيف بشكل فعال ، ولكنه يترك أرضيتك لامعة بلمسة واحدة. كما يحتوي على رائحة لطيفة توفر شعورا دائما بالانتعاش.', 'Keep out of reach of children, Avoid contact with eyes, in case of contact with eyes, wash immediately with water. Store away from direct sunlight and heat.', 'يحفظ بعيدا عن متناول الأطفال. تجنب ملامسة العينين ، في حالة ملامسة العينين ، اغسلها بالماء على الفور. يخزن بعيدا عن الشمس والحرارة.', 'Shine & Cleanliness', 'لمعان ونظافة'),
+(4, 1, NULL, 'Détergent Liquide Jaim Matic', 'Le Détergent Liquide Jaim Matic contient une formule efficace pour nettoyer en profondeur et éliminer les tâches difficiles.\r\nLe Détergent Liquide Jaim Matic est spécialement développé pour préserver l’élasticité et la forme de vos vêtements.', '3L', '50', 'Cleans,disinfects,perfumes', 4, 'products\\March2023\\PgKKABpXErfpRi8pw8yL.png', 'detergent-liquide-jaim-matic-rose', NULL, NULL, NULL, '2023-03-06 13:24:00', '2023-03-24 14:20:27', 'Roses de M’Gouna - Océan – Lavande – Savon de Marseille', 'Triez le linge selon le textile et la couleur. Versez l’équivalent du dosage mentionné dans le bac doseur de la lessive liquide de votre machine à laver ou versez le contenu dans un bac à lessive en cas de nettoyage à la main.', 'Tenir hors portée des enfants. Éviter le contact avec les yeux. En cas de contact avec les yeux, laver immédiatement avec de l’eau.', 'Jaim Matic Liquid Laundry Detergent', 'منظف سائل Jaim Matic', 'Jaim Floor Cleaner is a perfect maintenance product for regular cleaning of floor surfaces. It not only disinfects and cleans effectively, but leaves your floor shiny in just one pass. This product has a pleasant fragrance that provides a long-lasting feeling of freshness.', 'يحتوي المنظف السائل Jaim Matic على تركيبة فعالة للتنظيف وإزالة البقع الصعبة.\r\nتم تطوير المنظف السائل Jaim Matic  خصيصًا للحفاظ على مرونة وشكل ملابسك.', '3L', '3 لتر', 'Roses of M\'Gouna - Ocean - Lavender - Marseille soap', 'يحفظ بعيدا عن متناول الأطفال. تجنب ملامسة العينين. في حالة ملامسة العينين ، اغسل بالماء على الفور.', 'Jaim Matic Liquid Laundry Detergent has an effective formula for cleaning and removing tough stains. Jaim Matic Liquid Laundry Detergent is specially developed to preserve the elasticity and shape of your clothing.', 'اسكب ما يعادل الجرعة المذكورة في المكان المخصص له في الغسالة أو في حوض الغسيل في حالة التنظيف باليدين.', 'Keep out of reach of children. Avoid eye contact. In case of contact with eyes, wash immediately with water.', 'يحفظ بعيدا عن متناول الأطفال. تجنب ملامسة العينين. في حالة ملامسة العينين ، اغسل بالماء على الفور.', 'Clean, protect and remove stains from clothes', 'ينظف ، يحمي و يزيل البقع  من الملابس'),
+(5, 1, NULL, 'Détergent Liquide Jaim Matic', 'Le Détergent Liquide Jaim Matic contient une formule efficace pour nettoyer en profondeur et éliminer les tâches difficiles.\r\nLe Détergent Liquide Jaim Matic est spécialement développé pour préserver l’élasticité et la forme de vos vêtements.', '3L', '50', 'Nettoie, Protège et Détache', 5, 'products\\March2023\\bFmhIMBuuPtIjkbd97Tk.png', 'detergent-liquide-jaim-matic-bleu', NULL, NULL, NULL, '2023-03-06 13:26:00', '2023-03-24 14:19:41', 'Roses de M’Gouna - Océan – Lavande – Savon de Marseille', 'Triez le linge selon le textile et la couleur. Versez l’équivalent du dosage mentionné dans le bac doseur de la lessive liquide de votre machine à laver ou versez le contenu dans un bac à lessive en cas de nettoyage à la main.', 'Tenir hors portée des enfants. Éviter le contact avec les yeux. En cas de contact avec les yeux, laver immédiatement avec de l’eau.', 'Jaim Matic Liquid Laundry Detergent', 'منظف سائل Jaim Matic', 'Jaim Floor Cleaner is a perfect maintenance product for regular cleaning of floor surfaces. It not only disinfects and cleans effectively, but leaves your floor shiny in just one pass. This product has a pleasant fragrance that provides a long-lasting feeling of freshness.', 'يحتوي المنظف السائل Jaim Matic على تركيبة فعالة للتنظيف وإزالة البقع الصعبة.\r\nتم تطوير المنظف السائل Jaim Matic  خصيصًا للحفاظ على مرونة وشكل ملابسك.', '3L', '3 لتر', 'Roses of M\'Gouna - Ocean - Lavender - Marseille soap', 'يحفظ بعيدا عن متناول الأطفال. تجنب ملامسة العينين. في حالة ملامسة العينين ، اغسل بالماء على الفور.', 'Jaim Matic Liquid Laundry Detergent has an effective formula for cleaning and removing tough stains. Jaim Matic Liquid Laundry Detergent is specially developed to preserve the elasticity and shape of your clothing.', 'اسكب ما يعادل الجرعة المذكورة في المكان المخصص له في الغسالة أو في حوض الغسيل في حالة التنظيف باليدين.', 'Keep out of reach of children. Avoid eye contact. In case of contact with eyes, wash immediately with water.', 'يحفظ بعيدا عن متناول الأطفال. تجنب ملامسة العينين. في حالة ملامسة العينين ، اغسل بالماء على الفور.', 'Clean, protect and remove stains from clothes', 'ينظف ، يحمي و يزيل البقع  من الملابس'),
+(6, 1, NULL, 'Détergent Liquide Jaim Matic', 'Le Détergent Liquide Jaim Matic contient une formule efficace pour nettoyer en profondeur et éliminer les tâches difficiles.\r\nLe Détergent Liquide Jaim Matic est spécialement développé pour préserver l’élasticité et la forme de vos vêtements.', '3L', '50', 'Nettoie, Protège et Détache', 5, 'products\\March2023\\JXUyOm2igyNZvDh6IZAi.png', 'detergent-liquide-jaim-matic-violet', NULL, NULL, NULL, '2023-03-06 13:28:00', '2023-03-24 14:00:25', 'Roses de M’Gouna - Océan – Lavande – Savon de Marseille', 'Triez le linge selon le textile et la couleur. Versez l’équivalent du dosage mentionné dans le bac doseur de la lessive liquide de votre machine à laver ou versez le contenu dans un bac à lessive en cas de nettoyage à la main.', 'Tenir hors portée des enfants. Éviter le contact avec les yeux. En cas de contact avec les yeux, laver immédiatement avec de l’eau.', 'Jaim Matic Liquid Laundry Detergent', 'منظف سائل Jaim Matic', 'Jaim Floor Cleaner is a perfect maintenance product for regular cleaning of floor surfaces. It not only disinfects and cleans effectively, but leaves your floor shiny in just one pass. This product has a pleasant fragrance that provides a long-lasting feeling of freshness.', 'يحتوي المنظف السائل Jaim Matic على تركيبة فعالة للتنظيف وإزالة البقع الصعبة.\r\nتم تطوير المنظف السائل Jaim Matic  خصيصًا للحفاظ على مرونة وشكل ملابسك.', '3L', '3 لتر', 'Roses of M\'Gouna - Ocean - Lavender - Marseille soap', 'يحفظ بعيدا عن متناول الأطفال. تجنب ملامسة العينين. في حالة ملامسة العينين ، اغسل بالماء على الفور.', 'Jaim Matic Liquid Laundry Detergent has an effective formula for cleaning and removing tough stains. Jaim Matic Liquid Laundry Detergent is specially developed to preserve the elasticity and shape of your clothing.', 'اسكب ما يعادل الجرعة المذكورة في المكان المخصص له في الغسالة أو في حوض الغسيل في حالة التنظيف باليدين.', 'Keep out of reach of children. Avoid eye contact. In case of contact with eyes, wash immediately with water.', 'يحفظ بعيدا عن متناول الأطفال. تجنب ملامسة العينين. في حالة ملامسة العينين ، اغسل بالماء على الفور.', 'Clean, protect and remove stains from clothes', 'ينظف ، يحمي و يزيل البقع  من الملابس'),
+(7, 1, NULL, 'Détergent Liquide Jaim Matic blanc', 'Le Détergent Liquide Jaim Matic contient une formule efficace pour nettoyer en profondeur et éliminer les tâches difficiles.\r\nLe Détergent Liquide Jaim Matic est spécialement développé pour préserver l’élasticité et la forme de vos vêtements.', '3L', '50', 'Cleans,disinfects,perfumes', 5, 'products\\March2023\\tmIbRkTWLoZ5HZyP3e5j.png', 'detergent-liquide-jaim-matic-blanc', NULL, NULL, NULL, '2023-03-06 13:30:00', '2023-03-24 13:39:23', 'Roses de M’Gouna - Océan – Lavande – Savon de Marseille', 'Triez le linge selon le textile et la couleur. Versez l’équivalent du dosage mentionné dans le bac doseur de la lessive liquide de votre machine à laver ou versez le contenu dans un bac à lessive en cas de nettoyage à la main.', 'Tenir hors portée des enfants. Éviter le contact avec les yeux. En cas de contact avec les yeux, laver immédiatement avec de l’eau.', 'Jaim Matic Liquid Laundry Detergent', 'منظف سائل Jaim Matic', 'Jaim Matic Liquid Laundry Detergent has an effective formula for cleaning and removing tough stains.\r\nJaim Matic Liquid Laundry Detergent is specially developed to preserve the elasticity and shape of your clothing.', 'يحتوي المنظف السائل Jaim Matic على تركيبة فعالة للتنظيف وإزالة البقع الصعبة.\r\nتم تطوير المنظف السائل Jaim Matic  خصيصًا للحفاظ على مرونة وشكل ملابسك.', '3L', '3 لتر', 'Roses of M\'Gouna - Ocean - Lavender - Marseille soap', 'يحفظ بعيدا عن متناول الأطفال. تجنب ملامسة العينين. في حالة ملامسة العينين ، اغسل بالماء على الفور.', 'Jaim Matic Liquid Laundry Detergent has an effective formula for cleaning and removing tough stains. Jaim Matic Liquid Laundry Detergent is specially developed to preserve the elasticity and shape of your clothing.', 'اسكب ما يعادل الجرعة المذكورة في المكان المخصص له في الغسالة أو في حوض الغسيل في حالة التنظيف باليدين.', 'Keep out of reach of children. Avoid eye contact. In case of contact with eyes, wash immediately with water.', 'يحفظ بعيدا عن متناول الأطفال. تجنب ملامسة العينين. في حالة ملامسة العينين ، اغسل بالماء على الفور.', 'Clean, protect and remove stains from clothes', 'ينظف ، يحمي و يزيل البقع  من الملابس'),
+(8, 1, NULL, 'Détergent Liquide Jaim Matic', 'Le Détergent Liquide Jaim Matic contient une formule efficace pour nettoyer en profondeur et éliminer les tâches difficiles.Le Détergent Liquide Jaim Matic est spécialement développé pour préserver l’élasticité et la forme de vos vêtements.', '3L', '50', 'Nettoie, Protège et Détache', 5, 'products\\March2023\\3snXSodqlciGQSLbFJSs.png', 'detergent-liquide-jaim-matic', NULL, NULL, NULL, '2023-03-06 13:34:00', '2023-03-27 14:21:52', 'Roses de M’Gouna - Océan – Lavande – Savon de Marseille', 'Triez le linge selon le textile et la couleur. Versez l’équivalent du dosage mentionné dans le bac doseur de la lessive liquide de votre machine à laver ou versez le contenu dans un bac à lessive en cas de nettoyage à la main.', 'Tenir hors portée des enfants. Éviter le contact avec les yeux. En cas de contact avec les yeux, laver immédiatement avec de l’eau.', 'Jaim Matic Liquid Laundry Detergent', 'منظف سائل Jaim Matic', 'Jaim Matic Liquid Laundry Detergent has an effective formula for cleaning and removing tough stains.\r\nJaim Matic Liquid Laundry Detergent is specially developed to preserve the elasticity and shape of your clothing.', 'يحتوي المنظف السائل Jaim Matic على تركيبة فعالة للتنظيف وإزالة البقع الصعبة.\r\nتم تطوير المنظف السائل Jaim Matic  خصيصًا للحفاظ على مرونة وشكل ملابسك.', '3L', '3 لتر', 'Roses of M\'Gouna - Ocean - Lavender - Marseille soap', 'يحفظ بعيدا عن متناول الأطفال. تجنب ملامسة العينين. في حالة ملامسة العينين ، اغسل بالماء على الفور.', 'Jaim Matic Liquid Laundry Detergent has an effective formula for cleaning and removing tough stains. Jaim Matic Liquid Laundry Detergent is specially developed to preserve the elasticity and shape of your clothing.', 'اسكب ما يعادل الجرعة المذكورة في المكان المخصص له في الغسالة أو في حوض الغسيل في حالة التنظيف باليدين.', 'Keep out of reach of children. Avoid eye contact. In case of contact with eyes, wash immediately with water.', 'يحفظ بعيدا عن متناول الأطفال. تجنب ملامسة العينين. في حالة ملامسة العينين ، اغسل بالماء على الفور.', 'Clean, protect and remove stains from clothes', 'ينظف ، يحمي و يزيل البقع  من الملابس');
 
 -- --------------------------------------------------------
 
@@ -936,7 +968,7 @@ ALTER TABLE `contacts`
 -- AUTO_INCREMENT for table `data_rows`
 --
 ALTER TABLE `data_rows`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=108;
 
 --
 -- AUTO_INCREMENT for table `data_types`

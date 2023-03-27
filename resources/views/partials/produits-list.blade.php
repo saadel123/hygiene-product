@@ -10,10 +10,9 @@
                     <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="{{ $delay  }}">
                         <div class="box">
                             <img src="{{ Voyager::image($product->image) }}" class="img-fluid"
-                                alt="{{ $product->title }}" />
-                            <h3>{{ $product->title }}</h3>
-                            <a href="{{ url('produits/'. $category->slug . '/' . $product->slug) }}" class="btn-buy">Voir
-                                plus</a>
+                                alt="{{ $product->{'title_' . app()->getLocale()} }}" />
+                            <h3>{{ $product->{'title_' . app()->getLocale()} }}</h3>
+                            <a href="{{ url('produits/'. $category->slug . '/' . $product->slug) }}" class="btn-buy">{{ __('partials.buttons.see_more') }}</a>
                         </div>
                     </div>
                     @php

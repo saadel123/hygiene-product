@@ -52,7 +52,7 @@
 @section('content')
     @include('partials.categories-list')
     <!-- ======= Products Section ======= -->
-    <section class="padding-y bg-white product-detail">
+    <section class="product padding-y bg-white product-detail">
         <div class="container" data-aos="fade-up">
             <div class="row">
                 <aside class="col-lg-6">
@@ -65,9 +65,9 @@
                 </aside>
                 <div class="col-lg-6">
                     <article class="ps-lg-3">
-                        <header class="section-header text-start">
-                            <h1 class="fw-bold">{{ $product->title }}</h1>
-                            <span class="uses-text">{{ $product->uses }}</span>
+                        <header class="section-header">
+                            <h1 class="fw-bold">{{ $product->{'title_' . app()->getLocale()} }}</h1>
+                            <span class="uses-text">{{ $product->{'uses_' . app()->getLocale()} }}</span>
                         </header>
                         <div class="d-flex justify-content-between align-items-center mb-3">
                             <div class="ratings">
@@ -78,16 +78,16 @@
                             {{-- <h5 class="review-count">12 Reviews</h5> --}}
                         </div>
                         <div class="mb-3"> <span class="price h5">{{ $product->prix }} MAD</span> <span
-                                class="text-muted">/{{ $product->size }}</span>
+                                class="text-muted">/{{ $product->{'size_' . app()->getLocale()} }}</span>
                         </div>
-                        <p>{!! $product->description !!}</p>
+                        <p>{!! $product->{'description_' . app()->getLocale()} !!}</p>
                         <p>
-                            <strong>Mode d’emploi :</strong>
-                            {{ $product->mode_emploi }}
+                            <strong>{{ __('partials.info.instructions') }}</strong>
+                            {{ $product->{'mode_emploi_' . app()->getLocale()} }}
                         </p>
                         <p>
-                            <strong>Précaution d’emploi :</strong>
-                            {{ $product->precaution_emploi }}
+                            <strong>{{ __('partials.info.caution') }}</strong>
+                            {{ $product->{'precaution_emploi_' . app()->getLocale()} }}
                         </p>
 
                         {{-- <dl class="row">
@@ -101,8 +101,8 @@
                             <dd class="col-9">Russia, USA, and Europe </dd>
                         </dl> --}}
                         <div class="mt-5">
-                            <a href="#" class="btn btn-warning btn-achtez animate__animated animate__fadeInUp">
-                                Acheter
+                            <a href="{{ url('/distribution') }}" class="btn btn-warning btn-achtez animate__animated animate__fadeInUp">
+                                {{ __('partials.buttons.buy') }}
                             </a>
                         </div>
                     </article>
@@ -120,10 +120,9 @@
                     <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="{{ $i }}">
                         <div class="box">
                             <img src="{{ Voyager::image($product->image) }}" class="img-fluid"
-                                alt="{{ $product->title }}" />
-                            <h3>{{ $product->title }}</h3>
-                            <a href="{{ url('produits/' . $name_cat . '/' . $product->slug) }}" class="btn-buy">Voir
-                                plus</a>
+                                alt="{{ $product->{'title_' . app()->getLocale()} }}" />
+                            <h3>{{ $product->{'title_' . app()->getLocale()} }}</h3>
+                            <a href="{{ url('produits/' . $name_cat . '/' . $product->slug) }}" class="btn-buy">{{ __('partials.buttons.see_more') }}</a>
                         </div>
                     </div>
                     @php

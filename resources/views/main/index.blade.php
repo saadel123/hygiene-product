@@ -311,11 +311,10 @@
                         <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="{{ $delay }}">
                             <div class="box">
                                 <img src="{{ Voyager::image($product->image) }}" class="img-fluid"
-                                    alt="{{ $product->title }}" />
-                                <h3>{{ $product->title }}</h3>
+                                    alt="{{ $product->{'title_' . app()->getLocale()} }}" />
+                                <h3>{{ $product->{'title_' . app()->getLocale()} }}</h3>
                                 <a href="{{ url('produits/' . $product->category->slug . '/' . $product->slug) }}"
-                                    class="btn-buy">Voir
-                                    plus</a>
+                                    class="btn-buy">{{ __('partials.buttons.see_more') }}</a>
                             </div>
                         </div>
                         @php
@@ -333,7 +332,7 @@
                     <div class="col-lg-12 justify-content-center text-center">
                         <div class="" data-aos="zoom-out" data-aos-delay="200">
                             <div class="text-center text-lg-center">
-                                <a href="#"
+                                <a href="{{ url('/distribution') }}"
                                     class="btn-comandez d-inline-flex align-items-center justify-content-center align-self-center">
                                     <img src="{{ asset('assets/img/commandez.png') }}" class="icon-cmnd" alt="">
                                     <span>{{ __('partials.buttons.order') }}</span>

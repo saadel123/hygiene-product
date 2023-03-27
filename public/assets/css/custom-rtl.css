@@ -1,4 +1,4 @@
-.rtl * {
+.rtl *:not(span) {
     direction: rtl;
     font-family: Andalus !important;
     src: url('../fonts/andlso.ttf') !important;
@@ -10,16 +10,18 @@
     src: url('../fonts/andlso.ttf') !important;
 }
 
+
+
 .rtl #header * {
     direction: ltr !important;
 }
 
-.rtl .navbar a, .navbar a:focus {
+.rtl .navbar a, .rtl .navbar a:focus {
     font-size: 22px;
     font-weight: 100;
 }
 
-.rtl .logo-nav{
+.rtl .logo-nav {
     margin-left: 30px;
 }
 

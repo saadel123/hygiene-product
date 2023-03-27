@@ -17,6 +17,12 @@ return [
         "see_more" => "See more",
         "order" => "Order",
         "send" => "Send",
+        "buy" => "Buy",
+
+    ],
+    "info" => [
+        "instructions" => "Instructions :",
+        "caution" => "Caution :",
     ],
     "languages" => ["fr" => "French", "en" => "English", "ar" => "Arabic"],
     "forms" => [

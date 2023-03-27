@@ -1,4 +1,8 @@
 
+ .product .section-header {
+    text-align: start !important;
+}
+
 .contact span {
     color: red;
     margin-left: 15px;
