@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Product;
+use App\Slide;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -14,6 +15,7 @@ class Controller extends BaseController
     public function index()
     {
         $products = Product::with('category')->take(8)->get();
-        return view('main.index')->with(compact('products'));
+        $slides = Slide::orderby('order', 'ASC')->paginate(9);
+        return view('main.index')->with(compact('products', 'slides'));
     }
 }

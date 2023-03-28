@@ -13,6 +13,11 @@ return [
         "social-media" => "وسائل التواصل الاجتماعي",
 
     ],
+    "products" => [
+        "product1" => ["title" => "Nettoyant Sol Jaim", "uses" => "Brillance & propreté"],
+        "product2" => ["title" => "Détergent Liquide Jaim Matic", "uses" => "Nettoie, Protège et Détache"],
+        "product3" => ["title" => "", "uses" => ""],
+    ],
     "buttons" => [
         "read_more" => "اقرأ المزيد",
         "see_more" => "انظر المزيد",

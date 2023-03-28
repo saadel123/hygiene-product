@@ -163,52 +163,34 @@
         </div>
     </header>
     <!-- End Header -->
-
-
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex justify-cntent-center align-items-center">
         <div id="heroCarousel" class="container carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
-            <!-- Slide 1 -->
-            <div class="carousel-item active">
-                <div class="">
-                    <div class="row" data-aos="fade-up">
-                        <div class="col-lg-6 text-start">
-                            <div class="text-slide">
-                                <h2 class="animate__animated animate__fadeInDown">Nettoyant Sol</h2>
-                                <h3 class="animate__animated animate__fadeInUp text-white">Brillance & propreté</h3>
-                                <a href="{{ url('/details-produit') }}"
-                                    class="btn-get-started animate__animated animate__fadeInUp">{{ __('partials.buttons.read_more') }}</a>
+            @foreach ($slides as $slide)
+                <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+                    <div class="">
+                        <div class="row" data-aos="fade-up">
+                            <div class="col-lg-6 text-start">
+                                <div class="text-slide">
+                                    <h2 class="animate__animated animate__fadeInDown">
+                                        {{ $slide->{'title_' . app()->getLocale()} }}</h2>
+                                    <h3 class="animate__animated animate__fadeInUp text-white">
+                                        {{ $slide->{'uses_' . app()->getLocale()} }}</h3>
+                                    <a href="{{ url('produits/' . $slide->slug ) }}"
+                                        class="btn-get-started animate__animated animate__fadeInUp">{{ __('partials.buttons.read_more') }}</a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="img-slide">
-                                <img src="{{ asset('assets/img/slide/product1.png') }}"
-                                    class="d-block m-auto w-100px animate__animated animate__fadeInRight" alt="...">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="">
-                    <div class="row" data-aos="fade-up">
-                        <div class="col-lg-6 text-start">
-                            <div class="text-slide">
-                                <h2 class="animate__animated animate__fadeInDown">Liquide Vaisselle</h2>
-                                <h3 class="animate__animated animate__fadeInUp text-white">Brillance & propreté</h3>
-                                <a href="{{ url('/details-produit') }}"
-                                    class="btn-get-started animate__animated animate__fadeInUp">{{ __('partials.buttons.read_more') }}</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="img-slide">
-                                <img src="{{ asset('assets/img/slide/product7.png') }}"
-                                    class="d-block m-auto w-100px animate__animated animate__fadeInRight" alt="...">
+                            <div class="col-lg-6">
+                                <div class="img-slide">
+                                    <img src="{{ Voyager::image($slide->image) }}"
+                                        class="d-block m-auto w-100px animate__animated animate__fadeInRight"
+                                        alt="{{ $slide->{'title_' . app()->getLocale()} }}">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            @endforeach
             <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
             </a>
