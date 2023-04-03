@@ -22,7 +22,7 @@
             font-size: 40px;
             margin-bottom: 40px;
             font-weight: 700;
-            color: #27427a;
+            color: #388ccc;
         }
 
         .qui-sommes-nous p {
@@ -30,6 +30,7 @@
             line-height: 30px;
             font-weight: 600;
             color: #305092;
+            line-height: 1.9;
         }
 
         .services .service-box span {
@@ -54,15 +55,15 @@
         }
 
         .services .service-box.orange span {
-            color: #fe7f00;
+            color: #388ccc;
         }
 
         .services .service-box.pink span {
-            color: #e41e5b;
+            color: #388ccc;
         }
 
         .services .service-box.blue span {
-            color: #114e95;
+            color: #388ccc;
         }
 
         .shape-integrite {
@@ -106,7 +107,7 @@
             font-size: 34px;
             line-height: 42px;
             font-weight: 700;
-            color: #305095;
+            color: #388ccc;
         }
 
 

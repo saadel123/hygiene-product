@@ -23,6 +23,9 @@ return [
     "info" => [
         "instructions" => "Mode d’emploi :",
         "caution" => "Précaution d’emploi :",
+        "parfums" => "Parfums :",
+        "format" => "Format :",
+        "dh" => "Mad",
     ],
     "languages" => ["fr" => "Français", "en" => "Anglais", "ar" => "Arabe"],
     "forms" => [
@@ -36,6 +39,11 @@ return [
             "ville" => "Ville",
             "requested_products" => "Produit demandé",
         ]
+    ],
+    "distribution" => [
+        "title" => "Distribution",
+        "description" => "Notre flotte comporte une variété de formats de véhicules permettant de distribuer les marchandises dans tout le Royaume.",
+        "image" => "distribustion.jpg"
     ],
     "satisfaction-clients" => [
         "title" => "Satisfaction des clients",

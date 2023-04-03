@@ -23,6 +23,9 @@ return [
     "info" => [
         "instructions" => "Instructions :",
         "caution" => "Caution :",
+        "parfums" => "Scent :",
+        "format" => "Size :",
+        "dh" => "Mad",
     ],
     "languages" => ["fr" => "French", "en" => "English", "ar" => "Arabic"],
     "forms" => [
@@ -36,6 +39,11 @@ return [
             "ville" => "City",
             "requested_products" => "Requested product"
         ]
+    ],
+    "distribution" => [
+        "title" => "Distribution",
+        "description" => "Our fleet includes a variety of vehicle formats to distribute goods throughout the Kingdom.",
+        "image" => "distribustion-en.jpg"
     ],
     "satisfaction-clients" => [
         "title" => "Customer satisfaction",

@@ -24,7 +24,11 @@
         .distribution .php-email-form {
             background: unset !important;
             /* padding: 30px;
-                    height: 100%; */
+                                        height: 100%; */
+        }
+
+        .section-header h1 {
+            text-align: start;
         }
     </style>
 @endsection
@@ -33,16 +37,15 @@
         <!-- ======= Contact Section ======= -->
         <section id="distribution" class="distribution">
             <div class="container" data-aos="fade-up">
-                <header class="section-header text-start">
-                    <h1>Distribution</h1>
+                <header class="section-header">
+                    <h1>{{ __('partials.distribution.title') }}</h1>
                 </header>
                 <div class="row gy-4">
-                    <p>Notre flotte comporte une variété de formats de véhicules permettant de distribuer les marchandises
-                        dans tout le Royaume.</p>
+                    <p>{{ __('partials.distribution.description') }}</p>
                     <div class="col-lg-12 col-md-12 d-flex align-items-center justify-content-center" data-aos="fade-up"
                         data-aos-delay="200">
-                        <img src="{{ asset('assets/img/distribustion/distribustion.jpg') }}" class=""
-                            alt="distribution">
+                        <img src="{{ asset('assets/img/distribustion/' . __('partials.distribution.image')) }}"
+                            class="" alt="distribution">
                     </div>
                 </div>
             </div>
@@ -62,7 +65,8 @@
                             <div class="row gy-4">
                                 @include('partials.contact-form')
                                 <div class="col-md-12">
-                                    <label for="ville" class="form-label">{{ __('partials.forms.contact.ville') }}*</label>
+                                    <label for="ville"
+                                        class="form-label">{{ __('partials.forms.contact.ville') }}*</label>
                                     <select class="form-select" name="ville" id=""
                                         aria-label="Default select example">
                                         <option selected>Open this select menu</option>
@@ -72,7 +76,8 @@
                                     </select>
                                 </div>
                                 <div class="col-md-12">
-                                    <label for="ville" class="form-label">{{ __('partials.forms.contact.requested_products') }}*</label>
+                                    <label for="ville"
+                                        class="form-label">{{ __('partials.forms.contact.requested_products') }}*</label>
                                     <select class="form-select" name="ville" id=""
                                         aria-label="Default select example">
                                         <option selected>Open this select menu</option>
@@ -81,11 +86,11 @@
                                         <option value="3">Three</option>
                                         <option value="4">Four</option>
                                         <option value="5">Hello Which kind of post you want</option>
-                                        Thanks mate will do the same for the flyer
                                     </select>
                                 </div>
                                 <div class="col-md-12">
-                                    <label for="adresse" class="form-label">{{ __('partials.forms.contact.message') }}*</label>
+                                    <label for="adresse"
+                                        class="form-label">{{ __('partials.forms.contact.message') }}*</label>
                                     <textarea class="form-control {{ $errors->has('message') ? 'is-invalid' : '' }}" name="message" rows="6"
                                         placeholder="Message" required> {{ old('message') }}</textarea>
                                     @error('message')

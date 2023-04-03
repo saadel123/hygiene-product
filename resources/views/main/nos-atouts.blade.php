@@ -28,7 +28,7 @@
         .page-qualite::before {
             position: absolute;
             content: '';
-            background: rgba(204, 15, 103, 0.6);
+            background:  rgba(56, 140, 204, 0.6);
             width: 100%;
             height: 100%;
             top: 0;
@@ -50,7 +50,7 @@
             font-size: 34px;
             line-height: 42px;
             font-weight: 700;
-            color: #305095;
+            color: #388ccc;
         }
 
         .satisfaction-client p {

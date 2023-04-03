@@ -26,8 +26,11 @@ return [
         "buy" => "شراء",
     ],
     "info" => [
-        "instructions" => "طريقة الاستعمال: ",
-        "caution" => "احتياطات الاستخدام:",
+        "instructions" => "طريقة الاستعمال :",
+        "caution" => "احتياطات الاستخدام :",
+        "parfums" => "النسمة :",
+        "format" => "الحجم :",
+        "dh" => "درهم",
     ],
     "languages" => ["fr" => "الفرنسية", "en" => "الإنجليزية", "ar" => "العربية"],
     "forms" => [
@@ -41,6 +44,11 @@ return [
             "ville" => "المدينة",
             "requested_products" => "المنتجات المطلوبة"
         ]
+    ],
+    "distribution" => [
+        "title" => "التوزيع",
+        "description" => "يتضمن أسطولنا مجموعة متنوعة من أشكال المركبات لتوزيع البضائع في جميع أنحاء المملكة.",
+        "image" => "distribustion-ar.jpg"
     ],
     "satisfaction-clients" => [
         "title" => "إرضاء الزبناء",

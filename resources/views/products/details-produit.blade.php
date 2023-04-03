@@ -38,7 +38,7 @@
             line-height: 1;
             -webkit-animation-delay: 0.8s;
             animation-delay: 0.8s;
-            background: linear-gradient(0deg, rgba(127, 5, 148, 1) 0%, rgba(165, 13, 194, 1) 100%);
+            background: linear-gradient(0deg, #0e315b 0%, #124e96 100%);
             color: #fff;
         }
 
@@ -77,7 +77,7 @@
                             </div>
                             {{-- <h5 class="review-count">12 Reviews</h5> --}}
                         </div>
-                        <div class="mb-3"> <span class="price h5">{{ $product->prix }} MAD</span> <span
+                        <div class="mb-3"> <span class="price h5">{{ $product->price }} {{ __('partials.info.dh') }}</span> <span
                                 class="text-muted">/{{ $product->{'size_' . app()->getLocale()} }}</span>
                         </div>
                         <p>{!! $product->{'description_' . app()->getLocale()} !!}</p>
@@ -89,6 +89,15 @@
                             <strong>{{ __('partials.info.caution') }}</strong>
                             {{ $product->{'precaution_emploi_' . app()->getLocale()} }}
                         </p>
+                        <p>
+                            <strong>{{ __('partials.info.caution') }}</strong>
+                            {{ $product->{'precaution_emploi_' . app()->getLocale()} }}
+                        </p>
+                        <p>
+                            <strong>{{ __('partials.info.parfums') }}</strong>
+                            {{ $product->{'parfums_' . app()->getLocale()} }}
+                        </p>
+
 
                         {{-- <dl class="row">
                             <dt class="col-2">Model#</dt>
@@ -101,7 +110,8 @@
                             <dd class="col-9">Russia, USA, and Europe </dd>
                         </dl> --}}
                         <div class="mt-5">
-                            <a href="{{ url('/distribution') }}" class="btn btn-warning btn-achtez animate__animated animate__fadeInUp">
+                            <a href="{{ url('/distribution') }}"
+                                class="btn btn-warning btn-achtez animate__animated animate__fadeInUp">
                                 {{ __('partials.buttons.buy') }}
                             </a>
                         </div>
@@ -122,7 +132,8 @@
                             <img src="{{ Voyager::image($product->image) }}" class="img-fluid"
                                 alt="{{ $product->{'title_' . app()->getLocale()} }}" />
                             <h3>{{ $product->{'title_' . app()->getLocale()} }}</h3>
-                            <a href="{{ url('produits/' . $name_cat . '/' . $product->slug) }}" class="btn-buy">{{ __('partials.buttons.see_more') }}</a>
+                            <a href="{{ url('produits/' . $name_cat . '/' . $product->slug) }}"
+                                class="btn-buy">{{ __('partials.buttons.see_more') }}</a>
                         </div>
                     </div>
                     @php

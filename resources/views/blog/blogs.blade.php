@@ -14,18 +14,23 @@
             margin: 0 5px !important;
             padding: 7px 16px;
         }
+
+        .active>.page-link,
+        .page-link.active {
+            background: #388ccc;
+        }
     </style>
 
 @endsection
 
 @section('content')
-
     <main id="main">
-
-
         <!-- ======= Blog Section ======= -->
         <section id="blog" class="blog">
             <div class="container" data-aos="fade-up">
+                <header class="section-header">
+                    <h1>{{ __('partials.navbar.blog') }}</h1>
+                </header>
                 <div class="row">
                     <div class="col-lg-12 entries">
                         @foreach ($blogs as $blog)

@@ -1,16 +1,93 @@
-.rtl *:not(span) {
-    direction: rtl;
-    font-family: Andalus !important;
-    src: url('../fonts/andlso.ttf') !important;
-
+@font-face {
+    font-family: 'THESANSARABIC';
+    src: url(../fonts/THESANSARABIC.ttf) format('truetype');
 }
+
 
 @font-face {
-    font-family: Andalus !important;
-    src: url('../fonts/andlso.ttf') !important;
+    font-family: 'TRADITIONALARABIC';
+    src: url(../fonts/Traditional-Arabic.ttf) format('truetype');
 }
 
 
+.rtl *:not(span):not(p) {
+    direction: rtl;
+    font-family: 'THESANSARABIC', sans-serif;
+}
+
+.rtl p {
+    font-family: 'TRADITIONALARABIC';
+    font-size: 29px !important;
+    line-height: 1.9;
+    font-weight: 600;
+}
+
+.rtl strong {
+    font-family: 'TRADITIONALARABIC' !important;
+
+}
+
+.rtl span {
+    font-family: 'TRADITIONALARABIC' !important;
+    font-size: 24px;
+
+}
+
+.rtl label {
+    font-family: 'TRADITIONALARABIC' !important;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.rtl .section-header h1 {
+    font-weight: 500;
+}
+
+.rtl .footer .footer-top .footer-links ul a {
+    font-weight: 500;
+}
+
+.rtl .qualite h1 {
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.rtl .satisfaction-client h3 {
+    font-weight: 500;
+}
+
+.rtl .disponibilite h3 {
+    font-weight: 500;
+}
+.rtl .features .feture-tabs .tab-content h4 {
+    font-size: 29px;
+    font-family: 'TRADITIONALARABIC' !important;
+}
+
+.rtl .section-header p {
+    font-size: 38px !important;
+}
+
+.rtl .product-detail .uses-text {
+    font-size: 40px;
+}
+
+.rtl .products .btn-buy {
+    font-family: 'TRADITIONALARABIC';
+    font-weight: 600;
+    font-size: 21px;
+
+}
+
+.rtl #hero .carousel-control-next-icon, #hero .carousel-control-prev-icon {
+    font-family: boxicons !important;
+}
+
+
+
+.rtl .category .category-btn h4 {
+    font-family: 'TRADITIONALARABIC';
+}
 
 .rtl #header * {
     direction: ltr !important;
@@ -18,6 +95,7 @@
 
 .rtl .navbar a, .rtl .navbar a:focus {
     font-size: 22px;
+    font-family: 'THESANSARABIC';
     font-weight: 100;
 }
 

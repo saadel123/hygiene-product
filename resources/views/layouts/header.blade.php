@@ -35,7 +35,7 @@
         </div>
     </div>
 </header>
-<div class="pb-4">
+<div class="pb-4 menu-mobile">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-center">
         <a href="/" class="logo-nav d-flex align-items-center">
             <img src="{{ asset('assets/img/icone-accueil.png') }}" alt="" />
@@ -43,19 +43,28 @@
         <nav id="navbar" class="navbar">
             <ul>
                 {{-- <li><a class="nav-link scrollto active" href="#hero">Home</a></li> --}}
-                <li><a class="nav-link scrollto" href="{{ url('/qui-sommes-nous') }}">{{ __('partials.navbar.qui-sommes-nous') }}</a></li>
-                <li><a class="nav-link scrollto" href="{{ url('/produits') }}">{{ __('partials.navbar.produits') }}</a></li>
-                <li><a class="nav-link scrollto" href="{{ url('/nos-atouts') }}">{{ __('partials.navbar.nos_atouts') }}</a></li>
+                <li><a class="nav-link scrollto {{ request()->is('qui-sommes-nous') ? 'active' : '' }}"
+                        href="{{ url('/qui-sommes-nous') }}">{{ __('partials.navbar.qui-sommes-nous') }}</a></li>
+                <li><a class="nav-link scrollto {{ request()->is('produits*') ? 'active' : '' }}"
+                        href="{{ url('/produits') }}">{{ __('partials.navbar.produits') }}</a></li>
+                <li><a class="nav-link scrollto {{ request()->is('nos-atouts') ? 'active' : '' }}"
+                        href="{{ url('/nos-atouts') }}">{{ __('partials.navbar.nos_atouts') }}</a></li>
                 <li>
-                    <a class="nav-link scrollto" href="{{ url('/distribution') }}">{{ __('partials.navbar.distribution') }}</a>
+                    <a class="nav-link scrollto {{ request()->is('distribution') ? 'active' : '' }}"
+                        href="{{ url('/distribution') }}">{{ __('partials.navbar.distribution') }}</a>
                 </li>
-                <li><a class="nav-link scrollto" href="{{ route('blogs.index') }}">{{ __('partials.navbar.blog') }}</a></li>
-                <li><a class="nav-link scrollto" href="{{ url('/contactez-nous') }}">{{ __('partials.navbar.contact') }}</a></li>
+                <li><a class="nav-link scrollto {{ request()->is('blogs') ? 'active' : '' }}"
+                        href="{{ route('blogs.index') }}">{{ __('partials.navbar.blog') }}</a></li>
+                <li><a class="nav-link scrollto {{ request()->is('contactez-nous') ? 'active' : '' }}"
+                        href="{{ url('/contactez-nous') }}">{{ __('partials.navbar.contact') }}</a></li>
                 <li class="ms-4 me-4">
                     <select class="form-control changeLang ">
-                            <option value="fr" {{ session()->get('locale') == 'fr' ? 'selected' : '' }}>{{ __('partials.languages.fr') }}</option>
-                            <option value="en" {{ session()->get('locale') == 'en' ? 'selected' : '' }}>{{ __('partials.languages.en') }}</option>
-                            <option value="ar" {{ session()->get('locale') == 'ar' ? 'selected' : '' }}>{{ __('partials.languages.ar') }}</option>
+                        <option value="fr" {{ session()->get('locale') == 'fr' ? 'selected' : '' }}>
+                            {{ __('partials.languages.fr') }}</option>
+                        <option value="en" {{ session()->get('locale') == 'en' ? 'selected' : '' }}>
+                            {{ __('partials.languages.en') }}</option>
+                        <option value="ar" {{ session()->get('locale') == 'ar' ? 'selected' : '' }}>
+                            {{ __('partials.languages.ar') }}</option>
                     </select>
                 </li>
             </ul>

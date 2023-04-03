@@ -1,4 +1,8 @@
-
+.changeLang{
+    font-size: 15px;
+    font-weight: 700;
+    color: #013289;
+}
  .product .section-header {
     text-align: start !important;
 }
@@ -33,7 +37,7 @@
 .category .category-btn h4 {
     /* color: #444444; */
     font-weight: 600;
-    font-size: 1.3rem;
+    font-size: 1.7rem;
 }
 
 .category .category-btn .title {
@@ -166,7 +170,7 @@
 }
 
 .bg-pink {
-    background: #e41e5b;
+    background: #124e96;
     padding: 250px;
     margin-top: -400px;
 }

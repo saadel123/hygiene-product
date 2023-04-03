@@ -75,7 +75,7 @@
             margin: -15px 30px;
         }
 
-        .btn-comandez {
+        .btn-commandez {
             font-family: "Roboto", sans-serif;
             font-weight: 400;
             font-size: 26px;
@@ -89,9 +89,13 @@
             line-height: 1;
             -webkit-animation-delay: 0.8s;
             animation-delay: 0.8s;
-            background: linear-gradient(0deg, rgba(127, 5, 148, 1) 0%, rgba(165, 13, 194, 1) 100%);
+            background: linear-gradient(0deg, #0e315b 0%, #124e96 100%);
             color: #fff;
             box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        }
+
+        .btn-commandez:hover {
+            color: #fff;
         }
 
         .icon-cmnd {
@@ -113,14 +117,20 @@
             margin-right: 20px;
         }
 
-        .bg-pink {
-            background: #e41e5b;
+        .bg-blue {
+            background: #124e96;
             padding: 250px;
             margin-top: -400px;
         }
 
         #header {
             direction: ltr !important;
+        }
+
+        @media (max-width: 575px) {
+            #hero .img-slide-mobile {
+                max-height: 330px;
+            }
         }
     </style>
 @endsection
@@ -176,14 +186,14 @@
                                         {{ $slide->{'title_' . app()->getLocale()} }}</h2>
                                     <h3 class="animate__animated animate__fadeInUp text-white">
                                         {{ $slide->{'uses_' . app()->getLocale()} }}</h3>
-                                    <a href="{{ url('produits/' . $slide->slug ) }}"
+                                    <a href="{{ url('produits/' . $slide->slug) }}"
                                         class="btn-get-started animate__animated animate__fadeInUp">{{ __('partials.buttons.read_more') }}</a>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="img-slide">
                                     <img src="{{ Voyager::image($slide->image) }}"
-                                        class="d-block m-auto w-100px animate__animated animate__fadeInRight"
+                                        class="d-block m-auto w-100px animate__animated animate__fadeInRight img-slide-mobile"
                                         alt="{{ $slide->{'title_' . app()->getLocale()} }}">
                                 </div>
                             </div>
@@ -200,7 +210,7 @@
         </div>
     </section><!-- End Hero -->
     <!-- ======= navbar ======= -->
-    <div class="pb-4">
+    <div class="pb-4 menu-mobile">
         {{-- Use this style to add z-index to this menu
         z-index: 11;
         position: relative; --}}
@@ -253,7 +263,7 @@
                         <div class="content">
                             <div class="row">
                                 <div class="col-lg-8">
-                                    <h2>
+                                    <h2 class="mb-5">
                                         {{ __('about.qui-sommes-nous') }}
                                     </h2>
                                     <p>
@@ -267,7 +277,8 @@
                                             <a href="{{ url('/qui-sommes-nous') }}"
                                                 class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
                                                 <span>{{ __('partials.buttons.read_more') }}</span>
-                                                <i class="bi bi-arrow-right"></i>
+                                                <i
+                                                    class="me-2 ms-2 bi bi-arrow-{{ session()->get('locale') == 'fr' ? 'right' : 'left' }}"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -315,7 +326,7 @@
                         <div class="" data-aos="zoom-out" data-aos-delay="200">
                             <div class="text-center text-lg-center">
                                 <a href="{{ url('/distribution') }}"
-                                    class="btn-comandez d-inline-flex align-items-center justify-content-center align-self-center">
+                                    class="btn-commandez d-inline-flex align-items-center justify-content-center align-self-center">
                                     <img src="{{ asset('assets/img/commandez.png') }}" class="icon-cmnd" alt="">
                                     <span>{{ __('partials.buttons.order') }}</span>
                                 </a>
@@ -352,7 +363,7 @@
                 </div>
             </div>
             <!-- End Team Section -->
-            <section class="bg-pink">
+            <section class="bg-blue">
             </section>
         </div>
     </main>
