@@ -14,7 +14,8 @@ class Controller extends BaseController
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
     public function index()
     {
-        $products = Product::with('category')->take(8)->get();
+        $products = Product::with('category')->whereFeatured(1)->take(8)->get();
+        // ->whereFeatured(1)
         $slides = Slide::orderby('order', 'ASC')->paginate(9);
         return view('main.index')->with(compact('products', 'slides'));
     }

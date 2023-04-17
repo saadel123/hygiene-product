@@ -21,7 +21,7 @@
             border: 3px solid var(--bs-border-color);
             border-radius: 3rem;
             max-width: 100%;
-            width: 65%;
+            min-width: 70%;
             height: auto;
         }
 
@@ -46,6 +46,13 @@
             color: #305095;
             font-size: 18px;
         }
+
+        .img-produit {
+            max-height: 310px;
+            overflow: hidden;
+            margin: auto;
+            object-fit: cover;
+        }
     </style>
 @endsection
 
@@ -58,8 +65,7 @@
                 <aside class="col-lg-6">
                     <article class="gallery-wrap d-flex">
                         <div class="img-big-wrap text-center mx-auto img-thumbnail">
-                            <img class="" src="{{ Voyager::image($product->image) }}"
-                                style="max-width: 110px; height: auto;">
+                            <img class="img-produit" src="{{ Voyager::image($product->image) }}">
                         </div>
                     </article>
                 </aside>
@@ -77,17 +83,15 @@
                             </div>
                             {{-- <h5 class="review-count">12 Reviews</h5> --}}
                         </div>
-                        <div class="mb-3"> <span class="price h5">{{ $product->price }} {{ __('partials.info.dh') }}</span> <span
-                                class="text-muted">/{{ $product->{'size_' . app()->getLocale()} }}</span>
+                        <div class="mb-3"> <span class="price h5">
+                                {{-- {{ $product->price }}
+                                {{ __('partials.info.dh') }}</span> <span class="text-muted">/ --}}
+                                {{ $product->{'size_' . app()->getLocale()} }}</span>
                         </div>
                         <p>{!! $product->{'description_' . app()->getLocale()} !!}</p>
                         <p>
                             <strong>{{ __('partials.info.instructions') }}</strong>
                             {{ $product->{'mode_emploi_' . app()->getLocale()} }}
-                        </p>
-                        <p>
-                            <strong>{{ __('partials.info.caution') }}</strong>
-                            {{ $product->{'precaution_emploi_' . app()->getLocale()} }}
                         </p>
                         <p>
                             <strong>{{ __('partials.info.caution') }}</strong>
@@ -132,6 +136,7 @@
                             <img src="{{ Voyager::image($product->image) }}" class="img-fluid"
                                 alt="{{ $product->{'title_' . app()->getLocale()} }}" />
                             <h3>{{ $product->{'title_' . app()->getLocale()} }}</h3>
+                            <p>{{ $product->{'size_' . app()->getLocale()} }}</p>
                             <a href="{{ url('produits/' . $name_cat . '/' . $product->slug) }}"
                                 class="btn-buy">{{ __('partials.buttons.see_more') }}</a>
                         </div>

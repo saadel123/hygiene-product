@@ -23,7 +23,7 @@ return [
     "info" => [
         "instructions" => "Mode d’emploi :",
         "caution" => "Précaution d’emploi :",
-        "parfums" => "Parfums :",
+        "parfums" => "Parfum :",
         "format" => "Format :",
         "dh" => "Mad",
     ],
@@ -49,15 +49,13 @@ return [
         "title" => "Satisfaction des clients",
         "description" => "
             <p>
-                La satisfaction de nos clients constitue notre objectif premier ! <br>
+                La satisfaction de nos clients constitue notre objectif premier ! <br><br>
                 Nous responsabilisons et formons nos collaborateurs à donner une entière
                 satisfaction à nos clients et à leur proposer des produits et services de
-                qualité. <br>
-                Nous responsabilisons et formons nos collaborateurs à donner une entière
-                satisfaction à nos clients et à leur proposer des produits et services de
-                qualité. <br>
+                qualité. <br><br>
+                Nous sommes constamment à l’écoute des attentes de nos clients afin de répondre au mieux à leurs besoins. <br><br>
             </p>
-            <h4>Nous nous engageons :</h4> <br>
+            <h4>Nous nous engageons </h4> <br>
             <div class='d-flex align-items-center mb-2'>
                 <i class='bi bi-check2'></i>
                 <h4>

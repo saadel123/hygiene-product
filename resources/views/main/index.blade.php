@@ -143,8 +143,8 @@
                 <div class="container-fluid">
                     <div class="navbar-collapse collapse" id="mynavbar">
                         <div class="col-lg-3 text-start text-white">
-                            <span> <i class="bi bi-telephone-fill me-3"> </i> +(212)600000000</i> <span> <br>
-                                    <span><i class="bi bi-envelope-fill me-3"> </i>ranaindustrie@gmail.com</i> </span>
+                            <span> <i class="bi bi-telephone-fill me-3"> </i> +(212)6 66 15 62 35</i> <span> <br>
+                                    <span><i class="bi bi-envelope-fill me-3"> </i>contact@ranaindustrie.ma</i> </span>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-inline mx-auto" style="padding-right: 40px;">
@@ -306,6 +306,7 @@
                                 <img src="{{ Voyager::image($product->image) }}" class="img-fluid"
                                     alt="{{ $product->{'title_' . app()->getLocale()} }}" />
                                 <h3>{{ $product->{'title_' . app()->getLocale()} }}</h3>
+                                <p>{{ $product->{'size_' . app()->getLocale()} }}</p>
                                 <a href="{{ url('produits/' . $product->category->slug . '/' . $product->slug) }}"
                                     class="btn-buy">{{ __('partials.buttons.see_more') }}</a>
                             </div>

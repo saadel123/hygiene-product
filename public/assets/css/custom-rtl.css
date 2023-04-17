@@ -39,6 +39,12 @@
     font-weight: 600;
 }
 
+.rtl .section-header {
+  text-align: right;
+  padding-bottom: 40px;
+}
+
+
 .rtl .section-header h1 {
     font-weight: 500;
 }

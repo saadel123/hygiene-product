@@ -12,6 +12,7 @@
                             <img src="{{ Voyager::image($product->image) }}" class="img-fluid"
                                 alt="{{ $product->{'title_' . app()->getLocale()} }}" />
                             <h3>{{ $product->{'title_' . app()->getLocale()} }}</h3>
+                            <p>{{ $product->{'size_' . app()->getLocale()} }}</p>
                             <a href="{{ url('produits/'. $category->slug . '/' . $product->slug) }}" class="btn-buy">{{ __('partials.buttons.see_more') }}</a>
                         </div>
                     </div>

@@ -45,7 +45,7 @@ section {
 }
 
 .section-header {
-  text-align: right;
+  text-align: left;
   padding-bottom: 40px;
 }
 
@@ -1091,7 +1091,7 @@ section {
 --------------------------------------------------------------*/
 .products .box {
   padding: 35px 20px;
-  background: #fff;
+  background: #c9e3ff;
   text-align: center;
   box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
   border-radius: 50px;

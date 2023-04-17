@@ -40,10 +40,10 @@
                  <div class="col-lg-3 col-6 footer-links">
                      <h4>{{ __('partials.navbar.social-media') }}</h4>
                      <div class="social-links mt-3">
-                         <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                         <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                         <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                         <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                         {{-- <a href="#" class="twitter"><i class="bi bi-twitter"></i></a> --}}
+                         <a href="https://www.facebook.com/Jaim.morocco/" target="_blank" class="facebook"><i class="bi bi-facebook"></i></a>
+                         <a href="https://www.instagram.com/jaim.maroc" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
+                         {{-- <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a> --}}
                      </div>
                  </div>
                  <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">

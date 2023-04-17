@@ -5,8 +5,8 @@
 @section('stylesheet')
     <style>
         /* .blog .img-fluid {
-                        max-height: 300px;
-                    } */
+                                max-height: 300px;
+                            } */
 
         .blog p {
             white-space: pre-line;
@@ -56,12 +56,18 @@
 
                 <div class="col-lg-4">
                     <div class="sidebar">
+                        <div class="mb-4">
+                            <a href="#" onclick="history.back()">
+                                <img src="{{ asset('assets/img/retour.png') }}" style="max-height: 40px;" alt="retour">
+                            </a>
+                        </div>
                         <h3 class="sidebar-title">Les dernières blogs</h3>
                         <div class="sidebar-item recent-posts">
                             @foreach ($relatedBlogs as $relatedBlog)
                                 <div class="post-item clearfix">
                                     <img src="{{ Voyager::image($relatedBlog->image) }}" alt="">
-                                    <h4><a href="{{ route('blogs.show', $relatedBlog->slug) }}"> {{ $relatedBlog->title }}</a></h4>
+                                    <h4><a href="{{ route('blogs.show', $relatedBlog->slug) }}">
+                                            {{ $relatedBlog->title }}</a></h4>
                                     <time datetime="2020-01-01">
                                         {{ \Carbon\Carbon::parse($blog->created_at)->format('d/m/Y') }}</time>
                                 </div>
