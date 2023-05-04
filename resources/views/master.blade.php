@@ -34,6 +34,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/custom-rtl.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <!-- Variables CSS Files. Uncomment your preferred color scheme -->
     {{-- <link rel="stylesheet" href="{{ asset('assets/css/variables-green.css') }}">
     @if (!request()->is('login'))
@@ -68,6 +69,8 @@
     {{-- <script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script> --}}
     <!-- Template Main JS File -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
     {{-- <script src="{{ asset('assets/js/familytree.js') }}"></script> --}}
     <script type="text/javascript">
         var url = "{{ route('changeLang') }}";

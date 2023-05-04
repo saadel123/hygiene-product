@@ -34,7 +34,7 @@ Route::get('/produits/{category}/{slug}', [ProductController::class, 'showProduc
 Route::get('/qui-sommes-nous', function () {
     return view('main.qui-sommes-nous');
 });
-Route::get('/distribution', [DistributionController::class, 'index']);
+// Route::get('/distribution', [DistributionController::class, 'index']);
 
 
 
@@ -51,6 +51,7 @@ Route::get('/contactez-nous', function () {
 });
 
 Route::resource('contact', ContactController::class);
+Route::resource('distribution', DistributionController::class);
 
 Route::get('/ar', [LocalizationController::class, 'index']);
 Route::get('lang/change', [LocalizationController::class, 'lang_change'])->name('changeLang');

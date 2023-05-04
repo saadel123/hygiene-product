@@ -7,7 +7,7 @@
                 @endphp
                 @foreach ($categories as $categorie)
                     <div class="col-md-3 col-12" data-aos="fade-up" data-aos-delay="{{ $i }}">
-                        <a href="{{ route('produits.show', $categorie->slug) }}"
+                        <a href="{{ route('produits.show', $categorie->slug) }}#pricing" target="_self"
                             class="category-btn d-md-block {{ request()->is('produits/' . $categorie->slug . '*') ? 'active' : '' }}">
                             <div class=" title">
                                 <h4>{{ $categorie->{'name_'.app()->getLocale()} }}</h4>

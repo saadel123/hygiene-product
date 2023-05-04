@@ -121,3 +121,65 @@
 </div>
 </body>
 </html>
+
+my-project/
+├── src/
+│   ├── js/
+│   │   └── main.js
+│   └── scss/
+│   |   └── styles.scss
+|   └── index.html
+├── package-lock.json
+├── package.json
+└── vite.config.js
+
+
+HTML:
+
+What is HTML?
+HTML stands for HyperText Markup Language, which is used to create web pages.
+
+What are the different versions of HTML?
+HTML 5 is the latest version of HTML.
+
+What is the difference between HTML and XHTML?
+XHTML is an extension of HTML, and it is more strict than HTML.
+
+What is the use of the 'alt' attribute in the 'img' tag?
+The 'alt' attribute in the 'img' tag is used to specify an alternate text for an image.
+
+
+What is the 'doctype' declaration in HTML?
+The 'doctype' declaration in HTML is used to specify the version of HTML used in the web page.
+
+CSS:
+
+What is CSS?
+What are the advantages of using CSS?
+What is the box model in CSS?
+What is the difference between padding and margin?
+What is the difference between 'display:none' and 'visibility:hidden'?
+JavaScript:
+
+What is JavaScript?
+What is the difference between null and undefined in JavaScript?
+What are the different data types in JavaScript?
+What is an anonymous function in JavaScript?
+What is event bubbling in JavaScript?
+Here are some possible answers to these questions:
+
+
+CSS:
+
+CSS stands for Cascading Style Sheets, which is used to add style to web pages.
+CSS separates the content from the presentation of a web page, which makes it easier to maintain.
+The box model in CSS is a way of representing an HTML element as a rectangular box.
+Padding is the space between the content and the border of an element, while margin is the space outside the border of an element.
+'display:none' hides an element completely, while 'visibility:hidden' hides an element but keeps its space.
+JavaScript:
+
+JavaScript is a programming language used to create interactive web pages.
+null represents the absence of any object value, while undefined represents the absence of any value.
+The different data types in JavaScript are: string, number, boolean, object, null, and undefined.
+An anonymous function in JavaScript is a function without a name.
+Event bubbling in JavaScript is the propagation of events from the innermost element to the outermost element in the DOM hierarchy.

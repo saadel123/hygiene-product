@@ -504,6 +504,7 @@ class ComposerStaticInit6d1c141776d3d97ba81a1a057a07a7ce
         'App\\Models\\BLog' => __DIR__ . '/../..' . '/app/Models/BLog.php',
         'App\\Models\\Category' => __DIR__ . '/../..' . '/app/Models/Category.php',
         'App\\Models\\Contact' => __DIR__ . '/../..' . '/app/Models/Contact.php',
+        'App\\Models\\Distribution' => __DIR__ . '/../..' . '/app/Models/Distribution.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Product' => __DIR__ . '/../..' . '/app/Product.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',

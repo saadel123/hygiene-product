@@ -2,7 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Distribution;
+use App\Mail\DistrubtionMail;
+use App\Models\Ville;
+use App\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class DistributionController extends Controller
 {
@@ -14,7 +19,9 @@ class DistributionController extends Controller
     public function index()
     {
         //
-        return view('main.distribution');
+        $villes = Ville::all();
+        $products = Product::orderby('category_id', 'ASC')->get();
+        return view('main.distribution', compact('villes', 'products'));
     }
 
     /**
@@ -35,7 +42,19 @@ class DistributionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $details = $request->all();
+
+        if ($request->has('produits_id')) {
+            // split urls string into an array and trim any whitespace
+            $details['produits_id'] = json_encode($details['produits_id']);
+        }
+
+        Distribution::create($details);
+        Mail::to('contact@ranaindustrie.ma')->send(new DistrubtionMail($details));
+
+        session()->flash('success', "Votre Produit a été envoyer avec succès");
+        return redirect()->route('distribution.index', '#contact');
     }
 
     /**

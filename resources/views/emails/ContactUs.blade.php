@@ -13,5 +13,5 @@ Vous avez un nouveau message de: <strong>{{ $details['nom'] }}</strong> <br>
 <strong>Message:</strong> {{ $details['message'] }}<br><br>
 
 Cordialement,<br>
-L'équipe<span> </span>Rana.
+L'équipe<span> </span>Jaim.
 @endcomponent

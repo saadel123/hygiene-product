@@ -154,15 +154,16 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="col-lg-3 text-end me-3">
+                        <div class="col-lg-3 text-end me-3" style="z-index: 2">
                             <!-- Facebook -->
                             <button class="btn btn-primary icon" style="background-color: #fff;border: unset;"
-                                href="https://www.facebook.com/CIMRetraite/" target="blank" role="button">
+                                onclick="window.location.href='https://www.facebook.com/Jaim.morocco/'" formtarget="_blank"
+                                role="button">
                                 <i class="bi bi-facebook" style="color:#3b5998"></i>
                             </button>
                             <!-- Instagram -->
                             <button class="btn btn-primary icon" style="background-color: #fff;border: unset;"
-                                href="https://www.instagram.com/cimr_officiel" target="blank" role="button">
+                            onclick="window.location.href='https://www.instagram.com/jaim.maroc'" formtarget="_blank" role="button">
                                 <i class="bi bi-instagram" style="color:#ac2bac"></i>
                             </button>
                         </div>
@@ -230,7 +231,7 @@
                             href="{{ url('/nos-atouts') }}">{{ __('partials.navbar.nos_atouts') }}</a></li>
                     <li>
                         <a class="nav-link scrollto"
-                            href="{{ url('/distribution') }}">{{ __('partials.navbar.distribution') }}</a>
+                            href="{{ route('distribution.index') }}">{{ __('partials.navbar.distribution') }}</a>
                     </li>
                     <li><a class="nav-link scrollto"
                             href="{{ route('blogs.index') }}">{{ __('partials.navbar.blog') }}</a></li>
@@ -326,7 +327,7 @@
                     <div class="col-lg-12 justify-content-center text-center">
                         <div class="" data-aos="zoom-out" data-aos-delay="200">
                             <div class="text-center text-lg-center">
-                                <a href="{{ url('/distribution') }}"
+                                <a href="{{ route('distribution.index') }}"
                                     class="btn-commandez d-inline-flex align-items-center justify-content-center align-self-center">
                                     <img src="{{ asset('assets/img/commandez.png') }}" class="icon-cmnd" alt="">
                                     <span>{{ __('partials.buttons.order') }}</span>

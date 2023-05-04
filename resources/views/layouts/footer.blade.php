@@ -25,7 +25,7 @@
                          </li>
                          <li>
                              <i class="bi bi-chevron-right"></i>
-                             <a href="{{ url('/distribution') }}">{{ __('partials.navbar.distribution') }}</a>
+                             <a href="{{ route('distribution.index') }}">{{ __('partials.navbar.distribution') }}</a>
                          </li>
                          <li>
                              <i class="bi bi-chevron-right"></i>
@@ -46,7 +46,7 @@
                          {{-- <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a> --}}
                      </div>
                  </div>
-                 <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+                 {{-- <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
                      <h4>{{ __('partials.navbar.map') }}</h4>
                      <div>
                          <iframe
@@ -54,7 +54,7 @@
                              width="70%" height="200" style="border: 3px solid #3e6493;" allowfullscreen=""
                              loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                      </div>
-                 </div>
+                 </div> --}}
              </div>
          </div>
      </div>

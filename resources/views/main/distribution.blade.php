@@ -24,11 +24,37 @@
         .distribution .php-email-form {
             background: unset !important;
             /* padding: 30px;
-                                        height: 100%; */
+                                                                            height: 100%; */
         }
 
         .section-header h1 {
             text-align: start;
+        }
+
+        .select2-selection {
+            display: block;
+            width: 100%;
+            padding: .375rem 2.25rem .375rem .75rem;
+            -moz-padding-start: calc(0.75rem - 3px);
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #212529;
+            background-color: #fff;
+            background-size: 16px 12px;
+            border: 1px solid #ced4da;
+            border-radius: .375rem;
+            transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border-radius: 20px !important;
+            padding: 10px 15px;
+        }
+
+        .contact span {
+            color: #000;
+            margin-left: unset !important;
         }
     </style>
 @endsection
@@ -59,33 +85,30 @@
                             style="max-height: 450px;" alt="distribution">
                     </div>
                     <div class="col-lg-5">
-                        <form action="{{ route('contact.store') }}" method="post" class="php-email-form">
-                            @include('partials.messages-alert')
+                        <form action="{{ route('distribution.store') }}" method="post" class="php-email-form">
                             @csrf
                             <div class="row gy-4">
+                                @include('partials.messages-alert')
                                 @include('partials.contact-form')
                                 <div class="col-md-12">
                                     <label for="ville"
                                         class="form-label">{{ __('partials.forms.contact.ville') }}*</label>
-                                    <select class="form-select" name="ville" id=""
+                                    <select class="form-select" name="ville_id" id="ville_id"
                                         aria-label="Default select example">
                                         <option selected>Open this select menu</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
+                                        @foreach ($villes as $ville)
+                                            <option value="{{ $ville->id }}">{{ $ville->ville }}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                                 <div class="col-md-12">
-                                    <label for="ville"
+                                    <label for="produit"
                                         class="form-label">{{ __('partials.forms.contact.requested_products') }}*</label>
-                                    <select class="form-select" name="ville" id=""
-                                        aria-label="Default select example">
-                                        <option selected>Open this select menu</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
-                                        <option value="4">Four</option>
-                                        <option value="5">Hello Which kind of post you want</option>
+                                    <select class="form-select select2" name="produits_id[]" id="produits_id"
+                                        aria-label="Default select example" multiple>
+                                        @foreach ($products as $product)
+                                            <option value="{{ $product->slug }}">{{ $product->slug }}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                                 <div class="col-md-12">
@@ -109,4 +132,12 @@
             </div>
         </section>
         <!-- End Contact Section -->
+    @endsection
+
+    @section('javascripts')
+        <script>
+            $(document).ready(function() {
+                $('.select2').select2();
+            });
+        </script>
     @endsection
