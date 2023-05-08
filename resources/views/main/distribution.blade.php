@@ -24,7 +24,7 @@
         .distribution .php-email-form {
             background: unset !important;
             /* padding: 30px;
-                                                                            height: 100%; */
+                                                                                                                    height: 100%; */
         }
 
         .section-header h1 {
@@ -56,6 +56,27 @@
             color: #000;
             margin-left: unset !important;
         }
+
+        .distribution-image {
+            background-image: url('{{ asset('assets/img/distribustion/' . __('partials.distribution.image')) }}');
+
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            width: 100%;
+            height: 0;
+            padding-bottom: 52.7%;
+            /* Set the aspect ratio of the image (665/590 * 100) */
+        }
+
+        @media (max-width: 900px) {
+            .distribution-image {
+                /* background-image: url('{{ asset('assets/img/distribustion/' . __('partials.distribution.image-mobile')) }}'); */
+                background-image: url('assets/img/distribustion/distribustion-mobile.jpg');
+                padding-bottom: 99.6%;
+                /* Set the aspect ratio of the image (666/931 * 100) */
+            }
+        }
     </style>
 @endsection
 @section('content')
@@ -70,8 +91,7 @@
                     <p>{{ __('partials.distribution.description') }}</p>
                     <div class="col-lg-12 col-md-12 d-flex align-items-center justify-content-center" data-aos="fade-up"
                         data-aos-delay="200">
-                        <img src="{{ asset('assets/img/distribustion/' . __('partials.distribution.image')) }}"
-                            class="" alt="distribution">
+                        <div class="distribution-image"></div>
                     </div>
                 </div>
             </div>

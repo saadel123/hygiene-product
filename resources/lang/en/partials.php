@@ -43,7 +43,8 @@ return [
     "distribution" => [
         "title" => "Distribution",
         "description" => "Our fleet includes a variety of vehicle formats to distribute goods throughout the Kingdom.",
-        "image" => "distribustion-en.jpg"
+        "image" => "distribustion-en.jpg",
+        "image-mobile" => "distribustion-mobile.jpg"
     ],
     "satisfaction-clients" => [
         "title" => "Customer satisfaction",

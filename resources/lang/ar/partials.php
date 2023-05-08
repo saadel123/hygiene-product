@@ -48,7 +48,8 @@ return [
     "distribution" => [
         "title" => "التوزيع",
         "description" => "يتضمن أسطولنا مجموعة متنوعة من أشكال المركبات لتوزيع البضائع في جميع أنحاء المملكة.",
-        "image" => "distribustion-ar.jpg"
+        "image" => "distribustion-ar.jpg",
+        "image-mobile" => "distribustion-mobile.jpg"
     ],
     "satisfaction-clients" => [
         "title" => "إرضاء الزبناء",

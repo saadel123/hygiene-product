@@ -43,7 +43,8 @@ return [
     "distribution" => [
         "title" => "Distribution",
         "description" => "Notre flotte comporte une variété de formats de véhicules permettant de distribuer les marchandises dans tout le Royaume.",
-        "image" => "distribustion.jpg"
+        "image" => "distribustion.jpg",
+        "image-mobile" => "distribustion-mobile.jpg"
     ],
     "satisfaction-clients" => [
         "title" => "Satisfaction des clients",
