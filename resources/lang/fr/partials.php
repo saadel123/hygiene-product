@@ -15,10 +15,12 @@ return [
     "buttons" => [
         "read_more" => "Lire plus",
         "see_more" => "Voir plus",
-        "order" => "Comandez",
+        "order" => "Commandez",
         "send" => "Envoyer",
-        "buy" => "Acheter",
-
+        "buy" => "Commandez",
+    ],
+    "drop-down" => [
+        "select" => "Ouvrir ce menu déroulant",
     ],
     "info" => [
         "instructions" => "Mode d’emploi :",

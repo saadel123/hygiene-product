@@ -39,6 +39,10 @@
     font-weight: 600;
 }
 
+.rtl .form-select {
+    background-position: left.75rem center;
+}
+
 .rtl .section-header {
   text-align: right;
   padding-bottom: 40px;
@@ -72,6 +76,27 @@
 
 .rtl .section-header p {
     font-size: 38px !important;
+}
+
+.rtl .blog .entry .entry-title {
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.rtl .blog .entry-content p{
+    font-weight: 500;
+    font-size: 23px !important;
+
+}
+
+.rtl .products p{
+    text-align: center;
+    font-size: 24px !important;
+    font-weight: 500;
+}
+
+.rtl .products h3{
+    font-weight: 500;
 }
 
 .rtl .product-detail .uses-text {

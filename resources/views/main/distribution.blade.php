@@ -24,7 +24,7 @@
         .distribution .php-email-form {
             background: unset !important;
             /* padding: 30px;
-                                                                                                                    height: 100%; */
+            height: 100%; */
         }
 
         .section-header h1 {
@@ -71,8 +71,8 @@
 
         @media (max-width: 900px) {
             .distribution-image {
-                /* background-image: url('{{ asset('assets/img/distribustion/' . __('partials.distribution.image-mobile')) }}'); */
-                background-image: url('assets/img/distribustion/distribustion-mobile.jpg');
+                background-image: url('{{ asset('assets/img/distribustion/' . __('partials.distribution.image-mobile')) }}');
+                 /*background-image: url('assets/img/distribustion/distribustion-mobile.jpg'); */
                 padding-bottom: 99.6%;
                 /* Set the aspect ratio of the image (666/931 * 100) */
             }
@@ -115,7 +115,8 @@
                                         class="form-label">{{ __('partials.forms.contact.ville') }}*</label>
                                     <select class="form-select" name="ville_id" id="ville_id"
                                         aria-label="Default select example">
-                                        <option selected>Open this select menu</option>
+                                        {{-- ouvrire la liste derelount --}}
+                                        <option selected>{{ __('partials.drop-down.select') }}</option>
                                         @foreach ($villes as $ville)
                                             <option value="{{ $ville->id }}">{{ $ville->ville }}</option>
                                         @endforeach

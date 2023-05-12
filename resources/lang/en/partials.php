@@ -17,8 +17,11 @@ return [
         "see_more" => "See more",
         "order" => "Order",
         "send" => "Send",
-        "buy" => "Buy",
+        "buy" => "Order",
 
+    ],
+    "drop-down" => [
+        "select" => "Open this select menu",
     ],
     "info" => [
         "instructions" => "Instructions :",
