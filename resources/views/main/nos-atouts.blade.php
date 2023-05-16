@@ -1,7 +1,8 @@
 @extends('master')
-@section('title', 'Rana')
+@section('title', 'Nos Atouts - Qualité, Satisfaction des Clients, Disponibilité & Réactivité')
+@section('description', 'Découvrez nos atouts : une qualité de produits et de services irréprochables, une satisfaction client prioritaire, une disponibilité et réactivité à votre service. Contactez-nous dès maintenant.')
 
-@section('description', 'TEST')
+
 @section('stylesheet')
     <style>
         .contact span {

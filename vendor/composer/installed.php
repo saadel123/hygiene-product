@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'cfce1d6156535b96acd5d08b942be910b34b897a',
+        'reference' => '57e7022645a123bc3b926440f4b60673706aba3c',
         'name' => 'laravel/laravel',
         'dev' => false,
     ),
@@ -17,6 +17,15 @@
             'install_path' => __DIR__ . '/../arrilot/laravel-widgets',
             'aliases' => array(),
             'reference' => '8b0587288cfb301ee4631f381524f82a29341d6b',
+            'dev_requirement' => false,
+        ),
+        'artesaos/seotools' => array(
+            'pretty_version' => 'v1.2.0',
+            'version' => '1.2.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../artesaos/seotools',
+            'aliases' => array(),
+            'reference' => '99744eaa8c3e21a2121914d8a7ca61284e5497a4',
             'dev_requirement' => false,
         ),
         'brick/math' => array(
@@ -379,7 +388,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'cfce1d6156535b96acd5d08b942be910b34b897a',
+            'reference' => '57e7022645a123bc3b926440f4b60673706aba3c',
             'dev_requirement' => false,
         ),
         'laravel/sanctum' => array(

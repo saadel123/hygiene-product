@@ -1,7 +1,7 @@
 @extends('master')
-@section('title', 'Rana')
+@section('title', 'Contactez Rana Industrie - Votre partenaire en produits d hygiène domestique')
+@section('description', ' Vous souhaitez contacter Rana Industrie ? Remplissez le formulaire de contact pour toute demande d information, partenariat ou assistance. Notre équipe est à votre disposition pour répondre à vos besoins en matière de produits d hygiène domestique')
 
-@section('description', 'TEST')
 @section('stylesheet')
     <style>
 

@@ -1,13 +1,17 @@
  <!-- ======= Footer ======= -->
  <style>
      .text-facebook {
-         color: #1877f2;
+         color: #3b5998;
          /* Facebook Blue */
      }
 
      .text-instagram {
-         color: #e4405f;
+         color: #005099;
          /* Instagram Gradient */
+     }
+
+     .footer .footer-top .social-links a {
+         font-size: 30px;
      }
  </style>
  <footer id="footer" class="footer">

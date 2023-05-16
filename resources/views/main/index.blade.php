@@ -1,6 +1,6 @@
 @extends('master')
-@section('title', 'Rana')
-@section('description', 'TEST')
+@section('title', 'Rana Industrie - Votre partenaire en hygiène domestique au Maroc')
+@section('description', 'Rana Industrie, entreprise marocaine spécialisée dans les produits d hygiène domestique, vous offre une gamme complète pour une maison propre et saine. Découvrez nos produits de qualité dès maintenant.')
 
 @section('stylesheet')
     <style>
@@ -132,6 +132,7 @@
                 max-height: 330px;
             }
         }
+
     </style>
 @endsection
 @section('content')
@@ -154,18 +155,32 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="col-lg-3 text-end me-3" style="z-index: 2">
-                            <!-- Facebook -->
-                            <button class="btn btn-primary icon" style="background-color: #fff;border: unset;"
+                        <div class="col-lg-3 text-end me-3 pe-4" style="z-index: 2">
+                            <ul class="language-list">
+                                <li>
+                                    <a href="{{ route('changeLang') }}?lang=fr" class="language-link {{ session()->get('locale', 'fr') == 'fr' ? 'active' : '' }}">Français
+                                        <span class="text-white fw-bold ms-2">/</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('changeLang') }}?lang=ar" class="language-link {{ session()->get('locale') == 'ar' ? 'active' : '' }}">العربية
+                                        <span class="text-white fw-bold ms-2">/</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('changeLang') }}?lang=en" class="language-link {{ session()->get('locale') == 'en' ? 'active' : '' }}">English</a>
+                                </li>
+                            </ul>
+
+                            {{-- <button class="btn btn-primary icon" style="background-color: #fff;border: unset;"
                                 onclick="window.location.href='https://www.facebook.com/Jaim.morocco/'" formtarget="_blank"
                                 role="button">
                                 <i class="bi bi-facebook" style="color:#3b5998"></i>
                             </button>
-                            <!-- Instagram -->
                             <button class="btn btn-primary icon" style="background-color: #fff;border: unset;"
                             onclick="window.location.href='https://www.instagram.com/jaim.maroc'" formtarget="_blank" role="button">
                                 <i class="bi bi-instagram" style="color:#ac2bac"></i>
-                            </button>
+                            </button> --}}
                         </div>
                     </div>
                 </div>

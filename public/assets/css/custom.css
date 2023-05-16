@@ -1,3 +1,50 @@
+/* Styles for desktop */
+
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 767px) {
+    /* Styles for mobile */
+    .changeLang {
+        display: block !important;
+    }
+}
+
+.changeLang{
+    font-size: 15px;
+    font-weight: 700;
+    color: #013289;
+    display: none;
+
+}
+.language-list {
+    display: inline-block !important;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.language-list li {
+    display: inline-block;
+}
+
+.language-link {
+    text-decoration: none;
+    color: #000;
+}
+
+.language-list li.selected {
+    font-weight: bold;
+}
+
+.language-list a {
+    color: white;
+    padding: unset;
+}
+
+.language-list a:focus {
+    color: white;
+    padding: unset;
+}
 
  .product .section-header {
     text-align: start !important;

@@ -4,6 +4,10 @@
 <head>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta charset="UTF-8">
+    {!! SEOMeta::generate() !!}
+    {!! OpenGraph::generate() !!}
+    {!! Twitter::generate() !!}
+    {!! JsonLd::generate() !!}
     @hasSection('title')
         <title>@yield('title')</title>
     @endif
@@ -77,6 +81,12 @@
 
         $(".changeLang").change(function() {
             window.location.href = url + "?lang=" + $(this).val();
+        });
+        /*Changin the languege for the header*/
+        $(".language-link").click(function(e) {
+            e.preventDefault();
+            var url = $(this).attr('href');
+            window.location.href = url;
         });
     </script>
 

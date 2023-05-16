@@ -1,3 +1,6 @@
+<style>
+
+</style>
 <header id="header" class="">
     <div class="header-top">
         <div class="container-fluid align-items-center justify-content-between">
@@ -17,19 +20,25 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="col-lg-3 text-end me-3" style="z-index: 2">
-                            <!-- Facebook -->
-                            <button class="btn btn-primary icon" style="background-color: #fff;border: unset;"
-                                onclick="window.location.href='https://www.facebook.com/Jaim.morocco/'"
-                                formtarget="_blank" role="button">
-                                <i class="bi bi-facebook" style="color:#3b5998"></i>
-                            </button>
-                            <!-- Instagram -->
-                            <button class="btn btn-primary icon" style="background-color: #fff;border: unset;"
-                                onclick="window.location.href='https://www.instagram.com/jaim.maroc'"
-                                formtarget="_blank" role="button">
-                                <i class="bi bi-instagram" style="color:#ac2bac"></i>
-                            </button>
+                        <div class="col-lg-3 text-end me-3 pe-4" style="z-index: 2">
+                            <ul class="language-list">
+                                <li>
+                                    <a href="{{ route('changeLang') }}?lang=fr"
+                                        class="language-link {{ session()->get('locale', 'fr') == 'fr' ? 'active' : '' }}">Français
+                                        <span class="text-white fw-bold ms-2">/</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('changeLang') }}?lang=ar"
+                                        class="language-link {{ session()->get('locale') == 'ar' ? 'active' : '' }}">العربية
+                                        <span class="text-white fw-bold ms-2">/</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('changeLang') }}?lang=en"
+                                        class="language-link {{ session()->get('locale') == 'en' ? 'active' : '' }}">English</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>

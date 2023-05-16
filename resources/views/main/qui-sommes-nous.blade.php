@@ -1,7 +1,7 @@
 @extends('master')
-@section('title', 'Rana')
+@section('title', 'Rana Industrie - À Propos | Produits d Hygiène')
+@section('description', 'Découvrez Rana Industrie, une entreprise spécialisée dans les produits d hygiène domestique. Nous formulons, concevons, produisons et commercialisons des produits de qualité. Notre mission : faciliter votre quotidien. Contribuons au développement économique et renforçons l industrie marocaine. Valeurs : intégrité, professionnalisme et confiance.')
 
-@section('description', 'TEST')
 @section('stylesheet')
     <style>
         /*--------------------------------------------------------------

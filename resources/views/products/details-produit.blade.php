@@ -1,7 +1,5 @@
 @extends('master')
-@section('title', 'Rana')
 
-@section('description', 'TEST')
 @section('stylesheet')
     <style>
         .product-detail .ratings {

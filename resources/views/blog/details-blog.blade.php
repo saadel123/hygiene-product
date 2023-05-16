@@ -1,7 +1,5 @@
 @extends('master')
-@section('title', 'Rana')
 
-@section('description', 'TEST')
 @section('stylesheet')
     <style>
         /* .blog .img-fluid {
@@ -31,9 +29,9 @@
                             <img src="{{ Voyager::image($blog->image) }}" alt="{{ $blog->title }}" class="img-fluid">
                         </div>
 
-                        <h2 class="entry-title">
+                        <h1 class="entry-title">
                             {{ $blog->title }}
-                        </h2>
+                        </h1>
 
                         <div class="entry-meta">
                             <ul>
