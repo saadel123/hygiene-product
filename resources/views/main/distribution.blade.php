@@ -53,7 +53,7 @@
         }
 
         .contact span {
-            color: #000;
+            /* color: #000; */
             margin-left: unset !important;
         }
 
@@ -116,7 +116,7 @@
                                     <select class="form-select" name="ville_id" id="ville_id"
                                         aria-label="Default select example">
                                         {{-- ouvrire la liste derelount --}}
-                                        <option selected>{{ __('partials.drop-down.select') }}</option>
+                                        <option value="" selected>{{ __('partials.drop-down.select') }}</option>
                                         @foreach ($villes as $ville)
                                             <option value="{{ $ville->id }}">{{ $ville->ville }}</option>
                                         @endforeach

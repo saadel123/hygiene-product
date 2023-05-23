@@ -43,6 +43,16 @@ class DistributionController extends Controller
     public function store(Request $request)
     {
 
+        $this->validate($request, [
+            'nom' => 'required',
+            'prenom' => 'required',
+            'ville_id' => 'required',
+            'tele' => 'regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
+            'email' => 'required|email',
+            'adresse' => 'required',
+            'message' => 'required|max:1000'
+        ]);
+
         $details = $request->all();
 
         if ($request->has('produits_id')) {
