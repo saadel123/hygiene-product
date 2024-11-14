@@ -23,9 +23,9 @@ return [
         "see_more" => "انظر المزيد",
         "order" => "تقديم طلب",
         "send" => "إرسال",
-        "buy" =>  "تقديم طلب",
+        "buy" => "تقديم طلب"
     ],
-    "drop-down" => [
+     "drop-down" => [
         "select" => "افتح قائمة الاختيارت",
     ],
     "info" => [
@@ -52,7 +52,7 @@ return [
         "title" => "التوزيع",
         "description" => "يتضمن أسطولنا مجموعة متنوعة من أشكال المركبات لتوزيع البضائع في جميع أنحاء المملكة.",
         "image" => "distribustion-ar.jpg",
-        "image-mobile" => "distribustion-mobile.jpg"
+        "image-mobile" => "distribustion-mobile-ar.jpg"
     ],
     "satisfaction-clients" => [
         "title" => "إرضاء الزبناء",

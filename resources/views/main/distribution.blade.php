@@ -24,7 +24,7 @@
         .distribution .php-email-form {
             background: unset !important;
             /* padding: 30px;
-            height: 100%; */
+                                                                                                                    height: 100%; */
         }
 
         .section-header h1 {
@@ -115,10 +115,9 @@
                                         class="form-label">{{ __('partials.forms.contact.ville') }}*</label>
                                     <select class="form-select" name="ville_id" id="ville_id"
                                         aria-label="Default select example">
-                                        {{-- ouvrire la liste derelount --}}
                                         <option value="" selected>{{ __('partials.drop-down.select') }}</option>
                                         @foreach ($villes as $ville)
-                                            <option value="{{ $ville->id }}">{{ $ville->ville }}</option>
+                                            <option value="{{ $ville->id }}">{{ app()->getLocale() == 'ar' ? $ville->ville_ar : $ville->ville }}</option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -128,7 +127,7 @@
                                     <select class="form-select select2" name="produits_id[]" id="produits_id"
                                         aria-label="Default select example" multiple>
                                         @foreach ($products as $product)
-                                            <option value="{{ $product->slug }}">{{ $product->slug }}</option>
+                                            <option value="{{ $product->slug }}">{{ $product->{'title_' . app()->getLocale()} }}</option>
                                         @endforeach
                                     </select>
                                 </div>

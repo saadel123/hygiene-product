@@ -1,6 +1,7 @@
 @extends('master')
 @section('title', 'Derniers articles de blog | Blog Rana Industrie')
 @section('description', 'Explorez nos derniers articles de blog couvrant divers sujets liés aux produits de consommation, à l hygiène, aux informations sur l industrie et plus encore. Restez informé et obtenez des informations précieuses du blog de Rana Industrie.')
+
 @section('stylesheet')
     <style>
         .blog .img-fluid {
@@ -28,12 +29,12 @@
         <section id="blog" class="blog">
             <div class="container" data-aos="fade-up">
                 <header class="section-header">
-                    {{-- <h1>{{ __('partials.navbar.blog') }}</h1> --}}
+                                        <h1 style="display:none;">{{ __('partials.navbar.blog') }}</h1>
                 </header>
                 <div class="row">
                     <div class="col-lg-12 entries">
                         @foreach ($blogs as $blog)
-                            @php
+                           @php
                                 $translatedTitle = $blog->title;
                                 $translatedBody = $blog->body;
                                 $locale = session()->get('locale');
@@ -46,7 +47,6 @@
                                     $translatedBody = $blog->body_en;
                                 }
                             @endphp
-
                             @if (!empty($translatedTitle))
                                 <div class="row entry">
                                     <div class="col-md-4">

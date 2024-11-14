@@ -18,12 +18,12 @@
      <div class="footer-top">
          <div class="container">
              <div class="row gy-4">
-                 <div class="col-lg-3 col-md-12 footer-info d-flex justify-content-center align-self-center">
+                 <div class="col-lg-4 col-md-12 footer-info d-flex justify-content-center align-self-center">
                      <a href="/" class="logo">
                          <img src="{{ asset('assets/img/logo-footer.png') }}" alt="" />
                      </a>
                  </div>
-                 <div class="col-lg-3 col-6 footer-links">
+                 <div class="col-lg-4 col-6 footer-links">
                      <h4>{{ __('partials.navbar.pages') }}</h4>
                      <ul>
                          <li>
@@ -52,7 +52,7 @@
                          </li>
                      </ul>
                  </div>
-                 <div class="col-lg-3 col-6 footer-links">
+                 <div class="col-lg-4 col-6 footer-links">
                      <h4>{{ __('partials.navbar.social-media') }}</h4>
                      <div class="social-links mt-3">
                          {{-- <a href="#" class="twitter"><i class="bi bi-twitter"></i></a> --}}
@@ -63,7 +63,7 @@
                          {{-- <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a> --}}
                      </div>
                  </div>
-                 {{-- <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+                    {{-- <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
                      <h4>{{ __('partials.navbar.map') }}</h4>
                      <div>
                          <iframe

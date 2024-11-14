@@ -126,11 +126,18 @@
         #header {
             direction: ltr !important;
         }
+        
 
         @media (max-width: 575px) {
             #hero .img-slide-mobile {
                 max-height: 330px;
             }
+            
+        }
+        @media screen and (max-width: 580px) {
+         .mn-mobile{
+            justify-content: space-around!important;       
+            }   
         }
 
     </style>
@@ -142,7 +149,7 @@
             <!-- Navbar-->
             <nav class="navbar navbar-expand">
                 <div class="container-fluid">
-                    <div class="navbar-collapse collapse" id="mynavbar">
+                    <div class="navbar-collapse collapse" id="mynavbar" style="justify-content: space-between;">
                         <div class="col-lg-3 text-start text-white">
                             <span> <i class="bi bi-telephone-fill me-3"> </i> +(212)6 66 15 62 35</i> <span> <br>
                                     <span><i class="bi bi-envelope-fill me-3"> </i>contact@ranaindustrie.ma</i> </span>
@@ -156,7 +163,7 @@
                             </div>
                         </div>
                         <div class="col-lg-3 text-end me-3 pe-4" style="z-index: 2">
-                            <ul class="language-list">
+                              <ul class="language-list">
                                 <li>
                                     <a href="{{ route('changeLang') }}?lang=fr" class="language-link {{ session()->get('locale', 'fr') == 'fr' ? 'active' : '' }}">Français
                                         <span class="text-white fw-bold ms-2">/</span>
@@ -171,7 +178,6 @@
                                     <a href="{{ route('changeLang') }}?lang=en" class="language-link {{ session()->get('locale') == 'en' ? 'active' : '' }}">English</a>
                                 </li>
                             </ul>
-
                             {{-- <button class="btn btn-primary icon" style="background-color: #fff;border: unset;"
                                 onclick="window.location.href='https://www.facebook.com/Jaim.morocco/'" formtarget="_blank"
                                 role="button">
@@ -230,7 +236,7 @@
         {{-- Use this style to add z-index to this menu
         z-index: 11;
         position: relative; --}}
-        <div class="container-fluid container-xl d-flex align-items-md-center justify-content-md-center">
+        <div class="container-fluid container-xl d-flex align-items-md-center justify-content-md-center mn-mobile" >
             <a href="/" class="logo-nav d-flex align-items-center">
                 <img src="{{ asset('assets/img/icone-accueil.png') }}" alt="" />
             </a>

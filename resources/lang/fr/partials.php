@@ -18,8 +18,9 @@ return [
         "order" => "Commandez",
         "send" => "Envoyer",
         "buy" => "Commandez",
+
     ],
-    "drop-down" => [
+     "drop-down" => [
         "select" => "Ouvrir ce menu déroulant",
     ],
     "info" => [

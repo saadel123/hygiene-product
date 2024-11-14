@@ -1,5 +1,6 @@
 @extends('master')
 
+
 @section('stylesheet')
     <style>
         .product-detail .ratings {

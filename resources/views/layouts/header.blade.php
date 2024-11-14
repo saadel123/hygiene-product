@@ -1,13 +1,10 @@
-<style>
-
-</style>
 <header id="header" class="">
     <div class="header-top">
         <div class="container-fluid align-items-center justify-content-between">
             <!-- Navbar-->
             <nav class="navbar navbar-expand">
                 <div class="container-fluid">
-                    <div class="navbar-collapse collapse" id="mynavbar">
+                    <div class="navbar-collapse collapse" id="mynavbar" style="justify-content: space-between;">
                         <div class="col-lg-3 text-start text-white">
                             <span> <i class="bi bi-telephone-fill me-3"> </i> +(212)6 66 15 62 35</i> <span> <br>
                                     <span><i class="bi bi-envelope-fill me-3"> </i>contact@ranaindustrie.ma</i> </span>
@@ -20,8 +17,8 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="col-lg-3 text-end me-3 pe-4" style="z-index: 2">
-                            <ul class="language-list">
+                        <div class="col-lg-3 text-end me-3" style="z-index: 2">
+                               <ul class="language-list">
                                 <li>
                                     <a href="{{ route('changeLang') }}?lang=fr"
                                         class="language-link {{ session()->get('locale', 'fr') == 'fr' ? 'active' : '' }}">Français
@@ -30,7 +27,7 @@
                                 </li>
                                 <li>
                                     <a href="{{ route('changeLang') }}?lang=ar"
-                                        class="language-link {{ session()->get('locale') == 'ar' ? 'active' : '' }}">العربية
+                                        class="language-link {{ session()->get('locale') == 'ar' ? 'active' : '' }}">العربية 
                                         <span class="text-white fw-bold ms-2">/</span>
                                     </a>
                                 </li>
@@ -47,7 +44,7 @@
     </div>
 </header>
 <div class="pb-4 menu-mobile">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-center">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-center mn-mobile">
         <a href="/" class="logo-nav d-flex align-items-center">
             <img src="{{ asset('assets/img/icone-accueil.png') }}" alt="" />
         </a>

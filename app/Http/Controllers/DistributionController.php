@@ -8,6 +8,7 @@ use App\Models\Ville;
 use App\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\DB;
 
 class DistributionController extends Controller
 {
@@ -20,7 +21,13 @@ class DistributionController extends Controller
     {
         //
         $villes = Ville::all();
-        $products = Product::orderby('category_id', 'ASC')->get();
+        $products = Product::whereIn('id', function ($query) {
+            $query->select(DB::raw('MIN(id)'))
+                ->from('products')
+                ->groupBy('category_id');
+        })
+            ->orderBy('category_id', 'ASC')
+            ->get();
         return view('main.distribution', compact('villes', 'products'));
     }
 
