@@ -2,79 +2,72 @@
 
 return [
     "navbar" => [
-        "qui-sommes-nous" => "Qui sommes-nous",
-        "produits" => "Produits",
-        "nos_atouts" => "Nos atouts",
-        "distribution" => "Distribution",
-        "blog" => "Blog",
+        "qui-sommes-nous" => "À propos de nous",
+        "produits" => "Nos Produits",
+        "nos_atouts" => "Points Forts",
+        "distribution" => "Logistique",
+        "blog" => "Articles",
         "contact" => "Contactez-nous",
-        "pages" => "Les pages",
-        "map" => "Map",
-        "social-media" => "Réseaux sociaux",
+        "pages" => "Toutes les Pages",
+        "map" => "Carte",
+        "social-media" => "Suivez-nous",
     ],
     "buttons" => [
-        "read_more" => "Lire plus",
-        "see_more" => "Voir plus",
-        "order" => "Commandez",
+        "read_more" => "En savoir plus",
+        "see_more" => "Voir Plus",
+        "order" => "Passez une commande",
         "send" => "Envoyer",
-        "buy" => "Commandez",
-
+        "buy" => "Achetez",
     ],
-     "drop-down" => [
-        "select" => "Ouvrir ce menu déroulant",
+    "drop-down" => [
+        "select" => "Choisissez une option",
     ],
     "info" => [
-        "instructions" => "Mode d’emploi :",
-        "caution" => "Précaution d’emploi :",
+        "instructions" => "Guide d’utilisation :",
+        "caution" => "Précautions d’emploi :",
         "parfums" => "Parfum :",
-        "format" => "Format :",
-        "dh" => "Mad",
+        "format" => "Taille :",
+        "dh" => "Devise",
     ],
     "languages" => ["fr" => "Français", "en" => "Anglais", "ar" => "Arabe"],
     "forms" => [
         "contact" => [
-            "f_name" => "Nom",
-            "l_name" => "Prénom",
-            "phone" => "Tél",
-            "email" => "Email",
-            "address" => "Adresse",
-            "message" => "Message",
+            "f_name" => "Prénom",
+            "l_name" => "Nom de Famille",
+            "phone" => "Numéro de Téléphone",
+            "email" => "Adresse Email",
+            "address" => "Adresse Complète",
+            "message" => "Votre Message",
             "ville" => "Ville",
-            "requested_products" => "Produit demandé",
+            "requested_products" => "Produit Demandé",
         ]
     ],
     "distribution" => [
-        "title" => "Distribution",
-        "description" => "Notre flotte comporte une variété de formats de véhicules permettant de distribuer les marchandises dans tout le Royaume.",
+        "title" => "Logistique",
+        "description" => "Notre système de distribution garantit une livraison rapide dans différentes régions avec des moyens de transport efficaces.",
         "image" => "distribustion.jpg",
         "image-mobile" => "distribustion-mobile.jpg"
     ],
     "satisfaction-clients" => [
-        "title" => "Satisfaction des clients",
+        "title" => "Expérience Client",
         "description" => "
             <p>
-                La satisfaction de nos clients constitue notre objectif premier ! <br><br>
-                Nous responsabilisons et formons nos collaborateurs à donner une entière
-                satisfaction à nos clients et à leur proposer des produits et services de
-                qualité. <br><br>
-                Nous sommes constamment à l’écoute des attentes de nos clients afin de répondre au mieux à leurs besoins. <br><br>
+                Nous mettons l'accent sur des relations solides avec nos clients ! <br><br>
+                Notre équipe est formée pour offrir un service exceptionnel et répondre aux exigences des clients. <br><br>
+                Les retours sont essentiels pour affiner nos offres. <br><br>
             </p>
-            <h4>Nous nous engageons </h4> <br>
+            <h4>Nos Engagements :</h4> <br>
             <div class='d-flex align-items-center mb-2'>
                 <i class='bi bi-check2'></i>
-                <h4>
-                    Au respect des délais, des coûts et de la conformité de la demande.
-                </h4>
+                <h4>Offrir des services précis et rapides.</h4>
             </div>
             <div class='d-flex align-items-center mb-2'>
                 <i class='bi bi-check2'></i>
-                <h4>À adapter notre organisation pour répondre aux exigences de nos clients.
-                </h4>
+                <h4>Adapter nos solutions en fonction des retours.</h4>
             </div>
             <div class='d-flex align-items-center mb-2'>
                 <i class='bi bi-check2'></i>
-                <h4>À faire évoluer nos prestations.</h4>
+                <h4>Améliorer continuellement nos capacités.</h4>
             </div>"
     ]
-
 ];

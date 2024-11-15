@@ -3,80 +3,71 @@
 return [
     "navbar" => [
         "qui-sommes-nous" => "من نحن",
-        "produits" => "المنتجات",
-        "nos_atouts" => "قوتنا",
-        "distribution" => "التوزيع",
-        "blog" => "مدونة",
-        "contact" => "اتصل بنا",
-        "pages" => "الصفحات",
-        "map" => "خريطة",
-        "social-media" => "وسائل التواصل الاجتماعي",
-
-    ],
-    "products" => [
-        "product1" => ["title" => "Nettoyant Sol Jaim", "uses" => "Brillance & propreté"],
-        "product2" => ["title" => "Détergent Liquide Jaim Matic", "uses" => "Nettoie, Protège et Détache"],
-        "product3" => ["title" => "", "uses" => ""],
+        "produits" => "منتجاتنا",
+        "nos_atouts" => "مميزاتنا",
+        "distribution" => "الخدمات اللوجستية",
+        "blog" => "المقالات",
+        "contact" => "تواصل معنا",
+        "pages" => "جميع الصفحات",
+        "map" => "الموقع",
+        "social-media" => "تابعنا",
     ],
     "buttons" => [
-        "read_more" => "اقرأ المزيد",
-        "see_more" => "انظر المزيد",
-        "order" => "تقديم طلب",
+        "read_more" => "اكتشف المزيد",
+        "see_more" => "استكشف المزيد",
+        "order" => "قدم طلبك",
         "send" => "إرسال",
-        "buy" => "تقديم طلب"
+        "buy" => "شراء",
     ],
-     "drop-down" => [
-        "select" => "افتح قائمة الاختيارت",
+    "drop-down" => [
+        "select" => "اختر خياراً",
     ],
     "info" => [
-        "instructions" => "طريقة الاستعمال :",
-        "caution" => "احتياطات الاستخدام :",
-        "parfums" => "النسمة :",
-        "format" => "الحجم :",
-        "dh" => "درهم",
+        "instructions" => "دليل الاستخدام:",
+        "caution" => "إرشادات الأمان:",
+        "parfums" => "العطر:",
+        "format" => "حجم العبوة:",
+        "dh" => "العملة",
     ],
-    "languages" => ["fr" => "الفرنسية", "en" => "الإنجليزية", "ar" => "العربية"],
+    "languages" => ["fr" => "فرنسية", "en" => "إنجليزية", "ar" => "عربية"],
     "forms" => [
         "contact" => [
-            "f_name" => "الاسم الشخصي",
-            "l_name" => "الاسم العائلي",
+            "f_name" => "الاسم الأول",
+            "l_name" => "اسم العائلة",
             "phone" => "رقم الهاتف",
             "email" => "البريد الإلكتروني",
-            "address" => "العنوان",
-            "message" => "الرسالة",
-            "ville" => "المدينة",
-            "requested_products" => "المنتجات المطلوبة"
+            "address" => "العنوان الكامل",
+            "message" => "رسالتك",
+            "ville" => "الموقع",
+            "requested_products" => "المنتج المطلوب",
         ]
     ],
     "distribution" => [
-        "title" => "التوزيع",
-        "description" => "يتضمن أسطولنا مجموعة متنوعة من أشكال المركبات لتوزيع البضائع في جميع أنحاء المملكة.",
+        "title" => "الخدمات اللوجستية",
+        "description" => "نظام التوزيع لدينا يضمن التوصيل في الوقت المناسب عبر مناطق متعددة باستخدام وسائل نقل فعالة.",
         "image" => "distribustion-ar.jpg",
         "image-mobile" => "distribustion-mobile-ar.jpg"
     ],
     "satisfaction-clients" => [
-        "title" => "إرضاء الزبناء",
+        "title" => "تجربة العميل",
         "description" => "
             <p>
-            إرضاء الزبناء هو هدفنا الأساسي! <br>
-            نمكن وندرب موظفينا للإرضاء التام لزبنائنا وتقديم منتجات وخدمات عالية الجودة لهم.<br>
-            نستمع باستمرار إلى توقعات زبنائنا من أجل تلبية احتياجاتهم على أفضل وجه.<br>
+                نحن نركز على بناء علاقات قوية مع عملائنا! <br><br>
+                فريقنا مدرب على تقديم خدمات استثنائية لتلبية متطلبات العملاء. <br><br>
+                التغذية الراجعة أساسية لتحسين خدماتنا. <br><br>
             </p>
-            <h4>نحن ملتزمون بما يلي</h4> <br>
+            <h4>التزاماتنا:</h4> <br>
             <div class='d-flex align-items-center mb-2'>
                 <i class='bi bi-check2'></i>
-                <h4>
-                الالتزام بالمواعيد النهائية والتكاليف والامتثال للطلب.
-                </h4>
+                <h4>تقديم خدمات دقيقة وفي الوقت المناسب.</h4>
             </div>
             <div class='d-flex align-items-center mb-2'>
                 <i class='bi bi-check2'></i>
-                <h4>تكييف منظمتنا لتلبية متطلبات زبنائنا.
-                </h4>
+                <h4>تخصيص الحلول بناءً على التغذية الراجعة.</h4>
             </div>
             <div class='d-flex align-items-center mb-2'>
                 <i class='bi bi-check2'></i>
-                <h4>تطوير خدماتنا.</h4>
+                <h4>تعزيز قدراتنا باستمرار.</h4>
             </div>"
     ]
 ];

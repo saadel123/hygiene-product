@@ -2,12 +2,31 @@
 
 return [
     "qui-sommes-nous" => "Qui sommes-nous",
-    "description" => "Rana Industrie est une entreprise marocaine spécialisée dans les produits de grande consommation. <br><br> Rana Industrie opère dans les secteurs de l’hygiène : la formulation, la conception, la production et la commercialisation des produits d’hygiène domestique. <br><br>
-                          Rana Industrie dispose d’une unité de production à Casablanca et distribue ses produits sur l’ensemble du territoire national et à l’export.",
-    "mission" => ["title" => "Notre mission", "description" => "Nous mettons en commun nos énergies pour fournir à nos clients des produits et services de qualité et de valeur supérieure insufflant de l’aisance dans leur vie de tous les jours."],
-    "vision" => ["title" => "Notre vision", "description" => "Notre entreprise vise à contribuer au développement économique du pays et à renforcer la position de l’industrie marocaine sur le marché national et international."],
-    "valeur" => ["title" => "Nos valeurs", "description" => "Nos valeurs reflètent les comportements qui donnent le ton de nos interactions entre collaborateurs, avec nos clients et avec nos partenaires."],
-    "integrite" => ["title" => "Intégrité", "description" => "Nos valeurs reflètent les comportements qui donnent le ton de nos interactions entre collaborateurs, avec nos clients et avec nos partenaires."],
-    "professionnalisme" => ["title" => "Professionnalisme", "description" => "Nos valeurs reflètent les comportements qui donnent le ton de nos interactions entre collaborateurs, avec nos clients et avec nos partenaires."],
-    "confiance" => ["title" => "Confiance", "description" => "Nous établissons des relations de confiance avec nos clients en démontrant notre capacité à respecter nos engagements. Grâce à notre gestion rigoureuse et à la stabilité de notre entreprise, nous sommes en mesure de bâtir des relations durables avec nos clients, fondées sur la confiance."],
+    "description" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br><br>
+    Suspendisse potenti. Nulla facilisi. Integer nec justo vel urna accumsan fermentum. <br><br>
+    Sed tristique orci ut quam pharetra, vel vehicula ex bibendum. Proin non sapien a augue volutpat pulvinar.",
+    "mission" => [
+        "title" => "Notre mission",
+        "description" => "Notre objectif est de fournir des solutions simples et efficaces qui répondent aux besoins quotidiens et facilitent la vie des utilisateurs."
+    ],
+    "vision" => [
+        "title" => "Notre vision",
+        "description" => "Nous aspirons à créer un impact positif à travers des initiatives innovantes qui favorisent le développement durable et l'amélioration continue."
+    ],
+    "valeur" => [
+        "title" => "Nos valeurs",
+        "description" => "Nos valeurs sont basées sur l'intégrité, le respect et l'engagement envers l'excellence dans tout ce que nous faisons."
+    ],
+    "integrite" => [
+        "title" => "Intégrité",
+        "description" => "Nous croyons en la transparence et l'honnêteté dans toutes nos interactions avec les parties prenantes."
+    ],
+    "professionnalisme" => [
+        "title" => "Professionnalisme",
+        "description" => "Nous adoptons des standards élevés de compétence et de qualité pour garantir des résultats exceptionnels."
+    ],
+    "confiance" => [
+        "title" => "Confiance",
+        "description" => "Nous bâtissons des relations solides et durables en honorant nos engagements et en garantissant la satisfaction de nos interlocuteurs."
+    ],
 ];

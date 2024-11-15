@@ -2,33 +2,32 @@
 
 return [
     "navbar" => [
-        "qui-sommes-nous" => "About us",
-        "produits" => "Products",
-        "nos_atouts" => "Our advantages",
-        "distribution" => "Distribution",
-        "blog" => "Blog",
-        "contact" => "Contact us",
-        "pages" => "Pages",
-        "map" => "Map",
-        "social-media" => "Social networks",
+        "qui-sommes-nous" => "About Us",
+        "produits" => "Our Products",
+        "nos_atouts" => "Key Features",
+        "distribution" => "Logistics",
+        "blog" => "Articles",
+        "contact" => "Get in Touch",
+        "pages" => "All Pages",
+        "map" => "Location",
+        "social-media" => "Follow Us",
     ],
     "buttons" => [
-        "read_more" => "Read more",
-        "see_more" => "See more",
-        "order" => "Order",
-        "send" => "Send",
-        "buy" => "Order",
-
+        "read_more" => "Discover More",
+        "see_more" => "Explore More",
+        "order" => "Place Order",
+        "send" => "Submit",
+        "buy" => "Purchase",
     ],
     "drop-down" => [
-        "select" => "Open this select menu",
+        "select" => "Select an Option",
     ],
     "info" => [
-        "instructions" => "Instructions :",
-        "caution" => "Caution :",
-        "parfums" => "Scent :",
-        "format" => "Size :",
-        "dh" => "Mad",
+        "instructions" => "Usage Guide:",
+        "caution" => "Safety Precautions:",
+        "parfums" => "Fragrance:",
+        "format" => "Packaging Size:",
+        "dh" => "Currency",
     ],
     "languages" => ["fr" => "French", "en" => "English", "ar" => "Arabic"],
     "forms" => [
@@ -36,45 +35,39 @@ return [
             "f_name" => "First Name",
             "l_name" => "Last Name",
             "phone" => "Phone Number",
-            "email" => "Email",
-            "address" => "Address",
-            "message" => "Message",
-            "ville" => "City",
-            "requested_products" => "Requested product"
+            "email" => "Email Address",
+            "address" => "Full Address",
+            "message" => "Your Message",
+            "ville" => "Location",
+            "requested_products" => "Requested Item",
         ]
     ],
     "distribution" => [
-        "title" => "Distribution",
-        "description" => "Our fleet includes a variety of vehicle formats to distribute goods throughout the Kingdom.",
+        "title" => "Logistics",
+        "description" => "Our distribution system ensures timely delivery across various regions using efficient transportation.",
         "image" => "distribustion-en.jpg",
         "image-mobile" => "distribustion-mobile-en.jpg"
     ],
     "satisfaction-clients" => [
-        "title" => "Customer satisfaction",
+        "title" => "Customer Experience",
         "description" => "
             <p>
-                Customer satisfaction is our primary goal! <br><br>
-                We hold our employees accountable and train them to give full satisfaction to our customers and to offer them quality products and services. <br><br>
-                We are constantly listening to our clients' expectations in order to best meet their needs. <br><br>
+                We prioritize building strong relationships with our customers! <br><br>
+                Our team is trained to offer exceptional service and cater to client requirements. <br><br>
+                Feedback is key to refining our offerings. <br><br>
             </p>
-            <h4>We are committed to</h4> <br>
+            <h4>Our Commitments:</h4> <br>
             <div class='d-flex align-items-center mb-2'>
                 <i class='bi bi-check2'></i>
-                <h4>
-                    To respect deadlines, costs and compliance with the request.
-                </h4>
+                <h4>Delivering timely and accurate services.</h4>
             </div>
             <div class='d-flex align-items-center mb-2'>
                 <i class='bi bi-check2'></i>
-                <h4>To adapt our organization to the needs of our customers.
-                </h4>
+                <h4>Customizing solutions based on feedback.</h4>
             </div>
             <div class='d-flex align-items-center mb-2'>
                 <i class='bi bi-check2'></i>
-                <h4>To develop our services.</h4>
+                <h4>Continuously enhancing our capabilities.</h4>
             </div>"
     ]
-
-
-
 ];

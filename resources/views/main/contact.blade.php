@@ -1,6 +1,6 @@
 @extends('master')
-@section('title', 'Contactez Rana Industrie - Votre partenaire en produits d hygiène domestique')
-@section('description', ' Vous souhaitez contacter Rana Industrie ? Remplissez le formulaire de contact pour toute demande d information, partenariat ou assistance. Notre équipe est à votre disposition pour répondre à vos besoins en matière de produits d hygiène domestique')
+@section('title', 'Votre partenaire en produits d hygiène')
+@section('description', '')
 
 @section('stylesheet')
     <style>
@@ -43,32 +43,32 @@
                                 <div class="info-box">
                                     <i class="bi bi-geo-alt"></i>
                                     <h3>{{ __('partials.forms.contact.address') }}</h3>
-                                    <p>Lot 118 Polygone - Zone Industrielle – Sidi Bernnoussi - Casablanca</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="info-box">
                                     <i class="bi bi-telephone"></i>
                                     <h3>{{ __('partials.forms.contact.phone') }}</h3>
-                                    <p>+(212)6 66 15 62 35</p><br />
+                                    <p>+(212)6 00 00 00 00</p><br />
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="info-box">
                                     <i class="bi bi-envelope"></i>
                                     <h3>{{ __('partials.forms.contact.email') }}</h3>
-                                    <p>contact@ranaindustrie.ma</p>
+                                    <p>elghanemysaad@gmail.com</p>
                                     <br />
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="info-box mb-4">
                                     <p>
-                                        <a href="https://www.instagram.com/jaim.maroc" target="_blank" class="instagram">
-                                            <h3><i class="bi bi-instagram me-3"></i>jaim.maroc</h3>
+                                        <a href="#" target="_blank" class="instagram">
+                                            <h3><i class="bi bi-instagram me-3"></i>Lorem ipsum</h3>
                                         </a>
-                                        <a href="https://www.facebook.com/Jaim.morocco/" target="_blank" class="facebook">
-                                            <h3><i class="bi bi-facebook me-3 "></i>Jaim.morocco</h3>
+                                        <a href="#" target="_blank" class="facebook">
+                                            <h3><i class="bi bi-facebook me-3 "></i>Lorem ipsum</h3>
                                         </a>
                                     </p>
                                 </div>

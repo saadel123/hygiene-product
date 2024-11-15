@@ -6,13 +6,13 @@
                 <div class="container-fluid">
                     <div class="navbar-collapse collapse" id="mynavbar" style="justify-content: space-between;">
                         <div class="col-lg-3 text-start text-white">
-                            <span> <i class="bi bi-telephone-fill me-3"> </i> +(212)6 66 15 62 35</i> <span> <br>
-                                    <span><i class="bi bi-envelope-fill me-3"> </i>contact@ranaindustrie.ma</i> </span>
+                            <span> <i class="bi bi-telephone-fill me-3"> </i> +(212)6 00 00 00 00</i> <span> <br>
+                                    <span><i class="bi bi-envelope-fill me-3"> </i>elghanemysaad@gmail.com</i> </span>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-inline mx-auto" style="padding-right: 40px;">
                                 <a class="brand" href="/">
-                                    <img src="{{ asset('assets/img/logo-rana.png') }}" height="100" alt="Rana Logo"
+                                    <img src="{{ asset('assets/img/logo-saad.png') }}" height="100" alt="Saad Logo"
                                         loading="lazy" class="mt-4" />
                                 </a>
                             </div>
@@ -27,7 +27,7 @@
                                 </li>
                                 <li>
                                     <a href="{{ route('changeLang') }}?lang=ar"
-                                        class="language-link {{ session()->get('locale') == 'ar' ? 'active' : '' }}">العربية 
+                                        class="language-link {{ session()->get('locale') == 'ar' ? 'active' : '' }}">العربية
                                         <span class="text-white fw-bold ms-2">/</span>
                                     </a>
                                 </li>

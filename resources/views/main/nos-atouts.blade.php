@@ -1,5 +1,5 @@
 @extends('master')
-@section('title', 'Nos Atouts - Qualité, Satisfaction des Clients, Disponibilité & Réactivité')
+@section('title', 'Qualité, Satisfaction des Clients')
 @section('description', 'Découvrez nos atouts : une qualité de produits et de services irréprochables, une satisfaction client prioritaire, une disponibilité et réactivité à votre service. Contactez-nous dès maintenant.')
 
 
@@ -170,30 +170,5 @@
                 </div>
             </div>
         </section>
-        {{-- <section class="environnement">
-            <div class="container" data-aos="fade-up">
-                <div class="row">
-                    <div class="col-lg-9 mt-5" style="margin-right: -130px;">
-                        <div class="bg-environnement">
-                            <h3>Environnement</h3>
-                            <p>
-                                Les enjeux environnementaux se multiplient. Les risques liés au changement climatique, à la
-                                surexploitation des ressources naturelles, à l’érosion de la biodiversité et à la pollution
-                                sont des préoccupations centrales pour nos sociétés. Pour Rana Industrie, répondre aux
-                                enjeux environnementaux est un élément clé de la viabilité de son business model sur le
-                                long-terme.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="text-center">
-                            <img src="{{ asset('assets/img/satisfaction/environnement.png') }}" class="img"
-                                style="max-height: 380px;" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </section> --}}
     </main>
 @endsection

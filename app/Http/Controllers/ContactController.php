@@ -49,7 +49,7 @@ class ContactController extends Controller
         ]);
         //
         $details = $request->all();
-        Mail::to('contact@ranaindustrie.ma')->send(new ContactMail($details));
+        Mail::to('elghanemysaad@gmail.com')->send(new ContactMail($details));
         Contact::create($details);
         session()->flash('success', "Votre message a été envoyé avec succès.");
         return back();

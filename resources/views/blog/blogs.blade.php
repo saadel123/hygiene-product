@@ -1,6 +1,6 @@
 @extends('master')
-@section('title', 'Derniers articles de blog | Blog Rana Industrie')
-@section('description', 'Explorez nos derniers articles de blog couvrant divers sujets liés aux produits de consommation, à l hygiène, aux informations sur l industrie et plus encore. Restez informé et obtenez des informations précieuses du blog de Rana Industrie.')
+@section('title', 'Derniers articles de blog ')
+@section('description', '')
 
 @section('stylesheet')
     <style>

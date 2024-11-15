@@ -1,6 +1,6 @@
 @extends('master')
-@section('title', 'Distribution - Livraison rapide et efficace dans tout le Royaume')
-@section('description', 'Découvrez notre flotte de véhicules adaptés pour assurer une distribution rapide et efficace de vos marchandises dans tout le Royaume. Faites confiance à notre service de livraison professionnel.')
+@section('title', 'Livraison rapide et efficace')
+@section('description', '')
 
 @section('stylesheet')
     <style>

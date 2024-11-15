@@ -1,6 +1,6 @@
 @extends('master')
-@section('title', 'Rana Industrie - Votre partenaire en hygiène domestique au Maroc')
-@section('description', 'Rana Industrie, entreprise marocaine spécialisée dans les produits d hygiène domestique, vous offre une gamme complète pour une maison propre et saine. Découvrez nos produits de qualité dès maintenant.')
+@section('title', 'Produits d hygiène ')
+@section('description', '')
 
 @section('stylesheet')
     <style>
@@ -21,7 +21,7 @@
         }
 
         .bg-about {
-            background: url('assets/img/elements/element-rana.png');
+            background: url('assets/img/elements/element-shape.png');
             background-position: right;
             min-height: 366px;
             background-repeat: no-repeat;
@@ -126,20 +126,20 @@
         #header {
             direction: ltr !important;
         }
-        
+
 
         @media (max-width: 575px) {
             #hero .img-slide-mobile {
                 max-height: 330px;
             }
-            
-        }
-        @media screen and (max-width: 580px) {
-         .mn-mobile{
-            justify-content: space-around!important;       
-            }   
+
         }
 
+        @media screen and (max-width: 580px) {
+            .mn-mobile {
+                justify-content: space-around !important;
+            }
+        }
     </style>
 @endsection
 @section('content')
@@ -151,31 +151,34 @@
                 <div class="container-fluid">
                     <div class="navbar-collapse collapse" id="mynavbar" style="justify-content: space-between;">
                         <div class="col-lg-3 text-start text-white">
-                            <span> <i class="bi bi-telephone-fill me-3"> </i> +(212)6 66 15 62 35</i> <span> <br>
-                                    <span><i class="bi bi-envelope-fill me-3"> </i>contact@ranaindustrie.ma</i> </span>
+                            <span> <i class="bi bi-telephone-fill me-3"> </i> +(212)6 00 00 00 00</i> <span> <br>
+                                    <span><i class="bi bi-envelope-fill me-3"> </i>elghanemysaad@gmail.com</i> </span>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-inline mx-auto" style="padding-right: 40px;">
                                 <a class="brand" href="/">
-                                    <img src="{{ asset('assets/img/logo-rana.png') }}" height="100" alt="Rana Logo"
+                                    <img src="{{ asset('assets/img/logo-saad.png') }}" height="100" alt="Saad Logo"
                                         loading="lazy" class="mt-4" />
                                 </a>
                             </div>
                         </div>
                         <div class="col-lg-3 text-end me-3 pe-4" style="z-index: 2">
-                              <ul class="language-list">
+                            <ul class="language-list">
                                 <li>
-                                    <a href="{{ route('changeLang') }}?lang=fr" class="language-link {{ session()->get('locale', 'fr') == 'fr' ? 'active' : '' }}">Français
+                                    <a href="{{ route('changeLang') }}?lang=fr"
+                                        class="language-link {{ session()->get('locale', 'fr') == 'fr' ? 'active' : '' }}">Français
                                         <span class="text-white fw-bold ms-2">/</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('changeLang') }}?lang=ar" class="language-link {{ session()->get('locale') == 'ar' ? 'active' : '' }}">العربية
+                                    <a href="{{ route('changeLang') }}?lang=ar"
+                                        class="language-link {{ session()->get('locale') == 'ar' ? 'active' : '' }}">العربية
                                         <span class="text-white fw-bold ms-2">/</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('changeLang') }}?lang=en" class="language-link {{ session()->get('locale') == 'en' ? 'active' : '' }}">English</a>
+                                    <a href="{{ route('changeLang') }}?lang=en"
+                                        class="language-link {{ session()->get('locale') == 'en' ? 'active' : '' }}">English</a>
                                 </li>
                             </ul>
                             {{-- <button class="btn btn-primary icon" style="background-color: #fff;border: unset;"
@@ -236,7 +239,7 @@
         {{-- Use this style to add z-index to this menu
         z-index: 11;
         position: relative; --}}
-        <div class="container-fluid container-xl d-flex align-items-md-center justify-content-md-center mn-mobile" >
+        <div class="container-fluid container-xl d-flex align-items-md-center justify-content-md-center mn-mobile">
             <a href="/" class="logo-nav d-flex align-items-center">
                 <img src="{{ asset('assets/img/icone-accueil.png') }}" alt="" />
             </a>

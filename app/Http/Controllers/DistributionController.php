@@ -68,7 +68,7 @@ class DistributionController extends Controller
         }
 
         Distribution::create($details);
-        Mail::to('contact@ranaindustrie.ma')->send(new DistrubtionMail($details));
+        Mail::to('elghanemysaad@gmail.com')->send(new DistrubtionMail($details));
 
         session()->flash('success', "Votre Produit a été envoyer avec succès");
         return redirect()->route('distribution.index', '#contact');
